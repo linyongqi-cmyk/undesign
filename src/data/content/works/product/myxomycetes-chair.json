@@ -1,0 +1,97 @@
+{
+  "slug": "myxomycetes-chair",
+  "title": "Myxomycetes Chair",
+  "type": "Seating",
+  "image": "images/works/product/unconventional-16x9-3.webp",
+  "category": "product",
+  "order": 2,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "粘菌はカビに似た生物群であり、多くのデザイナーを凌駕するほどの優れた経路計画能力を持っている。食べ物を探す際、最適なルートを正確に見つけ出すことができる。この椅子の全体的な形状は、粘菌が生み出す経路とよく似ている。椅子の脚は、粘菌が餌を求めて伸びるように、上へと成長しながら支持面を探すような形状になっている。また、座面にはわずかな凹凸が施されており、全体の造形に豊かなレイヤー感を加えている。",
+        "使用アルゴリズム：経路探索アルゴリズム、Voronoi（ボロノイ）分割アルゴリズム、Voronoiノイズアルゴリズム"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "530*580*900mm"
+        },
+        {
+          "label": "material",
+          "value": "photopolymer resin"
+        },
+        {
+          "label": "date",
+          "value": "2022.05"
+        }
+      ]
+    },
+    {
+      "kind": "internalLink",
+      "text": "シリーズ作品「UNCONVENTIONAL」はこちらです。",
+      "category": "visual",
+      "workSlug": "unconventional-concept"
+    },
+    {
+      "kind": "internalLink",
+      "text": "シリーズ作品「UNCONVENTIONAL」のアニメーションはこちらです。",
+      "category": "visual",
+      "workSlug": "unconventional-animation"
+    },
+    {
+      "kind": "internalLink",
+      "text": "フラクタル幾何学に関する研究はこちらです。「Fractal & Furniture」（2022.05）",
+      "category": "research",
+      "workSlug": "2205-fractal"
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "30.29% 50.00%",
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/12-black.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-8796-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/unconventional-16x9-3-2.webp",
+        "alt": "",
+        "caption": ""
+      },
+      "displayWidth": 100
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/myxomycetes-chair-2-2.webp",
+        "alt": "",
+        "caption": ""
+      }
+    }
+  ],
+  "masonryThumbnail": {}
+}

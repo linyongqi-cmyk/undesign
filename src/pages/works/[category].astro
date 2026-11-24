@@ -1,0 +1,55 @@
+---
+import { workThumbnail, thumbnailStyle } from '../../lib/content/work-thumbnail.js';
+import { thumbnailMetadata } from '../../lib/content/thumbnail-metadata';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { getCategories } from '../../lib/content';
+import { imageSrc } from '../../lib/content/images';
+import ContentBlock from '../../components/content/ContentBlock.astro';
+import { researchArticleLanguage, workBodySections } from '../../lib/content/work-body-sections.js';
+export const prerender = true;
+
+export async function getStaticPaths() {
+  return getCategories().map((category) => ({ params: { category: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const thumbnails = await Promise.all(category.works.map(async (work) => {
+  const dimensions = await thumbnailMetadata(work.image);
+  return { ...dimensions, ...workThumbnail(work, category.kind, dimensions.width / dimensions.height) };
+}));
+---
+
+<SiteLayout active={category.slug} title={category.title}>
+  <section class:list={["content-page", `category-${category.slug}`, { "research-page": category.kind === 'research' }]}>
+    {category.kind === 'research' ? (
+      <div class="research-list">
+        {category.works.map((work) => {
+          const articleLanguage = researchArticleLanguage(work);
+          return (
+            <details class="research-item" data-research-id={`research-${work.slug}`} data-article-language={articleLanguage}>
+              <summary><span>{work.title}</span><span class="accordion-icon" aria-hidden="true"></span></summary>
+              <div class="research-reveal">
+                <div class="research-copy">
+                  {workBodySections(work).map((block) => <ContentBlock block={block} articleLanguage={articleLanguage} research={category.kind === 'research'} />)}
+                </div>
+              </div>
+            </details>
+          );
+        })}
+      </div>
+    ) : (
+      <div class="work-grid" data-work-masonry={category.kind === 'masonry' ? '' : undefined}>
+        {category.works.map((work, index) => (
+          <a class="work-card" data-thumb-aspect={thumbnails[index].aspect} style={thumbnailStyle(thumbnails[index])} href={`${base}works/${category.slug}/${work.slug}/`}>
+            <div class="work-image-wrap">
+              {work.image && <img src={imageSrc(work.image, base)} alt={work.title} width={thumbnails[index].width} height={thumbnails[index].height} loading={index < 4 ? 'eager' : 'lazy'} />}
+              <span class="work-hover-title"><span>{work.title}</span><small>{work.type}</small></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+  <script>import '../../scripts/work-card-activate.ts';</script>
+</SiteLayout>

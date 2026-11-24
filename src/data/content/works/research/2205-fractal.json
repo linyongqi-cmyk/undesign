@@ -1,0 +1,875 @@
+{
+  "slug": "2205-fractal",
+  "title": "#.2205　Fractal & Furniture(chinese)",
+  "type": "Research",
+  "category": "research",
+  "order": 7,
+  "sections": [
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "什么是分形"
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "分形几何由数学家曼德尔布罗特于1975年正式提出，其思想源于他1967年关于“海岸线长度”的研究。该研究指出，自然界中的不规则曲线具有尺度依赖性：测量精度越高，所得到的长度越大，理论上可趋于无限。这一现象揭示了自然形态中普遍存在的复杂性与不可精确测量性。进一步研究中，他发现海岸线具有“局部与整体相似”的特征，并据此提出“分形”（Fractal）概念，用以描述这种看似无序但具有自相似结构的形态。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "分形通常指可被分解为若干部分，且各部分与整体在缩小尺度上相同或相似的几何形态。其本质来源于自然规律，如闪电、雪花、血管和蚁巢等结构，体现出高度的复杂性与自组织特征，因此也被称为“自然的几何”。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "根据“相同”与“相似”的差异，分形可分为两类：一类是由严格数学公式生成的规则分形，具有精确自相似性；另一类是自然界中广泛存在的近似分形，更具不规则性。在设计应用中，后者因更贴近自然形态，通常具有更高的表现力与创造潜力。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/chutipon-pattanatitinon-lg8mt7f7lxq-unsplash.webp",
+            "alt": "",
+            "caption": "Lightning",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: chutipon Pattanatitinon",
+              "href": "https://unsplash.com/photos/a-purple-sky-filled-with-lots-of-lightning-LG8Mt7f7lXQ",
+              "newTab": true
+            },
+            "mobileCropAspect": 1.5,
+            "mobileCropScale": 1,
+            "mobileCropPosition": "50.00% 50.00%",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/venus-major-uc8hqc0udqy-unsplash.webp",
+            "alt": "",
+            "caption": "Romanesco",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: VENUS MAJOR",
+              "href": "https://unsplash.com/photos/green-and-white-flower-bouquet-UC8hqc0udqY",
+              "newTab": true
+            },
+            "mobileCropAspect": 1.5,
+            "mobileCropScale": 1,
+            "mobileCropPosition": "50.00% 0.00%",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/mario-mesaglio-knbhxjzqirs-unsplash.webp",
+            "alt": "",
+            "caption": "Tree branching",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: Mario Mesaglio",
+              "href": "https://unsplash.com/photos/black-tree-on-green-grass-field-during-daytime-KnBHXJzqIRs",
+              "newTab": true
+            },
+            "mobileCropAspect": 1.5,
+            "mobileCropScale": 1,
+            "mobileCropPosition": "57.89% 50.00%",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "right"
+            }
+          }
+        }
+      ],
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/vadim-bogulov-hq-azl6xvw4-unsplash.webp",
+            "alt": "",
+            "caption": "Sierpinski triangle",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: Vadim Bogulov",
+              "href": "https://unsplash.com/photos/background-pattern-HQ-azL6XVw4",
+              "newTab": true
+            },
+            "mobileCropAspect": 1.5,
+            "mobileCropScale": 1,
+            "mobileCropPosition": "50.00% 50.00%",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/jiaxiang-li-qvty7fo4xik-unsplash.webp",
+            "alt": "",
+            "caption": "Mandelbulb",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: Jiaxiang Li",
+              "href": "https://unsplash.com/photos/a-close-up-of-a-red-and-white-object-QVTy7fO4xIk",
+              "newTab": true
+            },
+            "mobileCropAspect": 1.5,
+            "mobileCropScale": 1,
+            "mobileCropPosition": "100.00% 50.00%",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/ayush-kumar-jbfk-xugv0s-unsplash.webp",
+            "alt": "",
+            "caption": "Fractal art",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: Ayush Kumar",
+              "href": "https://unsplash.com/photos/a-close-up-view-of-a-bunch-of-plants-jbfK-Xugv0s",
+              "newTab": true
+            },
+            "mobileCropAspect": 1.5,
+            "mobileCropScale": 1,
+            "mobileCropPosition": "65.54% 50.00%",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "right"
+            }
+          },
+          "displayWidth": 100
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "displayWidth": 110,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "基于分形几何的参数化家具创构流程（拟定）"
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "基于分形几何的参数化家具创构流程可概括为五个步骤。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "第一步：选择合适的分形几何形态作为设计基础，该形态通常来源于自然或数学模型，其结构特征将直接影响家具的整体造型。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "第二步：对所选分形进行规则解析，将其结构特征抽象为可控制的参数与生成逻辑，并借助参数化工具建立数学逻辑原型。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "第三步：将该逻辑原型应用于具体家具载体中，使抽象算法转化为可实现的设计形态，并根据功能与结构需求进行适配调整。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "第四步：通过参数调整生成多种设计方案，并对其进行分析与评估，进一步优化参数范围与算法逻辑，形成“生成—反馈—优化”的迭代过程。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "第五步：在优化结果基础上确定最终方案，并完成分形家具的原型设计输出。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "实际上在第五步中，应当考虑设计落地性问题。包括材料，加工方法，结构强度以及人机工学等。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-1182x1126-v-fs-webp-469ca9cf-1de3-4205-8df2-dff049c0e487.webp",
+        "alt": "",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      },
+      "displayWidth": 75,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "几种基于Grasshopper的分形几何形态生成算法"
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "循环迭代算法："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "这是基于重复运算的生成方法，其核心在于对初始几何单元进行持续的规则变换。通过对点、线、面或体进行缩放、位移、旋转或形变等几何操作，在多次迭代中逐步生成复杂结构。在Grasshopper中，通常借助Anemone插件实现循环迭代。其基本逻辑为：将初始数据输入Loop Start，通过设定几何变换规则生成新的结果，并在Loop End中判断是否满足终止条件；若未满足，则将结果反馈至输入端继续迭代，直至达到设定次数或条件后停止。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-2293x647-v-frms-webp-6fb1aeaa-4caf-42db-9c0b-a705be2f85a4-regular.webp",
+        "alt": "",
+        "caption": "基于Anemone创建的分形案例",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 90,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "最短路径算法："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "这是一种基于路径搜索的生成方法，其核心是在预先构建的路径网络中，寻找连接起点与终点的最优路径。在参数化设计中，该方法常用于生成具有分支特征的结构形态。在Grasshopper中，通常结合Proximity 3D与Shortest Walk实现该算法。首先，通过Proximity 3D将输入的点云转化为连接网络，即基于点与点之间的邻近关系生成路径结构，并可通过控制连接数量调节网络复杂度。随后，将起点与终点输入Shortest Walk，在路径网络中计算得到最短路径结果。由于路径网络由点云构成，当点的位置或数量发生变化时，连接关系与最终路径也会随之改变。因此，通过调整少量点数据，即可生成差异显著的分支形态。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-2395x726-v-frms-webp-3dc9ab9c-3036-4b02-bb77-118f5bf4e154-regular.webp",
+        "alt": "",
+        "caption": "基于Shortest Walk创建的分形案例",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 90,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "Voronoi镶嵌算法："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "这是一种基于离散点划分空间的几何方法，其特点是每个区域内的任意点到对应生成点的距离均小于或等于其他点，广泛存在于自然界的网状结构中。其生成通常基于Delaunay三角剖分，通过边的垂直平分线构建多边形。而在Grasshopper中，可通过Populate 2D生成点集，并利用Voronoi运算器快速构建结构。从其可视化角度来看，是将每个点看作不断向外扩张的圆，当相邻圆相交时形成边界并划分出各个多边形区域。在此基础上，通过增加不同密度的点集，可生成具有层级关系的嵌套Voronoi结构。而在三维空间中，借助Populate 3D与Voronoi 3D可构建体积单元，并通过缩放等操作形成复杂形态。通过调节点的数量、密度或引入随机干扰，可有效控制整体形态。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "blockIndent": 1,
+      "kind": "note",
+      "text": [
+        "Grasshopper中Voronoi的生成过程"
+      ],
+      "blockIndentSize": 14
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-763x384-v-fs-webp-b4c273d5-7869-429b-b7e4-c764a02db8bc-small.webp",
+            "alt": "",
+            "caption": "R=0.10",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-763x384-v-fs-webp-615d0714-ddd5-4cb0-9843-9b4718f31b15-small.webp",
+            "alt": "",
+            "caption": "R=0.15",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-763x384-v-fs-webp-2e22e27d-2b57-4132-966a-c63f70b38a5b-small.webp",
+            "alt": "",
+            "caption": "R=0.20",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-763x384-v-fs-webp-21a00e5a-a5b7-4379-8127-e05b6e3ea32a-small.webp",
+            "alt": "",
+            "caption": "R=0.30",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2,
+              "origin": "right"
+            }
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 125,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "Noise干扰算法："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "这是一种用于引入连续扰动的生成方法，其特点是在随机性的基础上保持平滑过渡，使几何形态产生自然的起伏与变化。通过对点、曲线或网格进行偏移，实现对整体形态的干扰与重构。在Grasshopper中，可借助Tundra插件中的Noise相关运算器对点集进行干扰，从而改变其分布状态，并进一步影响由点生成的结构形态。通过调节参数，可在可控范围内获得多种结果。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-1158x465-v-fs-webp-ef8973cf-2852-48d5-8cf7-a097c91efb01.webp",
+            "alt": "",
+            "caption": "利用Tundra插件进行Noise干扰的构建过程",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-924x1082-v-fs-webp-be9bf550-44cc-4833-a62a-6b9bc65612e9-small.webp",
+            "alt": "",
+            "caption": "",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2,
+              "origin": "right"
+            }
+          }
+        }
+      ],
+      "blockIndent": 1,
+      "blockIndentSize": 14
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "Kangaroo动力学算法："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "这是一种基于物理模拟的形态生成方法，其核心在于通过模拟力学行为来驱动几何形态的演化。在Grasshopper中，Kangaroo插件作为实时物理引擎，可对点、线、面等几何对象施加力与约束（如弹性、张力、重力、碰撞等），使系统在不断迭代中趋于平衡状态，从而生成稳定结构。通过对几何元素设定初始状态，并赋予相应的物理规则与约束条件，在迭代过程中通过力的相互作用不断调整形态，直至达到力学平衡。其生成结果通常呈现出类似织物、膜结构或自然生长形态的特征。Kangaroo也常用于建筑设计中的张拉膜结构、索网结构等受力驱动形态的生成。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/aaron-cook-mn1yi-puei-unsplash.webp",
+        "alt": "",
+        "caption": "一种建筑设计中张拉膜结构",
+        "linkLabel": {
+          "text": "ー Unsplash.com, by: Aaron Cook",
+          "href": "https://unsplash.com/photos/a-large-white-sail-sitting-on-top-of-a-building-mn1yI--PUeI",
+          "newTab": true
+        },
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 75,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "几种基于既得形态的优化方法"
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "遗传算法："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "遗传算法的其核心在于通过“变异—选择—遗传”的机制，对设计方案进行迭代优化。在Grasshopper中，可借助Biomorpher插件实现该算法。该方法通过将设计变量转化为“基因参数”，初始阶段系统随机生成多个个体方案，形成具有较大差异的种群。从中选择较优个体作为进化基础，并将在其参数基础上进行重组与变异，从而生成新一代相似但不完全相同的方案。通过调节突变概率与参数范围，可在“稳定演化”与“随机探索”之间取得平衡，使设计结果在保持可控性的同时具备多样性。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-2350x691-v-frms-webp-4052e60d-2588-47c8-88be-b99bc53f5f77-regular.webp",
+        "alt": "",
+        "caption": "基于Biomorpher创建的遗传进化迭代案例",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 90,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-1651x986-v-fms-webp-aae3cdce-d03a-480b-87ff-2e397f7f5828-middle-2.webp",
+            "alt": "",
+            "caption": "在初始集群中选择7号个体作为遗传因子",
+            "cropScale": 1,
+            "cropPosition": "center",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-1651x986-v-fms-webp-593b525d-9bf0-4cce-a0f5-030ff546c590-middle.webp",
+            "alt": "",
+            "caption": "第一次遗传进化后在其中选择5号个体作为遗传因子",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-1651x986-v-fms-webp-08cbb360-cde8-436a-b92b-213907f96a38-middle.webp",
+            "alt": "",
+            "caption": "第二次遗传进化后个体差异逐渐变小",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "right"
+            }
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 125,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "网格细分与形态优化："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "这是一类常见的几何建模方法，广泛应用于多边形建模与数字造型中。在参数化设计流程中，该方法常作为后期处理手段，用于提升模型的几何质量与视觉表现。在Grasshopper中，Weaverbird插件可对mesh结构进行细分与重构。通过Catmull-Clark Subdivision等运算器，可使模型表面更加平滑；同时，结合特定规则（如Sierpinski Carpet），可在原有结构基础上生成具有镂空或分形特征的形态。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-2104x1136-v-frms-webp-c8b0556c-3674-460f-b52c-2b41bd1aa2f7-middle.webp",
+        "alt": "",
+        "caption": "利用Weaverbird插件对网格进行实体、圆滑以及开孔处理",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 2,
+          "origin": "left"
+        }
+      },
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 50,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "拓扑优化："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "这是一种源于工程与结构设计领域的优化方法，其核心是在既定边界条件下，通过计算分析材料在空间中的最优分布形式，从而实现结构性能的最优化（如提高强度或降低重量）。该方法通常基于有限元分析，对结构内部的应力与能量分布进行迭代计算，并逐步去除低效材料、保留关键受力路径。与传统造型方法不同，拓扑优化并非对既有形态进行调整，而是从“生成结构”的角度出发，得到具有高度功能导向的结果，其形态往往呈现出类似骨骼或有机生长的特征。在Grasshopper中可借助Millipede、Ameba等插件实现基础的拓扑优化流程。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "videoEmbed",
+          "url": "https://www.bilibili.com/video/BV1He411W7Z5/?spm_id_from=888.80997.embed_other.whitelist&t=8&bvid=BV1He411W7Z5&vd_source=01174bb11b4b2cd298fa6d7c08038441",
+          "caption": "Ameba拓扑优化软件动画科普_by: bilibili"
+        },
+        {
+          "kind": "videoEmbed",
+          "url": "https://www.youtube.com/watch?v=0_VBPhoLRwI",
+          "caption": "Ameba Topology Optimization Software Based on Grasshopper_by: youtube"
+        }
+      ],
+      "blockIndent": 1,
+      "blockIndentSize": 14
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "实践"
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "系列作品UNCONVENTIONAL中的Coral Table便是基于分形几何特征进行设计探索过程中的其中一次尝试。在该方案中，基于前几次实验中对Voronoi镶嵌算法与最短路径算法的应用经验，分别利用Voronoi镶嵌构建桌面形态，并通过最短路径算法生成支撑结构。具体创构流程如下："
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "首先，绘制桌面的基础形体范围，并利用Populate 2D运算器在该范围内生成离散点群。通过控制点的数量与分布，构建Voronoi多边形结构。在此基础上，通过切割、筛选、圆滑及缩放等方法，对Voronoi单元进行优化处理，从而完成桌面的分块构建。（step1~4）"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "其次，通过对基础形体进行拉伸以定义三维空间范围，并在该空间中构建路径网络。与此同时，在底部构建二维离散点群，并通过Scale控制其分布范围。将底部点与桌面分块的中心点建立对应连接关系，生成路径线，并利用Shortest Walk运算器计算得到最短路径，从而形成支撑结构的基本形态。（step5~8）"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "至此，Coral Table的整体形态构建基本完成。随后进入细节优化阶段，包括桌面与支撑结构之间的连接处理等。将桌面由Surface转换为Mesh，并通过重网格化（Remeshing）优化其网格结构，以更好地适配与支撑结构的连接关系，从而完成整体设计。（step9~12）"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-5887x966-v-frms-webp-1bf97d79-db3e-499b-a6f0-475d35e99b06-regular.webp",
+        "alt": "",
+        "caption": "",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "displayWidth": 85,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-5887x966-v-frms-webp-6e933546-ee07-4adc-b7ea-c026b54d6e47-regular.webp",
+        "alt": "",
+        "caption": "",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "displayWidth": 85,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-5887x966-v-frms-webp-d2ef059c-4672-4bd4-adba-4e605746ed9e-regular.webp",
+        "alt": "",
+        "caption": "",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "displayWidth": 85,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-3840x2160-v-frms-webp-de5a11ca-dd5b-4d4b-b731-98f994112b17-middle.webp",
+            "alt": "",
+            "caption": "前期的一些基于不同算法构建的分形家具原型",
+            "captionSettings": {
+              "position": "top",
+              "gap": 4
+            },
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-3840x2160-v-frms-webp-91c79866-de64-47c1-8cf2-c646311532bc-middle.webp",
+            "alt": "",
+            "caption": "",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-3840x2160-v-frms-webp-d310e3f3-1475-4c81-be05-526c96ec911b-middle.webp",
+            "alt": "",
+            "caption": "",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/s-3840x2160-v-frms-webp-56a0e0ba-86ba-42f3-a230-15d6c516f5e8-middle.webp",
+            "alt": "",
+            "caption": "",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "right"
+            }
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "displayWidth": 125,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "note",
+      "text": [
+        "参考资料与文献\n「１」.　李森然. 基于分形形态的数字家具创构研究[D].北京林业大学,2020.\n「２」.　戴欣伟. 参数化设计在家居产品设计中的应用研究[D].北京工业大学,2017.\n「３」.　黄雨萌. 建筑设计中Rhino+Grasshopper插件功能与3D建模解析[J].自动化技术与应用,2021,40(07):167-169+173."
+      ]
+    },
+    {
+      "kind": "internalLink",
+      "text": "シリーズ作品「UNCONVENTIONAL」はこちらです。",
+      "category": "visual",
+      "workSlug": "unconventional-concept"
+    },
+    {
+      "kind": "internalLink",
+      "text": "3Dプリントによる実物化作品「Myxomycetes chair」はこちらです。",
+      "category": "product",
+      "workSlug": "myxomycetes-chair"
+    },
+    {
+      "kind": "internalLink",
+      "text": "シリーズ作品「UNCONVENTIONAL」のアニメーションはこちらです。",
+      "category": "visual",
+      "workSlug": "unconventional-animation"
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "image": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "template": "articleReading",
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "articleLanguage": "zh",
+  "gallery": []
+}

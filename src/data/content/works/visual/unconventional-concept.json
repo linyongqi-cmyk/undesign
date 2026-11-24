@@ -1,0 +1,248 @@
+{
+  "slug": "unconventional-concept",
+  "title": "UNCONVENTIONAL",
+  "type": "product concept",
+  "image": "images/works/visual/a3-1-3-2.webp",
+  "category": "visual",
+  "order": 1,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "フラクタルは自然の指紋であり、時間というキャンバスの上に、終わりのない反復と変化を刻み続けている。\n本作品は「フラクタル幾何学」を基盤とし、パラメトリックデザインなどの技術手法を組み合わせて制作したものである。フラクタルとは自然から導き出された数学的法則であり、単純なルールが無限の再帰を通して、美しさと神秘を立ち上がらせる。湿地の森をゆっくりと這う粘菌、青い海の奥でクマノミが暮らすサンゴ、都市計画のように整然と広がる細胞の配置――それらはすべて、自然が静かに綴る詩篇である。\n私は考えた。この神秘を、どのように日常へ取り込むことができるのだろうか。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions (as modeled)",
+          "value": "\n　myxomycetes chair: 530*580*900mm\n　coral table: 1750*950*735mm\n　voronoi lamp: 320*320*1750mm"
+        },
+        {
+          "label": "date",
+          "value": "2022.05"
+        }
+      ]
+    },
+    {
+      "kind": "internalLink",
+      "text": "3Dプリントによる実物化作品「Myxomycetes chair」はこちらです。",
+      "category": "product",
+      "workSlug": "myxomycetes-chair"
+    },
+    {
+      "kind": "internalLink",
+      "text": "シリーズ作品「UNCONVENTIONAL」のアニメーションはこちらです。",
+      "category": "visual",
+      "workSlug": "unconventional-animation"
+    },
+    {
+      "kind": "internalLink",
+      "text": "フラクタル幾何学に関する研究はこちらです。「Fractal & Furniture」（2022.05）",
+      "category": "research",
+      "workSlug": "2205-fractal"
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "50.00% 77.12%",
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/visual/a3-1-3.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/visual/image.webp",
+        "alt": "",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/visual/a3-3-3.webp",
+            "alt": "",
+            "caption": ""
+          },
+          "displayWidth": 75
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "sourceCard",
+          "text": "この写真は著作権法上の関係により、出典のみ記載している。",
+          "linkText": "Reference: WIRED — Slime Molds Remember, But Do They Learn?",
+          "href": "https://www.wired.com/story/slime-molds-rememberbut-do-they-learn/",
+          "caption": "コンセプト：粘菌\n粘菌はカビに似た生物群であり、多くのデザイナーを凌駕するほどの優れた経路計画能力を持っている。食べ物を探す際、最適なルートを正確に見つけ出すことができる。",
+          "displayWidth": 75,
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/visual/10-new-2-147-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/10-new-2-148-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/10-new-2-151-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/visual/a3-4.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/visual/joan-li-vhd6zjotczo-unsplash.webp",
+            "alt": "",
+            "caption": "コンセプト：珊瑚\nサンゴは、サンゴ虫が分泌する石灰質の骨格が集まり、樹枝のような形状を形成する生物である。一般的に、サンゴは基部で束を作りながら成長し、上に向かって分岐していく。この成長パターンは、樹木の枝分かれと類似している。",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: Joan Li",
+              "href": "https://unsplash.com/photos/a-coral-reef-under-water-VHd6ZjOTCzo",
+              "newTab": true
+            },
+            "cropScale": 1,
+            "cropPosition": "center"
+          },
+          "displayWidth": 75,
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/visual/7-new-2-440.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/7-new-2-436.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/7-new-2-438.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/visual/a3-5-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/visual/clay-banks-mybmp8pw4uq-unsplash.webp",
+            "alt": "",
+            "caption": "コンセプト：細胞\nVoronoi（ボロノイ）分割は、隣接する点を結ぶ線分の垂直二等分線を用いて構成される連続多角形の集合である。自然界では、葉脈の微細構造、トンボの羽、植物細胞の分布などが、このVoronoi分割に似た網目構造をしている。そのため、Voronoi分割は「細胞パターン」とも呼ばれることがある。",
+            "linkLabel": {
+              "text": "ー Unsplash.com, by: Clay Banks",
+              "href": "https://unsplash.com/ja/%E5%86%99%E7%9C%9F/%E6%B0%B4%E6%BB%B4%E3%81%8C%E4%B9%97%E3%81%A3%E3%81%9F%E7%B7%91%E3%81%AE%E8%91%89%E3%81%AE%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%BA%E3%82%A2%E3%83%83%E3%83%97-mYBMP8pW4uQ",
+              "newTab": true
+            }
+          },
+          "displayWidth": 75,
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/visual/9-new-4-post-1-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/9-new-154-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    }
+  ],
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false
+}

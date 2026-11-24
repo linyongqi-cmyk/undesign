@@ -1,0 +1,341 @@
+{
+  "slug": "ialu-spongelamp",
+  "title": "IAlu SpongeLamp",
+  "type": "Lighting",
+  "image": "images/works/product/dsc-1513-post-3.webp",
+  "category": "product",
+  "order": 6,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "私たちの周りにある都市建築は、多くの場合その構造をファサードという「皮膚」の内側に隠している。しかし、その皮膚を剥がし、内部の骨格を露出させると、そこには機能と力が織りなす純粋な美が現れる。さらにその骨格自体が建築の主体となるとき、構造は都市の記憶を刻む象徴へと昇華されるのである。ですから、私は都市の骨格を日常のスケールに縮小し、感じられるモノを生活に溶け込みたい。",
+        "アルミフレームに再加工を施し、中央にある丸穴に電線を内蔵することで、すっきりとした見た目を実現する。柔らかいスポンジをランプシェードとして、空間に優しい粒状の光影を落とす。また、サイドテーブル機能も統合する。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "400*430*1500mm"
+        },
+        {
+          "label": "weight",
+          "value": "5.2 kg"
+        },
+        {
+          "label": "aluminum frame type",
+          "value": "4040LZ"
+        },
+        {
+          "label": "other materials",
+          "value": "steel sheet, sponge, LED lighting"
+        },
+        {
+          "label": "date",
+          "value": "2023.11"
+        }
+      ]
+    },
+    {
+      "kind": "sourceCard",
+      "text": "この写真は著作権法上の関係により、出典のみ記載している。",
+      "linkText": "Beam, by: structura",
+      "href": "https://structura.com/products/beam",
+      "caption": "都市の骨格：都市を灯る街灯\n縦方向に直立する部材で、上部は片持ち構造で灯具を支える形になっている。電気配線や構造部品は柱の内部に収納されておく。",
+      "displayWidth": 65,
+      "mobile": {
+        "hidden": true
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "note",
+          "text": [
+            "同じシリーズの作品はこちらです。"
+          ]
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu BarChair",
+          "category": "product",
+          "workSlug": "ialu-barchair"
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu Trolley",
+          "category": "product",
+          "workSlug": "ialu-trolley"
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu PlantColumn",
+          "category": "product",
+          "workSlug": "ialu-plantcolumn"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "0.00% 50.00%",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1457-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/dsc-1504-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-1476-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1599-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-0001-post-1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1468-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/dsc-1259-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-1256-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        }
+      ],
+      "mobile": {
+        "hidden": true
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-0687-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/dsc-1513-post-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-1461-post-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-0107-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-0289-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1463-post-1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/dsc-1170-post-1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-0113-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-1247-post-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-0717-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-1171-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-0287-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-0105-post.webp",
+            "alt": "",
+            "caption": ""
+          },
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/2-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/3-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/4-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/5-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "displayWidth": 150,
+      "mobile": {
+        "layout": "scroll"
+      }
+    }
+  ]
+}

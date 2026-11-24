@@ -1,0 +1,42 @@
+---
+import { biographyTextStyle } from '../lib/content/biography-style.js';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getAboutProfile } from '../lib/content';
+import { imageSrc } from '../lib/content/images';
+export const prerender = true;
+const base = import.meta.env.BASE_URL;
+const profile = await getAboutProfile();
+---
+
+<SiteLayout active="about" title="About">
+  <section class="about-page">
+    <figure class="portrait"><img src={imageSrc(profile.portrait, base)} alt={`Portrait of ${profile.romanizedName}`} /></figure>
+    <div class="about-content">
+      <header class="about-profile">
+        <h1>{profile.name} <span>{profile.romanizedName}</span></h1>
+        <dl>
+          {profile.facts.map((fact) => <div><dt>{fact.period}</dt><dd>{fact.text}</dd></div>)}
+        </dl>
+      </header>
+      <div class="language-switch" role="group" aria-label="Biography language">
+        <button class="is-active" type="button" data-bio-lang="ja">Japanese</button>
+        <button type="button" data-bio-lang="zh">Chinese</button>
+      </div>
+      <div class="bio-copy" data-bio="ja" lang="ja" style={biographyTextStyle(profile, 'Ja')}>
+        {profile.biographyJa.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <div class="bio-copy" data-bio="zh" lang="zh" style={biographyTextStyle(profile, 'Zh')} hidden>
+        {profile.biographyZh.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+  <script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-bio-lang]');
+    const blocks = document.querySelectorAll<HTMLElement>('[data-bio]');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const lang = button.dataset.bioLang;
+      buttons.forEach((item) => item.classList.toggle('is-active', item === button));
+      blocks.forEach((block) => { block.hidden = block.dataset.bio !== lang; });
+    }));
+  </script>
+</SiteLayout>

@@ -1,0 +1,151 @@
+{
+  "slug": "crossing-mirror",
+  "title": "交差点の凸面鏡",
+  "type": "日本千葉県千葉市、2025.11",
+  "image": "images/works/photography/crossing-mirror.webp",
+  "category": "photography",
+  "order": 1,
+  "template": "photographyGallery",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "街を歩く中で、交差点に設置された凸面鏡に目が留まった。\nそれらは視界を広げるための装置であると同時に、空間の比率や方向を変化させる。\n私は鏡に映り込んだ街の風景を継続的に撮影し、反射によって生まれる画面そのものに注目した。\nこれらの写真は、装置によって変えられた一つの見え方を記録している。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "camera",
+          "value": "Canon EOS R50"
+        },
+        {
+          "label": "place",
+          "value": "Chiba City, Chiba Prefecture, Japan"
+        },
+        {
+          "label": "date",
+          "value": "2025.11"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": true,
+  "photographyIntroWidth": 45,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [
+    {
+      "src": "images/works/photography/img-2045.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2043.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-1829.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2083.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-1839.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2112.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-1843.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2000.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2009.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2019.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2048.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2049.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2085.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-2190.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    },
+    {
+      "src": "images/works/photography/img-1877.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center"
+    }
+  ]
+}

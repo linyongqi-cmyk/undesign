@@ -1,0 +1,176 @@
+---
+import { videoEmbedSource as videoEmbedSource } from "../../lib/content/video-embed.js";
+import { imageHoverAttributes } from '../../lib/content/image-hover.js';
+import { displayWidthStyle } from '../../lib/content/layout-group.js';
+import { getOverflowTextLayout, isEqualHeightMediaRow, overflowRowSettings } from '../../lib/content/media-row.js';
+import { blockIndentValue } from '../../lib/content/block-indent.js';
+import { imageCropMobileAttrs, mobileWrapProps, normalizeMobileOverride } from '../../lib/content/mobile-override.js';
+import PortableText from './PortableText.astro';
+import MediaCaption from './MediaCaption.astro';
+import ImageLinkLabel from './ImageLinkLabel.astro';
+import MediaCompositionItem from './MediaCompositionItem.astro';
+import FreeSizeMediaGroup from './FreeSizeMediaGroup.astro';
+import SourceCard from './SourceCard.astro';
+import ContentBlock from './ContentBlock.astro';
+import { imageSrc } from '../../lib/content/images';
+import { getCategories, getSiteSettings } from '../../lib/content';
+import type { ContentBlock as ContentBlockData, SiteSettings } from '../../lib/content/types';
+
+interface Props {
+  block: ContentBlockData;
+  articleLanguage?: 'ja' | 'zh';
+  research?: boolean;
+  rotationSeconds?: number;
+}
+
+const { block } = Astro.props;
+const articleLanguage = Astro.props.articleLanguage;
+const research = Astro.props.research === true;
+const rotationSeconds = Astro.props.rotationSeconds;
+const image = block.kind === 'imageWithCaption' ? block.image : undefined;
+const images = 'images' in block ? block.images.filter((entry) => entry?.src) : [];
+const mediaColumns = block.kind === 'mediaComposition'
+  ? block.columns?.length ? block.columns : (block.items || []).map((item) => ({ items: [item] }))
+  : [];
+const visibleMediaColumns = mediaColumns.filter((column) => (column.items || []).some((item) => item.kind === 'imageCarousel' ? item.images?.some((entry) => entry?.src) : item.kind === 'content' ? Boolean(item.block) : item.image?.src));
+const cropFrameStyle = (entry: import('../../lib/content/types').ContentImage) => {
+  const desktop = entry.cropAspect ? `aspect-ratio:${entry.cropAspect} / 1;overflow:hidden` : '';
+  const mobile = imageCropMobileAttrs(entry).styleFragment || '';
+  return [desktop, mobile].filter(Boolean).join(';') || undefined;
+};
+const cropFrameMobileAttrs = (entry: import('../../lib/content/types').ContentImage) => imageCropMobileAttrs(entry).attrs;
+const cropImageStyle = (entry: import('../../lib/content/types').ContentImage) => `object-position:${entry.cropPosition || 'center'};transform:scale(${entry.cropScale || 1});${entry.cropAspect ? 'height:100%;max-height:none;object-fit:cover' : ''}`;
+const siteSettings = getSiteSettings();
+const textPresets = siteSettings.typography || {};
+const fallbackPreset = { fontFamily: 'inherit', fontSize: 14, fontWeight: 300, color: 'inherit', lineHeight: 1.8, letterSpacing: 0, textAlign: 'left', textDecoration: 'none', fontStyle: 'normal', textTransform: 'none', writingMode: 'horizontal-tb', paragraphSpacing: 12, textIndent: 0 };
+type TextVariant = keyof NonNullable<SiteSettings['typography']>;
+const textStyle = (variant: TextVariant) => {
+  const preset = { ...fallbackPreset, ...(textPresets[variant] || {}) };
+  const fonts: Record<string, string> = { 'system-sans': 'Arial,"Yu Gothic",sans-serif', 'system-serif': 'Georgia,"Yu Mincho",serif', 'noto-sans-jp': '"Noto Sans JP","Yu Gothic",sans-serif', monospace: 'monospace' };
+  const languageFont = articleLanguage === 'zh' ? '"Noto Sans SC",sans-serif' : '"Noto Sans JP","Yu Gothic",sans-serif';
+  const font = ['paragraph', 'subheading', 'note'].includes(variant) && articleLanguage && ['zh', 'ja'].includes(articleLanguage)
+    ? languageFont
+    : fonts[preset.fontFamily] || fonts['system-sans'];
+  return `--text-font:${font};--text-size:${preset.fontSize}px;--text-weight:${preset.fontWeight};--text-color:${preset.color};--text-line-height:${preset.lineHeight};--text-letter-spacing:${preset.letterSpacing}px;--text-align:${preset.textAlign};--text-decoration:${preset.textDecoration};--text-style:${preset.fontStyle};--text-transform:${preset.textTransform};--text-writing-mode:${preset.writingMode || 'horizontal-tb'};--text-paragraph-spacing:${preset.paragraphSpacing}px;--text-indent:${preset.textIndent}px;--text-block-indent:${blockIndentValue(block)};--text-padding-left:${Number(preset.paddingLeft) || 0}px;--text-padding:${Number(preset.paddingTop) || 0}px ${Number(preset.paddingRight) || 0}px ${Number(preset.paddingBottom) || 0}px ${Number(preset.paddingLeft) || 0}px`;
+};
+const categories = getCategories();
+const base = import.meta.env.BASE_URL;
+const internalHref = (block: Extract<ContentBlockData, { kind: 'internalLink' }>) => {
+  if (block.category === '@home') return base;
+  if (block.category === '@about') return `${base}about/`;
+  if (block.category === '@contact') return `${base}contact/`;
+  const category = categories.find((item) => item.slug === block.category);
+  if (category?.kind === 'research' && block.workSlug) return `${base}works/${category.slug}/#research-${block.workSlug}`;
+  return category ? `${base}works/${category.slug}/${block.workSlug ? `${block.workSlug}/` : ''}` : '#';
+};
+
+const overflowRight = block.kind === 'mediaComposition' && block.overflowRight === true;
+const isTextMediaColumn = (column: typeof visibleMediaColumns[number]) => (column.items || []).length > 0 && (column.items || []).every((item) => item.kind === 'content' && ['paragraph', 'richText', 'note', 'quote', 'specifications', 'internalLink', 'externalLink'].includes(item.block?.kind));
+const mediaColumnCount = Math.max(1, visibleMediaColumns.filter((column) => !isTextMediaColumn(column)).length);
+const textLayout = getOverflowTextLayout(visibleMediaColumns, overflowRight);
+const overflow = overflowRight && visibleMediaColumns.length > 1;
+const equalHeight = isEqualHeightMediaRow(visibleMediaColumns, overflow);
+const rowSettings = overflowRowSettings(block.kind === 'mediaComposition' ? block.overflowSettings : undefined, equalHeight || textLayout.stack);
+const overflowStart = textLayout.inlineColumns || 1;
+const layoutItems = block.kind === 'layoutGroup'
+  ? block.items.filter((item) => item.kind !== 'imageWithCaption' || item.image?.src)
+  : [];
+const fixedHeightImageRow = block.kind === 'layoutGroup' && block.layout === 'row' && block.rowMode === 'fixedHeight'
+  && block.items.every((item) => (item.kind === 'imageWithCaption' && item.image?.src) || item.kind === 'sourceCard');
+const imageRowHeight = block.kind === 'layoutGroup' && block.layout === 'row' && Number(block.rowHeight) > 0 ? Number(block.rowHeight) : 200;
+const sideAlign = block.kind === 'layoutGroup' && block.layout === 'side' ? block.sideAlign : undefined;
+const mobileWrap = mobileWrapProps(block.mobile);
+const mobileLayout = normalizeMobileOverride(block.mobile)?.layout;
+---
+
+{mobileWrap.active ? (
+  <div class="mobile-override-wrap" {...mobileWrap.attrs} style={mobileWrap.style}>
+    <ContentBlock {...Astro.props} block={{ ...block, mobile: mobileLayout ? { layout: mobileLayout } : undefined }} />
+  </div>
+) : displayWidthStyle(block.displayWidth) && !fixedHeightImageRow ? (
+  <div data-display-width={block.displayWidth} style={displayWidthStyle(block.displayWidth)}>
+    <ContentBlock {...Astro.props} block={{ ...block, displayWidth: undefined }} />
+  </div>
+) : ['imageWithCaption', 'imageCarousel', 'sourceCard', 'localVideo', 'videoEmbed', 'componentGroup', 'layoutGroup', 'mediaComposition', 'freeSizeGroup'].includes(block.kind) && block.blockIndent ? (
+  <div data-media-indent style={{ paddingLeft: blockIndentValue(block), minWidth: 0 }}>
+    <ContentBlock {...Astro.props} block={{ ...block, blockIndent: undefined, blockIndentSize: undefined }} />
+  </div>
+) : <>
+{block.kind === 'componentGroup' && <div class="research-component-group">{(block.items || []).map((item) => <ContentBlock block={item} articleLanguage={articleLanguage} research={research} rotationSeconds={rotationSeconds} />)}</div>}
+{block.kind === 'layoutGroup' && layoutItems.length > 0 && (
+  <div class="content-layout-group" data-content-layout={block.layout} data-mobile-layout={mobileLayout} data-image-row-mode={fixedHeightImageRow ? "fixedHeight" : undefined} data-image-row-height={fixedHeightImageRow ? imageRowHeight : undefined} data-side-align={sideAlign} data-side-match-height={block.layout === "side" && block.sideMatchHeight ? "" : undefined} style={[`--mobile-item-count:${Math.max(1, layoutItems.filter((item) => !item?.mobile?.hidden).length)}`, block.layout === "side" ? `--layout-side-gap:${block.sideGap ?? 48}px` : fixedHeightImageRow ? `--image-row-height:${imageRowHeight}px` : ''].filter(Boolean).join(';')}>
+    <div class="layout-group-items">
+      {layoutItems.map((item) => <div data-layout-item><ContentBlock block={item} articleLanguage={articleLanguage} research={research} rotationSeconds={rotationSeconds} /></div>)}
+    </div>
+      {block.layout === 'side' && block.sideItems?.length > 0 && (
+      <div class="layout-side-items">
+        {block.sideItems.map((item) => <ContentBlock block={item} articleLanguage={articleLanguage} research={research} rotationSeconds={rotationSeconds} />)}
+      </div>
+    )}
+  </div>
+)}
+{block.kind === 'sourceCard' && <MediaCaption articleLanguage={articleLanguage} source={block}><SourceCard {...block} /></MediaCaption>}
+{block.kind === 'freeSizeGroup' && <FreeSizeMediaGroup block={block} mobile={block.mobile} articleLanguage={articleLanguage} research={research} rotationSeconds={Astro.props.rotationSeconds || 6} />}
+{block.kind === 'subheading' && <h2 class="detail-subheading text-style-subheading" style={textStyle('subheading')}>{block.text}</h2>}
+{(block.kind === 'richText' || block.kind === 'paragraph' || block.kind === 'note') && <div class:list={["detail-copy", `text-style-${block.kind === 'note' ? 'note' : 'paragraph'}`]} style={textStyle(block.kind === 'note' ? 'note' : 'paragraph')}><PortableText value={block.text} /></div>}
+{(block.kind === 'internalLink' || block.kind === 'externalLink') && <p class:list={["detail-copy", `text-style-${block.kind}`]} style={textStyle(block.kind)}>{block.kind === 'internalLink' ? <a class="text-link" href={internalHref(block)}>{block.text} →</a> : <a class="text-link" href={block.href} target={block.newTab === false ? undefined : '_blank'} rel={block.newTab === false ? undefined : 'noopener noreferrer'}>{block.text} ↗</a>}</p>}
+{block.kind === 'imageWithCaption' && image?.src && (
+  <MediaCaption articleLanguage={articleLanguage} source={image}>
+    <figure class="detail-image" {...imageHoverAttributes(image)} {...cropFrameMobileAttrs(image)} style={block.displayHeight ? `--single-image-height:${block.displayHeight}px;${image.cropAspect ? `width:${block.displayHeight * image.cropAspect}px;aspect-ratio:${image.cropAspect};overflow:hidden` : "width:max-content"};max-width:100%;${imageCropMobileAttrs(image).styleFragment || ''}` : cropFrameStyle(image)} data-single-image-height={block.displayHeight || undefined}>
+      <img src={imageSrc(image.src)} alt={image.alt ?? ''} loading="lazy" style={cropImageStyle(image)} />
+      <ImageLinkLabel image={image} />
+    </figure>
+  </MediaCaption>
+)}
+{block.kind === 'imagePair' && block.images?.length > 0 && (
+  <div class="detail-image-pair">
+    {block.images.slice(0, 2).map((entry) => {
+      const image = entry;
+      return entry.src && <figure><MediaCaption articleLanguage={articleLanguage} source={entry}><div class="detail-image-pair-frame" {...imageHoverAttributes(image)} {...cropFrameMobileAttrs(image)} style={cropFrameStyle(image)}><img src={imageSrc(entry.src)} alt={entry.alt ?? ''} loading="lazy" style={cropImageStyle(image)} /><ImageLinkLabel image={entry} /></div></MediaCaption></figure>;
+    })}
+  </div>
+)}
+{block.kind === 'mediaComposition' && visibleMediaColumns.length > 0 && (
+  <div class:list={["detail-media-composition", "is-column-groups", { "is-overflow-right": block.overflowRight && visibleMediaColumns.length > 1 }]} data-mobile-layout={mobileLayout} data-equal-height-media-row={equalHeight && rowSettings.align === "stretch" ? "" : undefined} data-overflow-align={overflow ? rowSettings.align : undefined} data-overflow-custom-width={rowSettings.textWidth === undefined ? undefined : ""} data-overflow-text-columns={textLayout.inlineColumns} data-overflow-video-stack={textLayout.stack ? "" : undefined} style={`--media-column-count:${visibleMediaColumns.length};--mobile-media-column-count:${mediaColumnCount};--inline-media-columns:${overflowStart};--overflow-gap:${rowSettings.gap};${rowSettings.textWidth === undefined ? "" : `--overflow-text-width:calc(var(--overflow-available) * ${rowSettings.textWidth})`}`}>
+    {visibleMediaColumns.map((column, columnIndex) => <div class="detail-media-stack-column" data-media-column={columnIndex + 1} data-media-row-column data-text-column={isTextMediaColumn(column) ? '' : undefined} data-overflow-side={overflow && columnIndex >= overflowStart ? columnIndex === overflowStart ? "start" : "right" : undefined}>
+      {(column.items || []).map((item, index) => <MediaCompositionItem articleLanguage={articleLanguage} item={item} index={index} eagerImage={block.overflowRight && visibleMediaColumns.length > 1} rotationSeconds={Astro.props.rotationSeconds || 6} textStyle={textStyle} internalHref={internalHref} />)}
+    </div>)}
+  </div>
+)}
+{block.kind === 'imageCarousel' && images.length > 0 && (
+  <MediaCaption articleLanguage={articleLanguage} source={block}>
+    <section class="detail-image-carousel" data-image-carousel data-rotation-seconds={Astro.props.rotationSeconds || 6} aria-label="作品图片轮播">
+      <div class="detail-image-carousel-slides">
+        {images.map((entry, index) => (
+          <figure class:list={["detail-image-carousel-slide", { "is-active": index === 0 }]} aria-hidden={index === 0 ? 'false' : 'true'} {...cropFrameMobileAttrs(entry)} style={cropFrameStyle(entry)}>
+            <img src={imageSrc(entry.src)} alt={entry.alt || `作品图片 ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} style={cropImageStyle(entry)} />
+          </figure>
+        ))}
+      </div>
+      {images.length > 1 && <div class="detail-image-carousel-dots" aria-hidden="true">{images.map((_, dotIndex) => <span aria-current={dotIndex === 0 ? 'true' : undefined} />)}</div>}
+      {images.length > 1 && <div class="detail-image-carousel-controls" aria-label="图片切换">
+        <button type="button" data-carousel-previous aria-label="上一张图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7" /></svg></button>
+        <button type="button" data-carousel-next aria-label="下一张图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5 7 7-7 7" /></svg></button>
+      </div>}
+    </section>
+  </MediaCaption>
+)}
+{block.kind === 'localVideo' && block.src && <MediaCaption articleLanguage={articleLanguage} source={block}><figure class="detail-video"><video controls preload="metadata" src={imageSrc(block.src)} /></figure></MediaCaption>}
+{block.kind === 'videoEmbed' && videoEmbedSource(block.url) && <MediaCaption articleLanguage={articleLanguage} source={block}><figure class="detail-video"><iframe src={videoEmbedSource(block.url)} title={block.caption || '作品视频'} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen /></figure></MediaCaption>}
+{block.kind === 'wideMedia' && <section class="detail-wide-media"><div class="detail-wide-media-track">{(block.items || []).map((entry) => entry.src && <img src={imageSrc(entry.src)} alt={entry.alt || ''} loading="lazy" />)}</div>{block.caption && <p>{block.caption}</p>}</section>}
+{block.kind === 'quote' && block.quote && <blockquote class="detail-quote" style={`--text-block-indent:${blockIndentValue(block)}`}>{block.quote}</blockquote>}
+{block.kind === 'specifications' && <dl class="split-detail-specifications detail-specifications text-style-specifications" style={textStyle('specifications')}>{(block.items || [{ label: 'dimensions', value: block.dimensions || '' }, { label: 'material', value: block.material || '' }, { label: 'date', value: block.date || '' }]).map((item) => <div><dt>{item.label}:</dt>{' '}<dd>{item.value || ''}</dd></div>)}</dl>}
+{block.kind === 'link' && block.linkLabel && typeof block.linkHref === 'string' && (block.linkHref.startsWith('/') && !block.linkHref.startsWith('//') || block.linkHref.startsWith('https://')) && (
+  <p class="detail-copy text-style-externalLink" style={textStyle('externalLink')}><a class="text-link" href={block.linkHref} target="_blank" rel="noopener noreferrer">{block.linkLabel} ↗</a></p>
+)}
+
+</>}
+
+<script>
+  import '../../scripts/content-image-carousel';
+  import { bindMediaRow, bindOverflowRow } from '../../lib/content/media-row.js';
+  import { observeLayoutGroups } from '../../lib/content/layout-group.js';
+  document.querySelectorAll('[data-equal-height-media-row], [data-overflow-video-stack]').forEach(bindMediaRow);
+  document.querySelectorAll('[data-overflow-align]').forEach(bindOverflowRow);
+  observeLayoutGroups(document);
+</script>

@@ -1,0 +1,218 @@
+{
+  "slug": "ice",
+  "title": "氷",
+  "type": "Lighting",
+  "image": "images/works/product/img-9053-post-2.webp",
+  "category": "product",
+  "order": 11,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "「つけたら、テクスチャーが見える照明器具」をコンセプトに作った作品。\n見た目は滑らかな正六面体だが、内部に複雑な仕組みがある。その仕組みによって、内部の光源をつけると、きれいなテクスチャーが浮かび上がる。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "125*125*125mm"
+        },
+        {
+          "label": "material",
+          "value": "photopolymer resin, plastic spheres"
+        },
+        {
+          "label": "date",
+          "value": "2023.03"
+        }
+      ]
+    },
+    {
+      "kind": "note",
+      "text": [
+        "\"There is a crack in everything — that's how the light gets in.\"\n（Leonard Cohen, Anthem, 1992）",
+        "",
+        ""
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "50.00% 50.00%",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-0233-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-9019-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-0361-post-2-2.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-511x511-webp-454f51c2-9542-4ae4-a66d-9ed6cab2934e-2.webp",
+            "alt": "",
+            "caption": "消す",
+            "captionSettings": {
+              "position": "top",
+              "gap": 4
+            }
+          },
+          "displayWidth": 50,
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ],
+      "sideGap": 12,
+      "sideAlign": "bottom"
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "layoutGroup",
+          "layout": "row",
+          "items": [
+            {
+              "kind": "imageWithCaption",
+              "image": {
+                "src": "images/works/product/img-9039-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            },
+            {
+              "kind": "imageWithCaption",
+              "image": {
+                "src": "images/works/product/img-8963-post.webp",
+                "alt": "",
+                "caption": ""
+              }
+            }
+          ]
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-511x511-webp-40c7f516-8ee9-41e2-afe4-f2ba94764f14-5.webp",
+            "alt": "",
+            "caption": "つける"
+          },
+          "displayWidth": 50,
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ],
+      "sideGap": 12
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/gif.gif",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-8950-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/img-0316-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-0318-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-9053-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-0265-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-8964-post-1.webp",
+            "alt": "",
+            "caption": ""
+          },
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ]
+    }
+  ]
+}

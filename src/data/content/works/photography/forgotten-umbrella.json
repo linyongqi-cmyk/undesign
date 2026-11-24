@@ -1,0 +1,392 @@
+{
+  "slug": "forgotten-umbrella",
+  "title": "忘れられた傘",
+  "type": "路上観察、2025 –",
+  "image": "images/works/photography/forgotten-umbrella.webp",
+  "category": "photography",
+  "order": 2,
+  "template": "photographyGallery2",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "四季があり雨の多い日本では、傘は生活に欠かせない道具である。特に透明のビニール傘は非常に安価で、どこでも手に入るため、まるで消耗品のように街に溢れている。私は、日本の街の至る所で忘れられ、その姿を風景に溶け込ませている傘の存在に強く惹かれた。ここでは、日常で見過ごされがちな傘を採集し、記録し、名前を付けている。忘れられた傘は、単なる忘れ物ではなく、持ち主の無意識の行動や都市の記憶が刻まれた一種の「痕跡」である。この観察を通じて、現代における人とモノの関係性や、都市風景に潜む微細なドラマを再提示することを試みる。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "camera",
+          "value": "iphone"
+        },
+        {
+          "label": "date",
+          "value": "2025.03 - "
+        }
+      ]
+    },
+    {
+      "kind": "internalLink",
+      "text": "相关内容",
+      "category": "research",
+      "workSlug": "2503-umbrella-v0"
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": true,
+  "photographyIntroWidth": 45,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [
+    {
+      "src": "images/works/photography/img-6774.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "手すりタイプ"
+    },
+    {
+      "src": "images/works/photography/img-5964.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "手すりタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6220.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "手すりタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6791.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "手すりタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6848.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "手すりタイプ"
+    },
+    {
+      "src": "images/works/photography/img-5917.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "トイレタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6651.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "トイレタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6720.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "トイレタイプ"
+    },
+    {
+      "src": "images/works/photography/img-7106.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "ゴミタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6260.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "ゴミタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6838.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "ゴミタイプ"
+    },
+    {
+      "src": "images/works/photography/img-8015.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "ゴミタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6867.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "ゴミタイプ"
+    },
+    {
+      "src": "images/works/photography/img-6882.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "駐車場タイプ"
+    },
+    {
+      "src": "images/works/photography/img-5956.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "駐車場タイプ"
+    },
+    {
+      "src": "images/works/photography/img-6079.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "駐車場タイプ"
+    },
+    {
+      "src": "images/works/photography/img-6341.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "駐車場タイプ"
+    },
+    {
+      "src": "images/works/photography/img-6530.webp",
+      "alt": "",
+      "caption": "",
+      "cropScale": 1,
+      "cropPosition": "center",
+      "photographyDescription": "駐車場タイプ"
+    }
+  ],
+  "photographyGallery2Sections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6774.webp",
+        "alt": "",
+        "photographyDescription": "手すりタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-5964.webp",
+        "alt": "",
+        "photographyDescription": "手すりタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6220.webp",
+        "alt": "",
+        "photographyDescription": "手すりタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6791.webp",
+        "alt": "",
+        "photographyDescription": "手すりタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6848.webp",
+        "alt": "",
+        "photographyDescription": "手すりタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-5917.webp",
+        "alt": "",
+        "photographyDescription": "トイレタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6651.webp",
+        "alt": "",
+        "photographyDescription": "トイレタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6720.webp",
+        "alt": "",
+        "photographyDescription": "トイレタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-7106.webp",
+        "alt": "",
+        "photographyDescription": "ゴミタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6260.webp",
+        "alt": "",
+        "photographyDescription": "ゴミタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6838.webp",
+        "alt": "",
+        "photographyDescription": "ゴミタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-8015.webp",
+        "alt": "",
+        "photographyDescription": "ゴミタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6867.webp",
+        "alt": "",
+        "photographyDescription": "ゴミタイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6882.webp",
+        "alt": "",
+        "photographyDescription": "駐車場タイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-5956.webp",
+        "alt": "",
+        "photographyDescription": "駐車場タイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6079.webp",
+        "alt": "",
+        "photographyDescription": "駐車場タイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6341.webp",
+        "alt": "",
+        "photographyDescription": "駐車場タイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/photography/img-6530.webp",
+        "alt": "",
+        "photographyDescription": "駐車場タイプ",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    }
+  ]
+}

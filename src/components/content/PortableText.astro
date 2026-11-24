@@ -1,0 +1,6 @@
+---
+const { value } = Astro.props;
+const paragraphs = typeof value === 'string' ? value.split(/\n\s*\n/).filter(Boolean) : Array.isArray(value) ? value : [];
+---
+
+{paragraphs.map((paragraph) => <p>{paragraph}</p>)}

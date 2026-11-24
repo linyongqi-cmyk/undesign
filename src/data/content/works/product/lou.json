@@ -1,0 +1,316 @@
+{
+  "slug": "lou",
+  "title": "樓",
+  "type": "Lighting",
+  "image": "images/works/product/img-8029-post.webp",
+  "description": "",
+  "category": "product",
+  "order": 0,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "深センは、中国で最も人口密度の高い都市の一つであり、中心部には多くの高層ビルがたたずんでいる。ある日の夕食後の散歩で、夜9時近くのことだった。ふと見上げると、星のようにぽつりぽつりと灯りが散らばる一棟のビルがあった。ビルの窓には明かりが灯り、外からも室内の光が見える。窓の光は明るくなったり暗くなったり、ときに消えることもある。それはまるで人生のようだ。この光の中には仕事、生活、希望があり、生活のために努力する人に温もりを与える。",
+        "構造的には、光源と空間の間に距離・面積・深さなどの要素差を設けることで、格子状に並んだ光の一つ一つに微妙な明るさの違いを生み出している。これは単なる光量の調整ではなく、「誰かの暮らしの一瞬」を映し出すような、窓の内側への想像力を誘発するためのデザインである。",
+        "都市の夜景の中に、ぽつりと灯る窓の光。その一つひとつに、小さな会話、仕事の手元、食卓のにぎわい、あるいは静かな孤独があるかもしれない。均質な構造の中にある「不均質な人間性」を、光の濃淡でそっと可視化しようとしたのが本作品の構造的仕組みである。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "260*260*1250mm"
+        },
+        {
+          "label": "material",
+          "value": "aluminum, plastic spheres"
+        },
+        {
+          "label": "date",
+          "value": "2023.06"
+        }
+      ]
+    },
+    {
+      "kind": "internalLink",
+      "text": "記号学に関する分析はこちらです。「樓-記号の分析と応用」（2025.04）",
+      "category": "research",
+      "workSlug": "2504-lou"
+    }
+  ],
+  "imageScale": 1,
+  "imagePosition": "50.00% 50.00%",
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [
+    {
+      "src": "images/works/product/img-8291-post.webp",
+      "alt": "",
+      "caption": "",
+      "cropAspect": 1.5,
+      "cropScale": 1,
+      "cropPosition": "50.00% 50.00%"
+    }
+  ],
+  "dimensions": "",
+  "material": "",
+  "leftSections": [
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "imageCarousel",
+              "images": [
+                {
+                  "src": "images/works/product/img-8108-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 0.6666666666666666,
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/img-8331-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 0.6666666666666666,
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/img-8199-post-2.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 0.6666666666666666,
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                }
+              ],
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-8029-post-2.webp",
+                "alt": "",
+                "caption": "",
+                "cropAspect": 0.6666666666666666,
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-7160-post.webp",
+        "alt": "",
+        "caption": "",
+        "cropAspect": 1.5,
+        "cropScale": 1,
+        "cropPosition": "50.00% 50.00%"
+      }
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "imageCarousel",
+              "images": [
+                {
+                  "src": "images/works/product/img-8854-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 0.6666666666666666,
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/img-8847-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 0.6666666666666666,
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/img-8852-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 0.6666666666666666,
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                }
+              ],
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-8006-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropAspect": 0.6666666666666666,
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-7262-post-2.webp",
+        "alt": "",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-8669-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-8454-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/img-7161-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-7159-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-8912-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-2358-post-1.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/04-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/05-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/13-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        }
+      ],
+      "mobile": {
+        "layout": "scroll"
+      }
+    }
+  ],
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false
+}

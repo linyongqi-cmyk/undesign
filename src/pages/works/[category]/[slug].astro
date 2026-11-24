@@ -1,0 +1,164 @@
+---
+import { imageHoverAttributes } from '../../../lib/content/image-hover.js';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { getCategories, getSiteSettings } from '../../../lib/content';
+import { imageSrc } from '../../../lib/content/images';
+import ContentBlock from '../../../components/content/ContentBlock.astro';
+import MediaCaption from '../../../components/content/MediaCaption.astro';
+import ImageLinkLabel from '../../../components/content/ImageLinkLabel.astro';
+import { workBodySections } from '../../../lib/content/work-body-sections.js';
+import { thumbnailMetadata } from '../../../lib/content/thumbnail-metadata.ts';
+import { distributePhotographyGallery } from '../../../lib/content/photography-gallery-layout.js';
+import { photographyLightboxStyle } from '../../../lib/content/media-caption-style.js';
+import { photographyGallery2Sections } from '../../../lib/content/photography-gallery2.js';
+import type { Category, ContentBlock as ContentBlockData, ContentImage, Template, Work } from '../../../lib/content/types';
+export const prerender = true;
+
+export async function getStaticPaths(): Promise<Array<{ params: { category: string; slug: string }; props: { category: Category; work: Work } }>> {
+  return getCategories().filter((category) => category.kind !== 'research').flatMap((category) => category.works.map((work) => ({
+    params: { category: category.slug, slug: work.slug },
+    props: { category, work },
+  })));
+}
+
+const { category, work } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const siteSettings = getSiteSettings();
+const { imageCarouselSeconds: rotationSeconds = 3, typography = {} } = siteSettings;
+const photographyLightboxEnabled = work.photographyLightboxEnabled === true;
+const photographyDescriptionStyle = JSON.stringify(photographyLightboxStyle(typography));
+const templates: Template[] = ['splitDetail', 'articleReading', 'photographyGallery', 'photographyGallery2'];
+const template: Template = work.template && templates.includes(work.template) ? work.template : 'articleReading';
+const gallerySource = work.gallery || [];
+const gallery: ContentImage[] = gallerySource.map((image: string | ContentImage) => typeof image === 'string' ? { src: image } : image);
+const isSplitDetail = template === 'splitDetail';
+const allBodySections = workBodySections(work);
+const bodySections = template === 'photographyGallery2'
+  ? workBodySections({ ...work, sections: [...(work.leftSections || []), ...(work.sections || [])] })
+  : allBodySections;
+const photoGallery = gallery;
+const photographyGallery2Source: ContentBlockData[] = photographyGallery2Sections(work);
+type PhotographyGallery2Item = { block: ContentBlockData; index: number; image?: ContentImage; aspect?: number };
+const photographyGallery2Items: PhotographyGallery2Item[] = await Promise.all(photographyGallery2Source.map(async (block, index) => {
+  if (block?.kind !== 'imageWithCaption' || !block.image?.src) return { block, index };
+  const { width, height } = await thumbnailMetadata(block.image.src);
+  const aspect = Number(block.image.cropAspect) || (width / height) || 1;
+  return { block, index, image: block.image, aspect };
+}));
+const photographyGalleryItems = await Promise.all(photoGallery.map(async (image, index) => {
+  const { width, height } = await thumbnailMetadata(image.src);
+  const aspect = Number(image.cropAspect) || (width / height) || 1;
+  return { image, index, aspect };
+}));
+const photographyGalleryColumns = distributePhotographyGallery(photographyGalleryItems);
+const cropFrameStyle = (image: ContentImage) => image.cropAspect ? `aspect-ratio:${image.cropAspect} / 1;overflow:hidden` : undefined;
+const cropImageStyle = (image: ContentImage) => `object-position:${image.cropPosition || 'center'};transform:scale(${image.cropScale || 1});${image.cropAspect ? 'height:100%;max-height:none;object-fit:cover' : ''}`;
+---
+
+<SiteLayout active={category.slug} title={work.seoTitle || work.title} description={work.seoDescription || work.description}>
+  <article id="page-top" class:list={["detail-page", `template-${template}`]}>
+  {isSplitDetail ? (
+      <div class="split-detail-layout">
+        <div class="split-detail-gallery">
+          {gallery.map((image, index) => <MediaCaption source={image}><figure class="split-detail-image" {...imageHoverAttributes(image)} style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} /><ImageLinkLabel image={image} /></figure></MediaCaption>)}
+          {work.leftSections?.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}
+        </div>
+        <aside class="split-detail-info">
+          <header class="detail-heading">
+            <h1>{work.title}</h1>
+          </header>
+          <div class="split-detail-sections">{bodySections.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}</div>
+        </aside>
+      </div>
+    ) : template === 'articleReading' ? <>
+    <header class="detail-heading">
+      <h1>{work.title}</h1>
+    </header>
+    {gallery.map((image, index) => <MediaCaption source={image}><figure class="article-detail-image" {...imageHoverAttributes(image)} style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} /><ImageLinkLabel image={image} /></figure></MediaCaption>)}
+    {bodySections.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}
+    </> : template === 'photographyGallery' ? <>
+    <section class="photography-intro-layout" style={`--photography-intro-width:${Math.min(100, Math.max(10, Number(work.photographyIntroWidth) || 45))}vw`}>
+      <header class="detail-heading photography-heading"><h1>{work.title}</h1></header>
+      <div class="photography-intro">{bodySections.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}</div>
+    </section>
+    {photoGallery.length > 0 && <div class="photography-gallery" data-photography-gallery data-photography-description-style={photographyDescriptionStyle}><div class="photography-gallery-columns">{photographyGalleryColumns.map((column) => <div data-photography-gallery-column>{column.map(({ image, index, aspect }) => <div data-photography-gallery-item data-photography-image-id={`gallery-${index}`} data-gallery-order={index} data-gallery-aspect={aspect} data-photo-crop-aspect={image.cropAspect || ''} data-photo-crop-scale={image.cropScale || 1} data-photo-crop-position={image.cropPosition || 'center'} style={`--gallery-order:${index}`}><MediaCaption source={image}><figure class="photography-detail-image" style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} />{photographyLightboxEnabled && <button type="button" class="photography-lightbox-trigger" data-photography-lightbox-trigger aria-label={`放大查看摄影图 ${index + 1}`} title="放大查看图片"></button>}<span hidden data-photography-description>{image.photographyDescription || ''}</span><ImageLinkLabel image={image} /></figure></MediaCaption></div>)}</div>)}</div></div>}
+    </> : template === 'photographyGallery2' ? <div class="photography-gallery2-layout">
+      <section class="photography-gallery2-text"><header class="detail-heading"><h1>{work.title}</h1></header>{bodySections.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}</section>
+      {photographyGallery2Source.length > 0 && <div class="photography-gallery photography-gallery2-media" data-photography-gallery data-photography-description-style={photographyDescriptionStyle}>
+        <div class="photography-gallery2-items">{photographyGallery2Items.map(({ block, index, image, aspect }) => block.kind === 'imageWithCaption'
+          ? (image?.src ? <div class="photography-gallery2-item" data-photography-gallery-item data-photography-image-id={`gallery-${index}`} data-gallery-order={index} data-gallery-aspect={aspect} data-photo-crop-aspect={image.cropAspect || ''} data-photo-crop-scale={image.cropScale || 1} data-photo-crop-position={image.cropPosition || 'center'} style={`--photo2-aspect:${aspect};--gallery-order:${index}`}>
+            <MediaCaption source={image}><figure class="photography-detail-image photography-gallery2-image" style={`--photo2-aspect:${aspect};${cropFrameStyle(image) || ''}`}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} />{photographyLightboxEnabled && <button type="button" class="photography-lightbox-trigger" data-photography-lightbox-trigger aria-label={`放大查看摄影图 ${index + 1}`} title="放大查看图片"></button>}<span hidden data-photography-description>{image.photographyDescription || ''}</span><ImageLinkLabel image={image} /></figure></MediaCaption>
+          </div> : null)
+          : <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}</div>
+      </div>}
+    </div> : <>
+    </>}
+  </article>
+  <script>
+    import { openPhotographyLightbox } from '../../../lib/content/photography-lightbox.js';
+
+    function bindPhotographyLightbox() {
+      const gallery = document.querySelector<HTMLElement>('.template-photographyGallery .photography-gallery[data-photography-gallery], .template-photographyGallery2 .photography-gallery[data-photography-gallery]');
+      if (!gallery || gallery.dataset.lightboxBound === 'true') return;
+      gallery.dataset.lightboxBound = 'true';
+      let descriptionStyle = {};
+      try { descriptionStyle = JSON.parse(gallery.dataset.photographyDescriptionStyle || '{}'); } catch {}
+      gallery.addEventListener('click', (event) => {
+        const trigger = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-photography-lightbox-trigger]') : null;
+        if (!trigger || !gallery.contains(trigger)) return;
+        event.preventDefault();
+      const items = [...gallery.querySelectorAll<HTMLElement>('[data-photography-image-id]')].map((element) => {
+        const image = element.querySelector<HTMLImageElement>('figure.photography-detail-image img');
+          if (!image) return null;
+          return {
+            id: element.dataset.photographyImageId,
+            src: image.currentSrc || image.src,
+            alt: image.alt,
+            aspect: Number(element.dataset.galleryAspect) || 1,
+            cropAspect: Number(element.dataset.photoCropAspect) || undefined,
+            cropScale: Number(element.dataset.photoCropScale) || 1,
+            cropPosition: element.dataset.photoCropPosition || 'center',
+            photographyDescription: element.querySelector('[data-photography-description]')?.textContent || '',
+            element,
+          };
+      }).filter((item): item is NonNullable<typeof item> => item !== null);
+      const item = trigger.closest<HTMLElement>('[data-photography-image-id]');
+        openPhotographyLightbox({
+          items,
+          startId: item?.dataset.photographyImageId,
+          baseUrl: import.meta.env.BASE_URL,
+          descriptionStyle,
+          returnFocus: trigger,
+          frameSelector: 'figure.photography-detail-image',
+        });
+      });
+    }
+
+    bindPhotographyLightbox();
+    document.addEventListener('astro:page-load', bindPhotographyLightbox);
+  </script>
+  <button class="back-to-top" type="button" aria-label="回到顶部" title="回到顶部" hidden>
+    <span class="back-to-top-icon" aria-hidden="true"></span>
+  </button>
+  <script>
+    const revealAfter = 300;
+    let backToTop: HTMLButtonElement | null;
+
+    function updateBackToTop() {
+      if (backToTop) backToTop.hidden = window.scrollY < revealAfter;
+    }
+
+    function bindBackToTop() {
+      backToTop = document.querySelector<HTMLButtonElement>('.back-to-top');
+      updateBackToTop();
+    }
+
+    bindBackToTop();
+    document.addEventListener('astro:page-load', bindBackToTop);
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    document.addEventListener('click', (event) => {
+      if (!(event.target instanceof Element) || !event.target.closest('.back-to-top')) return;
+      window.scrollTo({ top: 0 });
+    });
+  </script>
+</SiteLayout>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Portfolio Manager · LIN YONGQI</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/admin/assets/styles.css" />
+    <script type="module" src="/scripts/local-admin/app.js"></script>
+  </head>
+  <body class="admin-body">
+    <div class="admin-shell">
+      <header class="admin-topbar">
+        <div class="admin-heading-group">
+
+          <div class="admin-heading">
+          <h1>Portfolio Manager</h1>
+        </div>
+        </div>
+        <div class="admin-actions">
+          <div id="canvas-toolbar"></div>
+          <button id="undo-button" class="button admin-icon-button" type="button" aria-label="撤回" aria-keyshortcuts="Control+Z Meta+Z" title="撤回（⌘Z / Ctrl+Z）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5-5 5 5 5M4 10h10a6 6 0 0 1 0 12"/></svg></button>
+          <button id="redo-button" class="button admin-icon-button" type="button" aria-label="重做" aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" title="重做（⌘⇧Z / Ctrl+Shift+Z）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 5 5-5 5m5-5H10a6 6 0 0 0 0 12"/></svg></button>
+          <button id="save-button" aria-label="保存到本机" aria-keyshortcuts="Control+S Meta+S" title="保存到本机（Ctrl+S / ⌘S）" class="button button-dark admin-icon-button" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h13l3 3v13H4zM8 4v6h8V4M8 20v-6h8v6"/></svg></button>
+        </div>
+      </header>
+
+      <div class="admin-layout">
+        <div class="admin-navigation-rail">
+        <aside id="admin-navigation" class="admin-navigation">
+          <nav id="main-navigation" class="admin-nav-list" aria-label="内容类型"></nav>
+          <div id="work-navigation" hidden></div>
+        </aside>
+        </div>
+
+        <main class="admin-editor">
+          <div id="editor-canvas" class="admin-canvas" aria-live="polite"><p class="loading-state">正在读取本地内容…</p></div>
+        </main>
+        <aside id="admin-tools" tabindex="0" aria-label="编辑工具"></aside>
+      </div>
+    </div>
+
+    <dialog id="create-dialog" class="create-dialog" aria-labelledby="dialog-eyebrow">
+      <form id="create-form" method="dialog">
+        <p id="dialog-eyebrow" class="admin-label">新增内容</p>
+        <label id="create-category-row" class="field" hidden>
+          <span>分类</span>
+          <select id="create-category"></select>
+        </label>
+        <label class="field"><span id="create-title-label">名称</span><input id="create-title" required /></label>
+        <label class="field"><span>网址标识（英文小写与连字符）</span><input id="create-slug" aria-describedby="create-slug-error" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
+        <p id="create-slug-error" class="create-error" role="alert"></p>
+        <div class="dialog-actions"><button id="create-cancel" class="button button-quiet" type="button">取消</button><button id="create-confirm" class="button button-dark" value="default">创建</button></div>
+      </form>
+    </dialog>
+    <dialog id="work-delete-dialog" class="create-dialog" aria-labelledby="work-delete-title" aria-describedby="work-delete-message">
+      <h2 id="work-delete-title">移到回收站</h2>
+      <p id="work-delete-message"></p>
+      <p id="work-delete-error" class="create-error" role="alert"></p>
+      <div class="dialog-actions">
+        <button id="work-delete-cancel" class="button button-quiet" type="button" autofocus>取消</button>
+        <button id="work-delete-confirm" class="button button-dark" type="button">移到回收站</button>
+      </div>
+    </dialog>
+    <dialog id="work-trash-dialog" class="create-dialog" aria-labelledby="work-trash-title">
+      <h2 id="work-trash-title">回收站</h2>
+      <div id="work-trash-list"></div>
+      <p id="work-trash-error" class="create-error" role="alert"></p>
+      <div class="dialog-actions"><button id="work-trash-close" class="button" type="button" autofocus>关闭</button></div>
+    </dialog>
+  </body>
+</html>

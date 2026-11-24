@@ -1,0 +1,41 @@
+{
+  "slug": "2504-lou",
+  "title": "#.2504　樓-記号の分析と応用",
+  "type": "Research",
+  "category": "research",
+  "order": 5,
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "セミオーシス（記号過程）は意味が生成される動的なプロセスである。\n一つの記号が、その対象との関係を通じて、解釈者の心の中に新たな記号・解釈項を生み出す。\nそして、この「解釈項」自体が次の記号表現となり、\nさらなる解釈項を生み出すという、無限の連鎖反応のこと。",
+        "記号の三分類は記号とその対象との関係性に基づく三つの分類法。\nIconは記号がその対象と「類似」している関係。\nIndexは記号がその対象と物理的に「因果関係」にある関係。\nSymbolは記号とその対象との関係が「慣習・約束事」によって成立している関係。"
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/s-3134x3115-v-frms-webp-24bb14de-ed22-49b5-a6ec-b641c9f40e7e-regular.webp",
+        "alt": "",
+        "caption": ""
+      },
+      "displayWidth": 75,
+      "mobile": {
+        "displayWidth": 100
+      }
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "image": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "template": "articleReading",
+  "seoTitle": "",
+  "seoDescription": "",
+  "articleLanguage": "ja",
+  "gallery": [],
+  "photographyLightboxEnabled": false
+}

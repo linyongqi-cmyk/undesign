@@ -1,0 +1,251 @@
+{
+  "slug": "ialu-plantcolumn",
+  "title": "IAlu PlantColumn",
+  "type": "Storage",
+  "image": "images/works/product/dsc-1394-post.webp",
+  "category": "product",
+  "order": 7,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "私たちの周りにある都市建築は、多くの場合その構造をファサードという「皮膚」の内側に隠している。しかし、その皮膚を剥がし、内部の骨格を露出させると、そこには機能と力が織りなす純粋な美が現れる。さらにその骨格自体が建築の主体となるとき、構造は都市の記憶を刻む象徴へと昇華されるのである。ですから、私は都市の骨格を日常のスケールに縮小し、感じられるモノを生活に溶け込みたい。",
+        "このプランタースタンドは、3Dプリント技術を活用したカスタムトレーを本体の任意の位置に固定できる。底部の円盤とボールローラーにより傾斜状態を保持でき、揺れのある環境でも平衡を保つ。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "400*400*1520mm"
+        },
+        {
+          "label": "weight",
+          "value": "2.8 kg"
+        },
+        {
+          "label": "aluminum frame type",
+          "value": "2020V"
+        },
+        {
+          "label": "other materials",
+          "value": "steel sheet, glass, photopolymer resin"
+        },
+        {
+          "label": "date",
+          "value": "2024.02"
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/1d99762c9e05d8bec0bd3454bd9a7a6f.webp",
+        "alt": "",
+        "caption": "都市の骨格：都市をつなげる電波塔\n水平材や斜材を組み合わせて垂直に構築された構造物で、遠くまで広い範囲に電波を届ける目的で非常に高く建てられており、様々な種類のアンテナや関連機器が、塔のあらゆる方向や位置に設置されている。",
+        "linkLabel": {
+          "text": "Pinterest.com, Source unknown",
+          "href": "https://www.pinterest.com/pin/25684660369801499/",
+          "newTab": true
+        }
+      },
+      "displayWidth": 65,
+      "mobile": {
+        "hidden": true
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "note",
+          "text": [
+            "同じシリーズの作品はこちらです。"
+          ]
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu BarChair",
+          "category": "product",
+          "workSlug": "ialu-barchair"
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu Trolley",
+          "category": "product",
+          "workSlug": "ialu-trolley"
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu SpongeLamp",
+          "category": "product",
+          "workSlug": "ialu-spongelamp"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "44.09% 50.00%",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1419-post-1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-8965-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/image.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-8991-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/dsc-1398-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-1425-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-1390-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-1375-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1435-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-9004-post-1.webp",
+        "alt": "",
+        "caption": ""
+      },
+      "mobile": {
+        "hidden": true
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1587-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1589-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "mobile": {
+        "layout": "keep"
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/dsc-1393-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-1394-post-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-0788-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    }
+  ]
+}

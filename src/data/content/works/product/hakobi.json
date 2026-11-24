@@ -1,0 +1,410 @@
+{
+  "slug": "hakobi",
+  "title": "Hakobi",
+  "type": "Series",
+  "image": "images/works/product/img-8882-post.webp",
+  "category": "product",
+  "order": 1,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "グローバル化の影響による現代の都市生活では、多くの人が根無し草のように移動を繰り返している。その移動のたびに、私たちは、大切にしてきた何かを手放すという代償を払わなければならない。そうして愛着のあるモノを失う経験は、少しずつ心の中に埋めがたい空洞をつくり上げていくのです。",
+        "この作品は「環境が変わっても、スーツケースのように持ち運べる居場所をデザインし、心のつながりを保つ手段を探したい」という発想から生まれた家具シリーズです。都市で暮らす中で、引っ越しや移動によって変わり続ける生活環境の中でも、なじみのある空間を持ち運び、心のつながりを保つことを目的としている。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "\n　floor chair:400*430*250mm\n　low table: 400*700*335mm\n　floor lamp: 285*160*1200mm\n　packed: 440*160*780mm"
+        },
+        {
+          "label": "material",
+          "value": "marine plywood"
+        },
+        {
+          "label": "date",
+          "value": "2024.08"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "50.00% 33.09%",
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/img-8999-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-8961-post-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-9046-post-1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-9401-post.webp",
+        "alt": "",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-9148-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            },
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-9180-post-4.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-9200-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            },
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/img-9150-post-2.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        }
+      ],
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-9450-post.webp",
+        "alt": "",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center"
+      }
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "imageCarousel",
+              "images": [
+                {
+                  "src": "images/works/product/img-9237-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/img-9460-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                }
+              ],
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "content",
+              "block": {
+                "kind": "paragraph",
+                "text": [
+                  "各パーツのサイズは700×400mm以内に収め、組み立て後は電車や新幹線の手荷物規定、縦・横・高さの合計が250cm以内に適合する。重量は約7.5kgで、運べない時でも片手や両手で持ち運べる。",
+                  "移動とともに、家具の表情も変わり続けていく。UV塗装が施された化粧合板の表面は、シールを簡単に貼ったり剥がしたりすることができる。引っ越しの際に使われた飛行機の荷物タグや宅配便の伝票などを貼り付けて、まるで引っ越しの痕跡や生活の記憶をそのまま残すようにする。こうして、自分だけのスーツケースのような自分だけの家具を創り出す。"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "overflowRight": true,
+      "overflowSettings": {
+        "textWidth": 100
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/dsc-2455-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-2448-post-1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-2249-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-2311-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-2387-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-2415-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "imageCarousel",
+              "images": [
+                {
+                  "src": "images/works/product/dsc-2289-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/img-8876-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/dsc-2279-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                }
+              ],
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/dsc-2267-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "content",
+              "block": {
+                "kind": "paragraph",
+                "text": [
+                  "標準サイズ（1220*2440mm）の合板のちょうど半枚分を、無駄なく使用する設計で、材料効率を最大化した。"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "overflowRight": true,
+      "overflowSettings": {
+        "align": "bottom",
+        "gap": "default",
+        "textWidth": "auto"
+      }
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "content",
+              "block": {
+                "kind": "localVideo",
+                "src": "videos/works/product/img-4729.mp4",
+                "caption": ""
+              }
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "kind": "image",
+              "image": {
+                "src": "images/works/product/cad-png-2.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        }
+      ],
+      "overflowRight": true,
+      "overflowSettings": {
+        "textWidth": 100
+      }
+    },
+    {
+      "kind": "mediaComposition",
+      "columns": [
+        {
+          "items": [
+            {
+              "kind": "imageCarousel",
+              "images": [
+                {
+                  "src": "images/works/product/f8962a54669ddce843a61bacfa8876f.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 1.625732986204044,
+                  "cropScale": 1,
+                  "cropPosition": "50.00% 38.24%"
+                },
+                {
+                  "src": "images/works/product/img-4724-post-1.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 1.625732986204044,
+                  "cropScale": 1,
+                  "cropPosition": "50.00% 100.00%"
+                },
+                {
+                  "src": "images/works/product/d6ae3b77a605921e06e8310801aecb2.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 1.625732986204044,
+                  "cropScale": 1,
+                  "cropPosition": "center"
+                },
+                {
+                  "src": "images/works/product/img-4773-post.webp",
+                  "alt": "",
+                  "caption": "",
+                  "cropAspect": 1.625732986204044,
+                  "cropScale": 1,
+                  "cropPosition": "50.00% 100.00%"
+                }
+              ],
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false
+}

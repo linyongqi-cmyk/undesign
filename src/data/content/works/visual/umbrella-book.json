@@ -1,0 +1,20 @@
+{
+  "slug": "umbrella-book",
+  "title": "忘れられた傘_v1.0",
+  "type": "book (observation archive)",
+  "image": "images/works/visual/dsc-0108-post.webp",
+  "category": "visual",
+  "order": 3,
+  "template": "splitDetail",
+  "sections": [],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": []
+}

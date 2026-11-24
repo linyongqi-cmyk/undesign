@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+import { ClientRouter, fade } from 'astro:transitions';
+import SiteNavigation from '../components/SiteNavigation.astro';
+import { getCategories, getSiteSettings } from '../lib/content';
+import type { Category, SiteSettings } from '../lib/content/types';
+
+interface Props {
+  title?: string;
+  active?: string;
+  description?: string;
+  navCategories?: Category[];
+  siteSettings?: SiteSettings;
+  preview?: boolean;
+}
+
+const { title = 'LIN YONGQI', active = 'home', description, navCategories, siteSettings: providedSiteSettings, preview = false } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const routeBase = preview ? `${base}preview/` : base;
+const sections = navCategories ?? getCategories();
+const siteSettings = providedSiteSettings ?? getSiteSettings();
+const canonical = Astro.site && !preview ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const websiteSchema = active === 'home' && canonical ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Lin Yongqi',
+  alternateName: ['LINYONGQI', 'linyongqi', 'lin yongqi', 'Lin Yongqi', '林永祺'],
+  url: canonical.href,
+} : undefined;
+const personSchema = canonical ? {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Lin Yongqi',
+  alternateName: ['LINYONGQI', 'linyongqi', 'lin yongqi', '林永祺'],
+  url: canonical.origin,
+  jobTitle: 'Product and visual designer',
+} : undefined;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {siteSettings.favicon && (
+      <link rel="icon" href={base + siteSettings.favicon.replace(/^\/+/, '')} data-adaptive-favicon={siteSettings.adaptiveFavicon === false ? undefined : ''} />
+    )}
+    {canonical && <link rel="canonical" href={canonical.href} />}
+    {websiteSchema && <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />}
+    {personSchema && <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />}
+    <meta name="theme-color" content="#fbfbfa" />
+    <meta name="description" content={description ?? siteSettings.description ?? 'Portfolio of Lin Yongqi — product, furniture, research and visual design.'} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet" />
+    <ClientRouter />
+    {preview && <meta name="robots" content="noindex, nofollow, noarchive" />}
+    <title>{title} — {siteSettings.siteTitle || 'LIN YONGQI'}</title>
+  </head>
+  <body class:list={{ 'home-layout': active === 'home' }}>
+    <header class="mobile-topbar">
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="mobile-topbar-brand" href={routeBase} aria-label="Home">
+        <img src={`${base}images/brand/logo.svg`} alt={siteSettings.siteTitle || 'LIN YONGQI'} />
+      </a>
+    </header>
+    <SiteNavigation active={active} sections={sections} base={base} routeBase={routeBase} showAdminEntry={import.meta.env.DEV && !preview} />
+    <main class="site-main" transition:animate={fade({ duration: '350ms' })}><slot /></main>
+    <script>
+      import { bindImageHover } from '../lib/content/image-hover-preview.js';
+      bindImageHover();
+      import { observeWorkMasonry } from '../lib/content/work-masonry.js';
+      let stopMasonry = () => {};
+      const setupMasonry = () => { stopMasonry(); stopMasonry = observeWorkMasonry(); };
+      setupMasonry();
+      document.addEventListener('astro:page-load', setupMasonry);
+      document.addEventListener('astro:before-swap', () => stopMasonry());
+      import '../scripts/navigation';
+      import '../scripts/adaptive-favicon';
+      import '../scripts/research-articles';
+    </script>
+    <slot name="scripts" />
+  </body>
+</html>
+
+<script>
+  // Content saves refresh public previews without resetting the open manager's history.
+  if (import.meta.hot) {
+    import.meta.hot.on('portfolio:content-update', ({ paths }: { paths: string[] }) => {
+      const current = location.pathname.replace(/\/index\.html$/, '/').replace(/\/?$/, '/');
+      if (paths.some((path) => path.replace(/\/index\.html$/, '/') === current)) location.reload();
+    });
+  }
+</script>

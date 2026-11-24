@@ -1,0 +1,107 @@
+---
+import { videoEmbedSource as safeVideoSource } from "../../lib/content/video-embed.js";
+import { imageHoverAttributes } from '../../lib/content/image-hover.js';
+import ContentBlock from './ContentBlock.astro';
+import { imageSrc } from '../../lib/content/images';
+import SourceCard from './SourceCard.astro';
+import MediaCaption from './MediaCaption.astro';
+import ImageLinkLabel from './ImageLinkLabel.astro';
+import { sourceCardAspect } from '../../lib/content/free-media.js';
+import { mediaCaption } from '../../lib/content/media-caption.js';
+import { imageCropMobileAttrs, normalizeMobileOverride } from '../../lib/content/mobile-override.js';
+import type { FreeSizeGroup, FreeSizeItem, MobileOverride } from '../../lib/content/types';
+
+interface Props {
+  block: FreeSizeGroup;
+  mobile?: MobileOverride;
+  articleLanguage?: 'ja' | 'zh';
+  research?: boolean;
+  rotationSeconds?: number;
+}
+
+const { block, mobile, articleLanguage, research, rotationSeconds = 6 } = Astro.props;
+const mobileLayout = normalizeMobileOverride(mobile)?.layout;
+const items = (block.items || []).filter((item): item is FreeSizeItem => item && ['image', 'imageCarousel', 'localVideo', 'videoEmbed', 'sourceCard', 'component'].includes(item.kind));
+const ratioFor = (item: FreeSizeItem) => item.kind === 'sourceCard' ? sourceCardAspect
+  : item.kind === 'videoEmbed' || item.kind === 'localVideo' ? 16 / 9
+  : item.kind === 'image' ? Number(item.image?.cropAspect) || 1.5
+  : (item.kind === 'imageCarousel' ? item.images : []).find((image) => image?.src)?.cropAspect || 1.5;
+const captionSourceFor = (item: FreeSizeItem) => item.kind === 'image' ? item.image : item;
+
+---
+
+{items.length > 0 && <div class:list={["free-size-media-group", { "is-research-mode": block.mode === 'research' }]} data-free-size-group data-mobile-layout={mobileLayout} data-free-size-wide={block.overflowRight ? '' : undefined} data-group-mode={block.mode === 'research' ? 'research' : 'work'} style={`--free-group-height:${Math.max(40, Number(block.height) || 320)}px`}>
+  <div class="free-size-media-track">
+    {items.map((item, index) => {
+      const ratio = ratioFor(item);
+      const frameStyle = `--free-item-ratio:${ratio}`;
+      const carouselImages = item.kind === 'imageCarousel' ? (item.images || []).filter((image) => image?.src) : [];
+      const captionSource = captionSourceFor(item);
+      const itemHidden = item.mobile?.hidden === true;
+      const imageMobile = item.kind === 'image' && item.image ? imageCropMobileAttrs(item.image) : { attrs: {}, styleFragment: '' };
+      return <div class:list={["free-size-media-item", { "has-component": item.kind === 'component' }]} data-free-size-item data-item-ratio={ratio} data-item-id={item.id} data-item-kind={item.kind} data-mobile-hidden={itemHidden ? '' : undefined} data-has-caption={mediaCaption(captionSource) ? '' : undefined} style={frameStyle}>
+        {item.kind === 'component' && <ContentBlock block={item.block} articleLanguage={articleLanguage} research={research} rotationSeconds={rotationSeconds} />}
+        {item.kind === 'image' && item.image?.src && <MediaCaption articleLanguage={articleLanguage} source={item.image}><figure class="free-size-media-frame" {...imageHoverAttributes(item.image)} {...imageMobile.attrs} style={imageMobile.styleFragment || undefined}><img src={imageSrc(item.image.src)} alt={item.image.alt || ''} loading={index === 0 ? 'eager' : 'lazy'} data-natural-ratio={!item.image.cropAspect ? '' : undefined} style={item.image.cropAspect ? `object-fit:cover;object-position:${item.image.cropPosition || 'center'};transform:scale(${item.image.cropScale || 1})` : ''} /><ImageLinkLabel image={item.image} /></figure></MediaCaption>}
+        {item.kind === 'imageCarousel' && carouselImages.length > 0 && <MediaCaption articleLanguage={articleLanguage} source={item}><section class="free-size-media-carousel detail-image-carousel" data-image-carousel data-rotation-seconds={rotationSeconds} aria-label={`组内图片轮播 ${index + 1}`}>
+          <div class="detail-image-carousel-slides">{carouselImages.map((image, slideIndex) => <figure class:list={["detail-image-carousel-slide", { "is-active": slideIndex === 0 }]} aria-hidden={slideIndex === 0 ? 'false' : 'true'}><img src={imageSrc(image.src)} alt={image.alt || `作品图片 ${slideIndex + 1}`} loading={slideIndex === 0 ? 'eager' : 'lazy'} data-natural-ratio={slideIndex === 0 && !image.cropAspect ? '' : undefined} style={`object-fit:${slideIndex === 0 && image.cropAspect ? 'cover' : 'contain'};object-position:${image.cropPosition || 'center'};${slideIndex === 0 && image.cropScale ? `transform:scale(${image.cropScale})` : ''}`} /></figure>)}</div>
+          {carouselImages.length > 1 && <div class="detail-image-carousel-controls"><button type="button" data-carousel-previous aria-label="上一张图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7" /></svg></button><button type="button" data-carousel-next aria-label="下一张图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5 7 7-7 7" /></svg></button></div>}
+        </section></MediaCaption>}
+        {item.kind === 'localVideo' && item.src && <MediaCaption articleLanguage={articleLanguage} source={item}><video class="free-size-video" controls preload="metadata" src={imageSrc(item.src)} data-free-video /></MediaCaption>}
+        {item.kind === 'videoEmbed' && safeVideoSource(item.url) && <MediaCaption articleLanguage={articleLanguage} source={item}><iframe class="free-size-video" src={safeVideoSource(item.url)} title={item.caption || '作品视频'} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen /></MediaCaption>}
+        {item.kind === 'sourceCard' && <MediaCaption articleLanguage={articleLanguage} source={item}><SourceCard {...item} className="free-size-source-card" /></MediaCaption>}
+      </div>;
+    })}
+  </div>
+</div>}
+
+<script>
+  import { itemRatio as layoutItemRatio } from "../../lib/content/layout-group.js";
+  import { alignMediaCaptionRows } from "../../lib/content/media-caption-layout.js";
+  const resizeGroup = (group: HTMLElement) => {
+    if (group.hasAttribute('data-free-size-wide')) {
+      const gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gutter')) || 0;
+      const available = document.documentElement.clientWidth - group.getBoundingClientRect().left - gutter;
+      group.style.setProperty('--free-size-wide-width', `${Math.max(0, available)}px`);
+    }
+    const items = [...group.querySelectorAll<HTMLElement>(':scope > .free-size-media-track > [data-free-size-item]')];
+    if (!items.length) return;
+    const research = group.dataset.groupMode === 'research';
+    const ratioOf = (item: HTMLElement) => {
+      if (item.dataset.itemKind === 'component') return layoutItemRatio(item);
+      const media = item.querySelector<HTMLImageElement | HTMLVideoElement>('[data-natural-ratio], video[data-free-video]');
+      if (media instanceof HTMLImageElement && media.naturalWidth && media.naturalHeight) return media.naturalWidth / media.naturalHeight;
+      if (media instanceof HTMLVideoElement && media.videoWidth && media.videoHeight) return media.videoWidth / media.videoHeight;
+      return Number(item.dataset.itemRatio) || 1.5;
+    };
+    const height = Math.max(40, parseFloat(getComputedStyle(group).getPropertyValue('--free-group-height')) || 320);
+    items.forEach((item) => {
+      const ratio = ratioOf(item);
+      // A caption sits outside the media viewport, so only the viewport keeps
+      // the reference height; the item grows by the caption's own height.
+      const hasCaption = item.hasAttribute('data-has-caption');
+      item.style.width = research ? `${height * ratio}px` : '';
+      item.style.height = research && !hasCaption && item.dataset.itemKind !== 'component' ? `${height}px` : '';
+      item.style.setProperty('--free-item-ratio', String(ratio));
+      if (hasCaption) item.style.setProperty('--free-item-media-height', `${height}px`);
+      const image = item.querySelector<HTMLImageElement>('.free-size-media-frame img');
+      if (image && !image.style.objectFit) image.style.objectFit = 'contain';
+    item.querySelectorAll<HTMLElement>('[data-natural-ratio]').forEach((media) => { if (media.closest('.detail-image-carousel')) media.style.objectFit = 'contain'; });
+    });
+    alignMediaCaptionRows(group);
+  };
+  const init = () => {
+  document.querySelectorAll<HTMLElement>('[data-free-size-group]').forEach((group) => {
+      resizeGroup(group);
+      const observer = new ResizeObserver(() => resizeGroup(group));
+      observer.observe(group);
+      if (group.hasAttribute('data-free-size-wide')) observer.observe(document.documentElement);
+    group.querySelectorAll<HTMLImageElement>('img').forEach((media) => media.addEventListener('load', () => {
+        resizeGroup(group);
+      }, { once: true }));
+    group.querySelectorAll<HTMLVideoElement>('video').forEach((video) => video.addEventListener('loadedmetadata', () => {
+        resizeGroup(group);
+      }, { once: true }));
+    });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true }); else init();
+</script>

@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "product",
+    "title": "Product",
+    "kind": "grid",
+    "order": 0
+  },
+  {
+    "slug": "research",
+    "title": "Research Log",
+    "kind": "research",
+    "order": 1
+  },
+  {
+    "slug": "visual",
+    "title": "Visual",
+    "kind": "masonry",
+    "order": 2
+  },
+  {
+    "slug": "photography",
+    "title": "Photography",
+    "kind": "masonry",
+    "order": 3
+  }
+]

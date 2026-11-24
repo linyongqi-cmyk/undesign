@@ -1,0 +1,39 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getSiteSettings } from '../lib/content';
+import { imageSrc } from '../lib/content/images';
+export const prerender = true;
+const base = import.meta.env.BASE_URL;
+const { homeCovers: covers, rotationSeconds, randomHomeCover } = getSiteSettings();
+---
+
+<SiteLayout active="home" title="Design Portfolio">
+  <section class="home-hero" aria-label="Lin Yongqi design portfolio" data-rotation-seconds={rotationSeconds} data-random-initial={randomHomeCover ? 'true' : 'false'}>
+    {covers.map((cover, index) => (
+      <img
+        class:list={{ 'is-visible': index === 0 }}
+        src={imageSrc(cover.src, base)}
+        alt={cover.alt}
+        aria-hidden={index === 0 ? undefined : 'true'}
+        style={`--cover-scale:${cover.scale};--cover-position:${cover.position};--cover-mobile-scale:${cover.mobileScale ?? cover.scale};--cover-mobile-position:${cover.mobilePosition ?? cover.position}`}
+        fetchpriority={index === 0 ? 'high' : undefined}
+        loading={index === 0 ? 'eager' : 'lazy'}
+      />
+    ))}
+    {covers.length > 1 && (
+      <div class="home-carousel-controls" role="group" aria-label="封面图片切换">
+        {covers.map((_, index) => (
+          <button
+            type="button"
+            data-home-cover-index={index}
+            aria-label={`第 ${index + 1} 张封面`}
+            aria-current={index === 0 ? 'true' : undefined}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+  <script>
+    import '../scripts/home-carousel';
+  </script>
+</SiteLayout>

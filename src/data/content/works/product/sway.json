@@ -1,0 +1,260 @@
+{
+  "slug": "sway",
+  "title": "SWAY",
+  "type": "Installation",
+  "image": "images/works/product/sway.webp",
+  "category": "product",
+  "order": 12,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "この作品は、風や雨がもたらす「揺れの中にある静けさ」を、工業的な素材を用いて再現する試み。風が木の葉を撫で、雨雫が枝を打つ。その自然が織りなす微かな震動に、言いようのない静けさを感じる。この小さな現象を取り出し、揺れの中にある静けさを再現する。木のフレームの中にアルミ片は、風雨に呼応して葉のように揺れ動き、微かな金属音を立てる。",
+        "一枚一枚のアルミ片が持つ強い光沢は、周囲の環境をその表面に映し込む。太陽の角度、雲の流れ、風の強弱。そうした自然の変化に呼応し、光を鋭く反射して閃光のように輝く瞬間もあれば、影の中に沈んで表情を潜める瞬間もある。それぞれが異なる角度で揺れ動くことで、インスタレーション全体が複雑で有機的な光のモザイクとなり、常に新しい表情を見せ続ける。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "900*660*120mm"
+        },
+        {
+          "label": "material",
+          "value": "hinoki cypress, aluminum"
+        },
+        {
+          "label": "date",
+          "value": "2025.08"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-2591-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-3047-post-1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/dsc-3011-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-3127-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-3135-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "用事を済ませたあと、\n友人と約束していた時間まで、まだ2時間ほどあった。\n特に行く当てもなく、気づけば近くの公園まで歩いてきていた。",
+            "そよ風が頬をやさしく撫でる。\n早くも枯れ落ちた葉を連れて、乾いたまま砂利の地面を擦り、\nときおり枝先へと潜り込んでは、葉をさわさわと鳴らす。\nそして木の隙間から差す陽の光を揺らし、\n揺らされた光は細かく砕けて地面へ落ち、\n木陰と一緒になって、ゆらゆらと揺れていた。",
+            "しばらくして、\n足元すれすれに一匹のトンボが飛び去った。\n「雨が降るのかもしれない。」\nそう思った矢先、豆粒ほどの雨がひとつ、額に落ちた。\n幸い晴れ間の雨はそれほど強くなく、\n慌てて木陰へ駆け込むころには、\n服に墨を落としたような点が、いくつか付いただけだった。\n雨粒が一つ、また一つと落ち、\n葉もそれにつられるように、一枚一枚が頷く。\nまばらに、静かに。",
+            "この午後の涼しさのせいだろうか。\n光に、風に、葉に、雨に包まれているうちに、\nいつの間にか、何年も前へ戻ってしまったような気がした。\n「喜び」も「悲しみ」も、\nまだ名前を持たなかった、あの頃へ。",
+            "西暦二〇二五年九月十六日　午後三時二十五分　記す。"
+          ],
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-3145-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-3101-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-2577-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-1028x1674-v-fms-webp-31444320-736f-4d01-bf2c-2343e4f590d7-middle.webp",
+            "alt": "",
+            "caption": ""
+          },
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ],
+      "sideMatchHeight": true
+    },
+    {
+      "kind": "localVideo",
+      "src": "videos/works/product/dsc-3268.mp4",
+      "caption": ""
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/dsc-3215-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-3264-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-3227-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-3104-post-2.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-3098-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-3024x4032-v-frms-webp-afb4d5cf-feda-4c88-8270-849aa8dafdb6-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-3024x4032-v-frms-webp-b0a0570a-3c70-465f-8417-64ea76798aec-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-3024x4032-v-frms-webp-3fb4b265-10ba-4333-860a-c5172db912f1-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-4284x5712-v-frms-webp-840fbc58-b0fa-41c0-836a-0905063213a0-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-3024x4032-v-frms-webp-2bd09e47-1cff-478c-a2ed-599e50193552-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "displayWidth": 150,
+      "mobile": {
+        "layout": "scroll"
+      }
+    }
+  ]
+}

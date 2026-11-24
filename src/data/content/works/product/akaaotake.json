@@ -1,0 +1,132 @@
+{
+  "slug": "akaaotake",
+  "title": "赤と青と竹",
+  "type": "Storage",
+  "image": "images/works/product/dsc-1107-post-2.webp",
+  "category": "product",
+  "order": 3,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "この洋服掛けは、直線と色彩の調和を追求するデ・ステイルの思想に基づき、直線と原色による純粋な秩序を竹という有機的な素材で具現化したものである。幾何学的な美しさと有機的な自然素材が共存するデザインを目指した。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "420*275*1650mm"
+        },
+        {
+          "label": "material",
+          "value": "laminated bamboo"
+        },
+        {
+          "label": "date",
+          "value": "2024.02"
+        }
+      ]
+    },
+    {
+      "kind": "note",
+      "text": [
+        "2023年第七回”龍韵杯”国際竹木プロダクトデザインコンテスト入選"
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "35.11% 50.00%",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1344-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1107-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1626-post-2.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1616-post-2.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1352-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/dsc-1637-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-1639-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-1227-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    }
+  ]
+}

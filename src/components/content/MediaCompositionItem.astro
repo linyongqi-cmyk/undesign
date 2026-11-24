@@ -1,0 +1,64 @@
+---
+import { videoEmbedSource as videoSource } from "../../lib/content/video-embed.js";
+import { imageHoverAttributes } from '../../lib/content/image-hover.js';
+import { imageCropMobileAttrs, mobileWrapProps } from '../../lib/content/mobile-override.js';
+import { imageSrc } from '../../lib/content/images';
+import PortableText from './PortableText.astro';
+import MediaCaption from './MediaCaption.astro';
+import ImageLinkLabel from './ImageLinkLabel.astro';
+import type { ContentBlock as ContentBlockData, SiteSettings } from '../../lib/content/types';
+
+type MediaItem = NonNullable<Extract<ContentBlockData, { kind: 'mediaComposition' }>['items']>[number];
+type TextVariant = keyof NonNullable<SiteSettings['typography']>;
+interface Props {
+  articleLanguage?: 'ja' | 'zh';
+  item: MediaItem;
+  index: number;
+  rotationSeconds?: number;
+  eagerImage?: boolean;
+  textStyle: (variant: TextVariant) => string;
+  internalHref: (block: Extract<ContentBlockData, { kind: 'internalLink' }>) => string;
+}
+
+const { articleLanguage, item, index, rotationSeconds = 6, textStyle, internalHref } = Astro.props;
+const cropFrameStyle = (image: import('../../lib/content/types').ContentImage) => {
+  const desktop = image.cropAspect ? `aspect-ratio:${image.cropAspect} / 1;overflow:hidden` : '';
+  const mobile = imageCropMobileAttrs(image).styleFragment || '';
+  return [desktop, mobile].filter(Boolean).join(';') || undefined;
+};
+const cropFrameMobileAttrs = (image: import('../../lib/content/types').ContentImage) => imageCropMobileAttrs(image).attrs;
+const cropImageStyle = (image: import('../../lib/content/types').ContentImage) => `object-position:${image.cropPosition || 'center'};transform:scale(${image.cropScale || 1});${image.cropAspect ? 'height:100%;max-height:none;object-fit:cover' : ''}`;
+const images = item.kind === 'imageCarousel' ? item.images.filter((image) => image?.src) : [];
+const grouped = item.kind === 'content' ? item.block : undefined;
+const itemMobile = mobileWrapProps(item.mobile);
+
+---
+
+<div class="mobile-override-wrap" {...itemMobile.attrs} style={itemMobile.style}>
+{item.kind === 'imageCarousel'
+  ? <MediaCaption articleLanguage={articleLanguage} source={item}><div class="detail-media-composition-item" data-media-item={index + 1}>
+      <section class="detail-image-carousel" data-image-carousel data-rotation-seconds={rotationSeconds} aria-label={`作品图片轮播 ${index + 1}`}>
+        <div class="detail-image-carousel-slides">
+          {images.map((image, slideIndex) => <figure class:list={["detail-image-carousel-slide", { "is-active": slideIndex === 0 }]} aria-hidden={slideIndex === 0 ? 'false' : 'true'} {...cropFrameMobileAttrs(image)} style={cropFrameStyle(image)}>
+            <img src={imageSrc(image.src)} alt={image.alt || `作品图片 ${slideIndex + 1}`} loading={slideIndex === 0 ? 'eager' : 'lazy'} style={cropImageStyle(image)} />
+          </figure>)}
+        </div>
+        {images.length > 1 && <div class="detail-image-carousel-dots" aria-hidden="true">{images.map((_, dotIndex) => <span aria-current={dotIndex === 0 ? 'true' : undefined} />)}</div>}
+        {images.length > 1 && <div class="detail-image-carousel-controls" aria-label="图片切换">
+          <button type="button" data-carousel-previous aria-label="上一张图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7" /></svg></button>
+          <button type="button" data-carousel-next aria-label="下一张图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5 7 7-7 7" /></svg></button>
+        </div>}
+      </section>
+    </div></MediaCaption>
+  : grouped?.kind === 'paragraph' || grouped?.kind === 'richText' || grouped?.kind === 'note' ? <div class:list={["detail-media-composition-item", "detail-copy", grouped.kind === 'note' ? 'text-style-note' : 'text-style-paragraph']} data-media-item={index + 1} data-grouped-text style={textStyle(grouped.kind === 'note' ? 'note' : 'paragraph')}><PortableText value={grouped.text} /></div>
+  : grouped?.kind === 'quote' ? <blockquote class="detail-media-composition-item detail-quote" data-grouped-text data-media-item={index + 1}>{grouped.quote}</blockquote>
+  : grouped?.kind === 'internalLink' || grouped?.kind === 'externalLink' ? <p class:list={["detail-media-composition-item", "detail-copy", `text-style-${grouped.kind}`]} data-media-item={index + 1} data-grouped-text style={textStyle(grouped.kind)}><a class="text-link" href={grouped.kind === 'internalLink' ? internalHref(grouped) : grouped.href} target={grouped.kind === 'externalLink' && grouped.newTab !== false ? '_blank' : undefined} rel={grouped.kind === 'externalLink' && grouped.newTab !== false ? 'noopener noreferrer' : undefined}>{grouped.text || '链接'} →</a></p>
+  : grouped?.kind === 'specifications' ? <dl class="detail-media-composition-item detail-specifications text-style-specifications" data-grouped-text style={textStyle('specifications')} data-media-item={index + 1}>{(grouped.items || []).map((entry) => <div><dt>{entry.label}:</dt><dd>{entry.value}</dd></div>)}</dl>
+  : grouped?.kind === 'localVideo' && grouped.src ? <MediaCaption articleLanguage={articleLanguage} source={grouped}><figure class="detail-media-composition-item detail-video" data-media-item={index + 1}><video controls preload="metadata" src={imageSrc(grouped.src)} /></figure></MediaCaption>
+  : grouped?.kind === 'videoEmbed' && videoSource(grouped.url) ? <MediaCaption articleLanguage={articleLanguage} source={grouped}><figure class="detail-media-composition-item detail-video" data-media-item={index + 1}><iframe src={videoSource(grouped.url)} title={grouped.caption || '作品视频'} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen /></figure></MediaCaption>
+  : grouped?.kind === 'wideMedia' ? <div class="detail-media-composition-item detail-wide-media" data-media-item={index + 1}><div class="detail-wide-media-track">{(grouped.items || []).map((entry) => entry.src && <img src={imageSrc(entry.src)} alt={entry.alt || ''} loading="lazy" />)}</div>{grouped.caption && <p>{grouped.caption}</p>}</div>
+  : item.kind === 'image' && item.image.src ? <MediaCaption articleLanguage={articleLanguage} source={item.image}><figure class="detail-media-composition-item" data-media-item={index + 1} {...imageHoverAttributes(item.image)} {...cropFrameMobileAttrs(item.image)} style={cropFrameStyle(item.image)}>
+      <img src={imageSrc(item.image.src)} alt={item.image.alt || `作品图片 ${index + 1}`} loading={Astro.props.eagerImage ? "eager" : "lazy"} style={cropImageStyle(item.image)} />
+      <ImageLinkLabel image={item.image} />
+    </figure></MediaCaption> : null}
+</div>

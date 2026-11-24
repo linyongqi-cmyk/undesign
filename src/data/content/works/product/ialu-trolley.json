@@ -1,0 +1,206 @@
+{
+  "slug": "ialu-trolley",
+  "title": "IAlu Trolley",
+  "type": "Storage",
+  "image": "images/works/product/img-7112-post-2.webp",
+  "category": "product",
+  "order": 5,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "私たちの周りにある都市建築は、多くの場合その構造をファサードという「皮膚」の内側に隠している。しかし、その皮膚を剥がし、内部の骨格を露出させると、そこには機能と力が織りなす純粋な美が現れる。さらにその骨格自体が建築の主体となるとき、構造は都市の記憶を刻む象徴へと昇華されるのである。ですから、私は都市の骨格を日常のスケールに縮小し、感じられるモノを生活に溶け込みたい。",
+        "このワゴンには異なる種類のアルミフレームが使用されている。主要な荷重を支える構造には強度の高い2040Eを採用し、その他の部分にはより細めの2020Vを使用している。また、穴あきアクリル板を天板として用いている。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "385*700*580mm"
+        },
+        {
+          "label": "weight",
+          "value": "7 kg"
+        },
+        {
+          "label": "aluminum frame type",
+          "value": "2020V, 2040E"
+        },
+        {
+          "label": "other materials",
+          "value": "acrylic panels, metal casters"
+        },
+        {
+          "label": "date",
+          "value": "2023.07"
+        }
+      ]
+    },
+    {
+      "kind": "sourceCard",
+      "text": "この写真は著作権法上の関係により、出典のみ記載している。",
+      "linkText": "Public Condenser, by: Muoto, 2016",
+      "href": "https://www.studiomuoto.com/en/lieu-de-vie/",
+      "caption": "都市の骨格：都市で人の活動場所\n柱と梁で構成されたシンプルなフレーム構造は、大きな平面を支えるのに適する。最小限の構造だが、機能性はしっかり確保されている。屋上運動場では、ボールや利用者の安全確保のため、梁を高く設置し飛び出し防止を図っている。",
+      "displayWidth": 65,
+      "mobile": {
+        "hidden": true
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "note",
+          "text": [
+            "同じシリーズの作品はこちらです。"
+          ]
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu BarChair",
+          "category": "product",
+          "workSlug": "ialu-barchair"
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu SpongeLamp",
+          "category": "product",
+          "workSlug": "ialu-spongelamp"
+        },
+        {
+          "kind": "internalLink",
+          "text": "IAlu PlantColumn",
+          "category": "product",
+          "workSlug": "ialu-plantcolumn"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "50.00% 80.20%",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1291-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-7614-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-7357-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/img-7583-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-7226-post-1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/img-7213-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-7112-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-7238-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-8372-post-2.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-8377-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-7359-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-7206-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    }
+  ]
+}

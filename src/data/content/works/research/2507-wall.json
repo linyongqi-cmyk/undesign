@@ -1,0 +1,625 @@
+{
+  "slug": "2507-wall",
+  "title": "#.2507　壁-記号と認知(chinese)",
+  "type": "Research",
+  "category": "research",
+  "order": 4,
+  "sections": [
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "前言："
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "最近有幸参加了某设计机构举办的，以“墙”为主题的建筑设计小型workshop。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "主办方希望参加者能用新的视角认识“墙”，通过对“墙”意义的重新思考，将自身的理解转化为一个立体构成的训练作品。虽然一直对建筑设计很感兴趣，但对于工业设计出身的我而言，这种“建筑模型”的prototype制作却还是第一次。诚然对模型尺度与现实尺度的低把控力和对工具与材料的陌生，让我成为参与者中花费时间最长，完成效果最差的一位。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "但私以为，在这不到两个小时的课题构思以及实物制作的过程中，所完成的思维训练确是值得记录。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "开始："
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "“墙是什么？如何理解墙？”这是我拿到课题时的第一反应。正好最近在尝试进入符号学的世界，便斗胆使用以所掌握的尚未触及该理论的万分之一的浅薄的知识来对“墙”这一符号进行解释。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "对于某个人在某种场景下："
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "必须在特定场景与特定社群的约束下，符号的讨论才具有实际意义“一面纯粹的平面的墙”可能指向“阻隔”，人将认知到类似于“此路不通”的意识或是导向“不会走到墙的面前”的行动（即符号所产生的意义/解释项）。而“一圈圆形的墙”则可能指向“圆圈/平等”并导向“环顾四周/感到舒适”的行动或者感受。以此类推，“一面开了口的墙”可能指向“窗户”并最终导向“看向窗户并观察窗户后的事物”这一行为，即引导的交流。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "思考："
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "至此以“引导的交流”为关键词，我开始了一系列的设计思考。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "最开始，我希望通过创造一面低矮但略高于腰部的墙体以尝试将两个空间进行“暧昧的连接”，为处于两个空间的陌生人制造“适当的距离感”，以身体上的阻隔但沟通上的畅通来放宽交流的难度。但对于相互陌生的两个人来说，面对面的交流方式似乎依然是一座高耸的大山。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "在此基础上，我的脑海中闪过由日本建筑设计团队Suppose Design Office所设计的“千駄ヶ谷駅前公衆トイレ”。（当时没能想起具体信息，只有一个模糊的印象）这个建筑的外部混凝土墙体挑高了约50公分，位于建筑体外的人能够清晰地看到步入建筑体内的人的行动轨迹。而位于建筑体内的人也能感受到外部行人的存在。我们暂且不去讨论建筑本身作为公共卫生间所涉及的安全、隐私等问题。挑高50公分的墙体为人与人之间的关系构筑或者说对人与人之间的交流方式提供了一个不一样的路径，即交流并非限制在言语或肢体沟通中，一个人对另一个人的认识是否也是一种交流的方式？这是我当时想到的。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/14abef4c614efef87820bcd7706f24e.webp",
+            "alt": "",
+            "caption": "最初的思考逻辑",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/36482f6be7010bf2aff550109d91e38.webp",
+            "alt": "",
+            "caption": "思考过程",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2.5,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "sourceCard",
+          "text": "この写真は著作権法上の関係により、出典のみ記載している。",
+          "linkText": "Suppose Design Office",
+          "href": "https://suppose.jp/works/%e5%8d%83%e9%a7%84%e3%83%b6%e8%b0%b7%e9%a7%85%e5%89%8d%e5%85%ac%e8%a1%86%e3%83%88%e3%82%a4%e3%83%ac/",
+          "caption": "関係を溶かす・千駄ヶ谷駅前公衆トイレ\n浮かせることで、建築内部と街に程よい繋がりと人の気配を感じる透明性が生まれ、公衆トイレの閉塞感や不安感に繋がる要因となる廊下や行き止まりという要素を取り払うことが出来た。",
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ],
+      "mobile": {
+        "displayWidth": 100,
+        "layout": "keep"
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "所以我开始思考，而为认知？一个人如何构建起对于另一个人的完整认知？就不同的人而言，认知的概念不同，有些父母甚至不敢说对自己的子女有一个完整无误的认知。但如果是对于一开始便完全陌生的两个人而言，人们是从其所最开始接收到的、与对象相关的信息开始，逐步构建起对于对象的认知。而这些信息便以符号的形式作用于整个认知过程。（特定的环境下对于特定的人群，同样的符号有可能导向不同的对象，不同的符号也有可能导向相同的对象，从而产生不同的意义/认知）"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "比如听到磁性的声音，我们会判断对方是一个男性；看到大肚腩，我们会判断对方为一个爱喝啤酒的人或是一个孕妇；看到某人在喂野猫，我们会判断对方是一个爱护动物的善良的人...这些一个一个的符号以及其产生的意义构成了我们对一个人的基本但完整的初次认知。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "所以我想将人身上所携带的符号进行分割，通过对个人的部分的符号进行单独的认知与解释后。再在某一处汇集，使得片面的认知最终能够组合，成为一次完整的认知过程。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "认知："
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "于是我将人物理性地分为了5个部分：足部、腿部、腰部、躯干以及头部。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "在这样一个类似展览会场的空间中，通过错位排列的墙体位置创造引导性的路径，在墙体的不同高度打开不同大小的窗口创造引导性的视线。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/2.webp",
+            "alt": "",
+            "caption": "路径引导以及错位排列的开口墙体（红色部分，开口位置如下）",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/dsc3719-post.webp",
+            "alt": "",
+            "caption": "",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "right"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/1-2.webp",
+        "alt": "",
+        "caption": "五面在不同高度开口的墙体",
+        "cropScale": 1,
+        "cropPosition": "center",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.75,
+          "origin": "left"
+        }
+      },
+      "displayWidth": 70,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "认知第一步「足部」："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "脚是一个很特别的符号，不同的脚和鞋子指向了不同的意义。在不同的语境下有着不同的指向，甚至在某些语境下脚直接指向了性或权力。正如昆汀在其电影中大量地使用脚部特写来隐喻情欲，社会问题和角色的心理状态等。而在普通的环境下，一双已经破烂开胶的鞋子或许指向了落魄的流浪汉形象；品牌的运动鞋或许指向了充满活力的青年形象；红色的细跟高跟鞋指向了性感诱惑的美艳形象。足部作为我们认知一个人的第一步，随着一次初步但片面的认知在我们心中构建起了对对象的第一印象。（篇幅问题，以下其他步骤仅作简要说明）"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "认知第二步「腿部」："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "腿部是足部信息的延伸，它连接了静态的符号与动态的身体。行走的姿势与节奏。衣着的款式与颜色等。正如包裹下身的衣物侧面反映了一个人是开放、保守、干练还是优雅等。这些符号开始慢慢地完善我们对于对象的认知。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "认知第三步「腰部」："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "腰部可能携带的信息不多，但它却是连接认知的前后部分的重要过渡点。例如手部的摆放位置，是插入下装口袋、还是下垂到腰部随步幅摆动、还是抬起到躯干部分？还有其他例如上衣是否被束进裤子里？其佩戴的腰带的款式？都是我们对一个人认知的重要部分。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "认知第四步「躯干」："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "躯干是携带信息最多的部位。对方穿着的是衬衫还是大衣？是否有佩戴领带？衣服的配色以及花纹是什么？身材是健硕还是消瘦？是否佩戴了首饰？等等...对躯干携带符号的解释让我们能够更进一步地了解对象，甚至能够在此时完全重建前面已经构建起的认识。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "认知第五步「头部」："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "头部则是符号产生意义效果最强的部分。脸是一个人最明显的符号。所谓电影中的易容术、现实中的医美整形等，都是通过修改“脸”这个符号从而强行改变他人对自身的认知。其他的发型、首饰、妆容也都对构建认知过程起到了重要的作用。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/1-3.webp",
+            "alt": "",
+            "caption": "认知的第一步“足部”",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/2-2.webp",
+            "alt": "",
+            "caption": "认知的第二步“腿部”",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/3-2.webp",
+            "alt": "",
+            "caption": "认知的第三步“腰部”",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "right"
+            }
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 125,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/4.webp",
+            "alt": "",
+            "caption": "认知的第四步“躯干”",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/5.webp",
+            "alt": "",
+            "caption": "认知的第五步“头部”",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/6-1.webp",
+            "alt": "",
+            "caption": "认知的最后一步“组合”",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.75,
+              "origin": "right"
+            }
+          },
+          "displayWidth": 150
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 125,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "认知的最后一步「组合」："
+          ]
+        },
+        {
+          "blockIndent": 1,
+          "kind": "paragraph",
+          "text": [
+            "我们通过五步走的方式，基本完成了对一个人的认知过程，但这些认知可能是片面且散乱的。这时我们则需要进入认识的最后一步“组合”。在完成头部的认知后，继续往前，我们将进入一个宽阔的空间，出口在空间的较远端。在离开之前，我们有一次能够将之前所有片面的认知进行组合并完整地呈现在眼前的机会。通过在人群中不断地捕捉收集之前的片段并一一对应，我们会找到一个完整的人。当我们看到这个的人同时，脑中所有的信息都将一一对应并组合，构建或重建我们对某人的认知。到这里我们才真正完成一次“完整认知”并产生意义。最终，通过这样一条具有引导性的路径，一个人在认知另一个人的同时，这个人也同时被第三个人所认知。从而完成了一次社会性的完整的认知过程，即一次完整的交流。"
+          ],
+          "blockIndentSize": 14
+        },
+        {
+          "blockIndent": 1,
+          "kind": "note",
+          "text": [
+            "此处的意义即所导向的解释项或是最终解释项。如“她好美”这一感受性的未经分析的直接解释项。或是“我想去要她的微信/我去问她要微信”这样的，影响我们当下思想或是行为的动力解释项。但最后总会导向一个影响我们未来思想或行动的，如“ta是一个怎样的人”的最终解释项。但我们可能无法准确地描述并说明这个被认知的对象。我们对对象的认知会保存在自己的脑海经验中，而这些经验将有可能影响我们的下一次判断。比如在经过若干时间后，在某一次讨论中提及性感这一个符号时，我们会不知觉地指向当时所认知的更加具体的，金发的、身着红色长裙的、脚踩红色高更鞋的美女形象。即我们对于性感的判断标准被曾经认知到的这个人所影响了。"
+          ],
+          "blockIndentSize": 14
+        },
+        {
+          "blockIndent": 1,
+          "kind": "note",
+          "text": [
+            "为了方便理解，我让AI给了我一个更加具象的例子：一个新手司机看到STOP标志时，可能会经历“看到红色八角形”→“想起交规”→“判断应该停车”→“决定踩刹车”的过程，即动力解释项。而对于一位经验丰富的老司机，这个过程已经完全内化。他看到标志牌时，几乎不需要任何思考，他的脚就会下意识地、习惯性地从油门移到刹车上，即最终解释项，行为的习惯。这个已经固化在身体里的、自动化的“反应模式”，就是STOP标志对他而言最深刻、最“最终”的意义。"
+          ],
+          "blockIndentSize": 14
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/viewcapture20250629-204910-2.webp",
+        "alt": "",
+        "caption": "社会认知循环",
+        "hoverZoom": {
+          "enabled": true,
+          "scale": 1.75,
+          "origin": "left"
+        }
+      },
+      "blockIndent": 1,
+      "blockIndentSize": 14,
+      "displayWidth": 50,
+      "mobile": {
+        "displayWidth": 100
+      }
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "实践："
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "第一次做这种手工模型，着实不知道如何下手。粘合剂的种类和用量、纸张如何在泡沫板上立住而不倒、怎样才能精准地裁切得不歪、为什么我的刀尖会跑到尺子上...种种问题。因为一开始做错两次（把不该裁掉的地方裁掉了）耽误了大量的时间，做到后面看着大家都做完了，无所事事就干等我，更急了，做得更糙了...但好赖还是完成了，就是简陋且难看而已。（苦笑）"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "手工作业完成后，现场发表了自己的制作流程以及思考逻辑。发表也可以说是一个锻炼即时反应和思维能力的过程。五分钟的发表时间内需要用最简单易懂的方式把自己整个思维逻辑链介绍给大家，在没有提前做准备的情况下，意外地并不是一件简单的事情。通过发表也是一次将自己那些本来散布在脑颅各处的零散信息重新组织连接的机会。"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/dsc3617-post.webp",
+            "alt": "",
+            "caption": "草图和制作过程",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/dsc3690.webp",
+            "alt": "",
+            "caption": "介绍思考过程",
+            "cropScale": 1,
+            "cropPosition": "center",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/dsc3691-post-2.webp",
+            "alt": "",
+            "caption": "现场完成时的图片",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "right"
+            }
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "displayWidth": 125,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/dsc3684-post.webp",
+            "alt": "",
+            "caption": "介绍行动路径",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 2.5,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/dsc3721-post-1-2.webp",
+            "alt": "",
+            "caption": "",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/research/dsc3724-post.webp",
+            "alt": "",
+            "caption": "",
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "right"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "subheading",
+          "text": "最后："
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "我也不得不承认，短时间内思考出来的一次所谓的“空间设计”，在实际操作上存在诸多问题。路径的长度，两墙间的距离，观察时（特别是足部）的视角问题，路径设置为斜坡是否更易于观察，有无考虑身高差问题等等...这只能是一次prototype尝试。但私以为，若此仅作为一次思维训练，到目前的阶段就可以停止了。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "在workshop中完成了肯特纸模型的制作，但由于本人动手能力较差，成品效果并不理想。为了解说方便以及保证阅读的美观性，大部分图示通过计算机三维建模软件进行了完善并重建，因此出现了纸质模型与3D模型所展示的结构与效果存在巨大差异的情况。请原谅。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "符号学是一个非常庞大、非常完善却又仍在发展且饱受争议的学科。本文的符号学相关内容是基于皮尔斯的三元模型所进行的分析。但目前本人甚至不能说有半只脚踏入符号学世界的大门。而就在撰写的过程中我也不断地在查阅并完善自己对这些概念的理解，因此可能会有许多概念表达不准确甚至是出现错误的情况。十分地感谢各位读到这里的读者，如果您发现或认为我所撰写的内容有误，亦或是想要一同交流进步，不论是符号学还是设计。都欢迎私信指正或是讨论。"
+          ]
+        },
+        {
+          "kind": "paragraph",
+          "text": [
+            "再次由衷地感谢阅读。"
+          ]
+        }
+      ]
+    }
+  ],
+  "date": "",
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "image": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "seoTitle": "",
+  "seoDescription": "",
+  "articleLanguage": "zh",
+  "gallery": [],
+  "masonryThumbnail": {},
+  "template": "articleReading",
+  "photographyLightboxEnabled": false
+}

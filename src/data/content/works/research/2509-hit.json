@@ -1,0 +1,26 @@
+{
+  "slug": "2509-hit",
+  "title": "#.2509　叩く",
+  "type": "Research",
+  "category": "research",
+  "order": 3,
+  "sections": [
+    {
+      "kind": "localVideo",
+      "src": "videos/works/research/dsc-2512-post.mp4",
+      "caption": ""
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "image": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "template": "articleReading",
+  "seoTitle": "",
+  "seoDescription": "",
+  "articleLanguage": "zh",
+  "gallery": []
+}

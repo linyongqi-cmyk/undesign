@@ -1,0 +1,27 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getContactSettings } from '../lib/content';
+import { CONTACT_ICONS } from '../lib/content/contact-icons';
+export const prerender = true;
+const contact = await getContactSettings();
+---
+
+<SiteLayout active="contact" title="Contact">
+  <section class="contact-page" aria-label="Contact">
+    <h1 class="sr-only">Contact</h1>
+    <div class="contact-list">
+      <div class="contact-row">
+        <span class="contact-icon" set:html={CONTACT_ICONS.wechat} />
+        <p class="contact-text">wechat: {contact.wechat}</p>
+      </div>
+      <a class="contact-row contact-link" href={`https://instagram.com/${contact.instagram}`} target="_blank" rel="noreferrer">
+        <span class="contact-icon" set:html={CONTACT_ICONS.instagram} />
+        <p class="contact-text">instagram: {contact.instagram}</p>
+      </a>
+      <a class="contact-row contact-link" href={`mailto:${contact.email}`}>
+        <span class="contact-icon" set:html={CONTACT_ICONS.email} />
+        <p class="contact-text">email: {contact.email}</p>
+      </a>
+    </div>
+  </section>
+</SiteLayout>

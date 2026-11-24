@@ -1,0 +1,28 @@
+{
+  "slug": "1",
+  "category": "research",
+  "title": "1",
+  "type": "",
+  "order": 0,
+  "sections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/research/1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    }
+  ],
+  "date": "",
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "image": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "seoTitle": "",
+  "seoDescription": "",
+  "articleLanguage": "ja",
+  "gallery": []
+}

@@ -1,0 +1,18 @@
+---
+// One external caption unit shared by every media component. The caption sits
+// outside the media viewport, so it never inherits the image/video backdrop,
+// never covers player controls and its height never changes a media ratio.
+import { mediaCaption } from '../../lib/content/media-caption.js';
+
+import { getSiteSettings } from '../../lib/content';
+import { mediaCaptionStyle } from '../../lib/content/media-caption-style.js';
+const { source, articleLanguage } = Astro.props;
+const noteStyle = mediaCaptionStyle(getSiteSettings().typography?.note, articleLanguage);
+const caption = mediaCaption(source);
+---
+{caption ? (
+  <div class="media-caption-unit" data-caption-position={caption.position} style={`--media-caption-gap:${caption.gap}px`}>
+    <slot />
+    <p class="media-caption detail-copy text-style-note" style={noteStyle}>{caption.text}</p>
+  </div>
+) : <slot />}

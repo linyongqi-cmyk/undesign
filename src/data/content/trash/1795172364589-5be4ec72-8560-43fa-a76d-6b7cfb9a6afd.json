@@ -1,0 +1,260 @@
+{
+  "slug": "1",
+  "category": "product",
+  "title": "1",
+  "type": "",
+  "order": 0,
+  "template": "splitDetail",
+  "sections": [],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "image": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "seoTitle": "",
+  "seoDescription": "",
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/36482f6be7010bf2aff550109d91e38-2.webp",
+        "alt": "",
+        "caption": "",
+        "cropScale": 1,
+        "cropPosition": "center",
+        "hoverZoom": {
+          "enabled": false,
+          "scale": 1.5,
+          "origin": "left"
+        }
+      },
+      "displayWidth": 75
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/myxomycetes-chair-2.webp",
+            "alt": "",
+            "caption": "",
+            "cropScale": 1,
+            "cropPosition": "center"
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/5.webp",
+            "alt": "",
+            "caption": "",
+            "cropScale": 1,
+            "cropPosition": "center"
+          }
+        }
+      ],
+      "displayWidth": 140
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "layoutGroup",
+          "layout": "column",
+          "items": [
+            {
+              "kind": "imageWithCaption",
+              "image": {
+                "src": "images/works/product/img-9148-post-2.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            },
+            {
+              "kind": "imageWithCaption",
+              "image": {
+                "src": "images/works/product/img-9180-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "layoutGroup",
+          "layout": "column",
+          "items": [
+            {
+              "kind": "imageWithCaption",
+              "image": {
+                "src": "images/works/product/img-9180-post-3.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            },
+            {
+              "kind": "imageWithCaption",
+              "image": {
+                "src": "images/works/product/img-9150-post.webp",
+                "alt": "",
+                "caption": "",
+                "cropScale": 1,
+                "cropPosition": "center"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-9150-post-4.webp",
+            "alt": "",
+            "caption": "",
+            "cropScale": 1,
+            "cropPosition": "center"
+          }
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "paragraph",
+          "text": [
+            "啊的话就啥都很少见啊看得很傻"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/36482f6be7010bf2aff550109d91e38-4.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/image-2.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "sideGap": 12,
+      "sideMatchHeight": true
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/tablogoalpha.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-9148-post-3.webp",
+            "alt": "",
+            "caption": "1231",
+            "linkLabel": {
+              "text": "3",
+              "href": "https://www.instagram.com/saltandpepper223/?hl=ja",
+              "newTab": true
+            },
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "left"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-9150-post-3.webp",
+            "alt": "",
+            "caption": "",
+            "linkLabel": {
+              "text": "2",
+              "href": "https://www.instagram.com/saltandpepper223/?hl=ja",
+              "newTab": true
+            },
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "center"
+            }
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-9148-post-4.webp",
+            "alt": "",
+            "caption": "123213",
+            "captionSettings": {
+              "position": "top",
+              "gap": 4
+            },
+            "linkLabel": {
+              "text": "1",
+              "href": "https://www.instagram.com/saltandpepper223/?hl=ja",
+              "newTab": true
+            },
+            "hoverZoom": {
+              "enabled": true,
+              "scale": 1.5,
+              "origin": "left"
+            }
+          }
+        }
+      ],
+      "rowMode": "fixedHeight",
+      "rowHeight": 200
+    },
+    {
+      "kind": "localVideo",
+      "src": "videos/works/product/img-4729-2.mp4",
+      "caption": ""
+    },
+    {
+      "kind": "videoEmbed",
+      "url": "https://www.bilibili.com/video/BV1bR4y1M7Ts/?spm_id_from=333.788.player.switch&vd_source=01174bb11b4b2cd298fa6d7c08038441&p=39",
+      "caption": "dsadsa"
+    },
+    {
+      "kind": "videoEmbed",
+      "url": "https://www.youtube.com/watch?v=R0xCWuEetT0",
+      "caption": ""
+    }
+  ],
+  "masonryThumbnail": {}
+}

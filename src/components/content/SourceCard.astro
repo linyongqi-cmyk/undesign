@@ -1,0 +1,29 @@
+---
+import { getSiteSettings } from '../../lib/content';
+import { sourceCardDisplayText, sourceCardLinkPrompt, sourceCardText, validExternalUrl } from '../../lib/content/free-media.js';
+import type { SourceCard as SourceCardData, SiteSettings } from '../../lib/content/types';
+
+interface Props extends SourceCardData {
+  className?: string;
+}
+
+const { linkText = '', href = '', className = '' } = Astro.props;
+const settings = getSiteSettings();
+const defaults = { fontSize: 14, fontWeight: 300, color: 'inherit', lineHeight: 1.8, letterSpacing: 0, textAlign: 'left', textDecoration: 'none', fontStyle: 'normal', textTransform: 'none', paragraphSpacing: 12, textIndent: 0 };
+type TextVariant = keyof NonNullable<SiteSettings['typography']>;
+const textStyle = (variant: TextVariant) => {
+  const preset = { ...defaults, ...(settings.typography?.[variant] || {}) };
+  return `--text-font:"Noto Sans JP","Yu Gothic",sans-serif;--text-size:${preset.fontSize}px;--text-weight:${preset.fontWeight};--text-color:${preset.color};--text-line-height:${preset.lineHeight};--text-letter-spacing:${preset.letterSpacing}px;--text-align:${preset.textAlign};--text-decoration:${preset.textDecoration};--text-style:${preset.fontStyle};--text-transform:${preset.textTransform};--text-paragraph-spacing:${preset.paragraphSpacing}px;--text-indent:${preset.textIndent}px`;
+};
+const safeHref = validExternalUrl(href);
+const displayText = sourceCardDisplayText(linkText, safeHref);
+---
+
+<div class:list={['source-media-card', className]}>
+  <p class="detail-copy text-style-paragraph source-card-disclaimer" style={textStyle('paragraph')}>{sourceCardText}</p>
+  {displayText && <p class="detail-copy text-style-externalLink source-card-link-line" style={textStyle('externalLink')}>
+    <span class="source-card-link-prompt">{sourceCardLinkPrompt}</span>{' '}{safeHref
+      ? <a href={safeHref} target="_blank" rel="noopener noreferrer">{displayText}</a>
+      : <span>{displayText}</span>}
+  </p>}
+</div>

@@ -1,0 +1,16 @@
+---
+import { renderSiteNavigation } from '../lib/site-navigation-markup.js';
+import type { Category } from '../lib/content/types';
+
+interface Props {
+  active: string;
+  sections: Category[];
+  base: string;
+  routeBase: string;
+  showAdminEntry?: boolean;
+}
+
+const { active, sections, base, routeBase, showAdminEntry = false } = Astro.props;
+---
+
+<aside class="sidebar" id="site-navigation" transition:persist="site-navigation" transition:name="site-navigation" set:html={renderSiteNavigation({ active, sections, base, routeBase, showAdminEntry })}></aside>

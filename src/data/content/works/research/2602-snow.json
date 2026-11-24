@@ -1,0 +1,32 @@
+{
+  "slug": "2602-snow",
+  "title": "#.2602　暇の雪の午後",
+  "type": "Research",
+  "category": "research",
+  "order": 2,
+  "sections": [
+    {
+      "kind": "localVideo",
+      "src": "videos/works/research/0322-26-2-8-yuki.mp4",
+      "caption": ""
+    },
+    {
+      "kind": "externalLink",
+      "text": "bgm: londonderry air, by: bilibili 四季佳饮",
+      "href": "https://www.bilibili.com/video/BV1Pt4y1z7Wy/?spm_id_from=333.337.search-card.all.click&vd_source=01174bb11b4b2cd298fa6d7c08038441",
+      "newTab": true
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "image": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "template": "articleReading",
+  "seoTitle": "",
+  "seoDescription": "",
+  "articleLanguage": "zh",
+  "gallery": []
+}

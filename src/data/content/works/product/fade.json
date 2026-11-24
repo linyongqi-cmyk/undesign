@@ -1,0 +1,30 @@
+{
+  "slug": "fade",
+  "category": "product",
+  "title": "Fade",
+  "type": "Lighting",
+  "order": 13,
+  "template": "splitDetail",
+  "sections": [],
+  "image": "images/works/product/img-0346.webp",
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "23.19% 50.00%",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-0479.webp",
+        "alt": "",
+        "caption": ""
+      }
+    }
+  ]
+}

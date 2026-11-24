@@ -1,0 +1,14 @@
+---
+// Link label anchored to the visible bottom-right corner of a plain image.
+// It is real text in a real anchor; only the label is clickable, never the image.
+import { imageLinkLabel } from '../../lib/content/media-caption.js';
+
+import { getSiteSettings } from '../../lib/content';
+import { mediaCaptionStyle } from '../../lib/content/media-caption-style.js';
+const linkStyle = mediaCaptionStyle(getSiteSettings().typography?.externalLink);
+const { image } = Astro.props;
+const label = imageLinkLabel(image);
+---
+{label && (
+  <a class="image-link-label" style={linkStyle} data-image-link-label href={label.href} target={label.newTab ? '_blank' : undefined} rel={label.newTab ? 'noopener noreferrer' : undefined}>{label.text}</a>
+)}

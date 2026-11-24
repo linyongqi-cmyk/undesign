@@ -1,0 +1,152 @@
+{
+  "slug": "tsuyutama",
+  "title": "露玉",
+  "type": "Objects",
+  "image": "images/works/product/img-1281-post-2.webp",
+  "category": "product",
+  "order": 10,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "「花を包む大きな露玉」をコンセプトに作った作品。\n露玉は一瞬の儚い存在だが、その一滴が葉に輝きを与え、朝の光を映し出す。それは自然がささやいている。小さく短い瞬間こそが、人生の流れの中で最も純粋な一時なのだ。露玉と葉の関係は、「瞬間」と「永遠」のようなものだ。\n私は、その儚さを永遠に変えると思っていた。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "\n　large: 130*130*240mm\n　small: 80*80*195mm"
+        },
+        {
+          "label": "material",
+          "value": "aluminum, stained glass"
+        },
+        {
+          "label": "date",
+          "value": "2023.03"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "36.88% 50.00%",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-0299-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-1281-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-1338-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-1622-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "mobile": {
+        "layout": "keep"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-1395-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/img-1433-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-1603-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/dsc-1506-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-1605-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/img-0292-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-0296-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    }
+  ]
+}

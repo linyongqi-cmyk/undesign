@@ -1,0 +1,150 @@
+{
+  "slug": "unconventional-animation",
+  "title": "UNCONVENTIONAL",
+  "type": "animation",
+  "image": "images/works/visual/image-3.webp",
+  "category": "visual",
+  "order": 0,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "登場するシーンには、海底、宇宙船内、氷河期、地下河川、エイリアン工場、ピンクの夕焼け、洞窟、ホタルの森、稲田、微視的な世界などが含まれている。各シーンが素早いモンタージュ技法で切り替わり、それぞれのシーン特有の背景音が流れる。これにより、観る人がまるでその場にいるかのような没入感を体験できるようになっている。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "date",
+          "value": "2022.05"
+        }
+      ]
+    },
+    {
+      "kind": "componentGroup",
+      "items": [
+        {
+          "kind": "note",
+          "text": [
+            "Scene assets courtesy of the following creators (modown.cn):\n・1109\n・Hans\n・ThisMan\n・zsy\n・阿米\n・阿楠\n・独狼\n・杏丶林",
+            "Sound effects (non-commercial use). Sources:"
+          ]
+        },
+        {
+          "kind": "externalLink",
+          "text": "・Slime Sound (CC-BY-NC) — Mattia Greyfox\n　https://www.ear0.com/sound/15697",
+          "href": "https://www.ear0.com/sound/15697",
+          "newTab": true,
+          "blockIndent": 0,
+          "blockIndentSize": 12
+        },
+        {
+          "kind": "externalLink",
+          "text": "・Blizzard Sound (CC-BY) — Pedaling Prince\n　https://www.ear0.com/sound/10239",
+          "href": "https://www.ear0.com/sound/10239",
+          "newTab": true,
+          "blockIndent": 0,
+          "blockIndentSize": 12
+        }
+      ]
+    },
+    {
+      "kind": "internalLink",
+      "text": "シリーズ作品「UNCONVENTIONAL」はこちらです。",
+      "category": "visual",
+      "workSlug": "unconventional-concept"
+    },
+    {
+      "kind": "internalLink",
+      "text": "3Dプリントによる実物化作品「Myxomycetes chair」はこちらです。",
+      "category": "product",
+      "workSlug": "myxomycetes-chair"
+    },
+    {
+      "kind": "internalLink",
+      "text": "フラクタル幾何学に関する研究はこちらです。「Fractal & Furniture」（2022.05）",
+      "category": "research",
+      "workSlug": "2205-fractal"
+    }
+  ],
+  "description": "",
+  "date": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1.65,
+  "imagePosition": "50.00% -20.51%",
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "localVideo",
+      "src": "videos/works/visual/unconventional.mp4",
+      "caption": ""
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/visual/8.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/3.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/4.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/7-2.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/5.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/visual/6.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    }
+  ]
+}

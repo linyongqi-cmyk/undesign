@@ -1,0 +1,291 @@
+{
+  "slug": "taoreruna",
+  "title": "倒れるな！",
+  "type": "Seating",
+  "image": "images/works/product/mg-5717-post-1.webp",
+  "category": "product",
+  "order": 8,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "小学三年生くらいの頃のこと。住んでいた家のベッドはまだ柔らかいマットレスではなく、硬い板張りのベッドだった。勉強机はそのベッドのすぐ隣にあった。ある日、宿題をしている最中に遊び心が湧いてきた私は、椅子の背もたれに寄りかかりながら後ろに傾ける遊びを始めた。時折感じる無重力のようなスリルを楽しんでいたのだ。何度も繰り返すうちに、椅子の傾きはどんどん大きくなり、ついに限界に達した。「ガタン！」という音とともに椅子が倒れ、私の後頭部はベッドの角に強くぶつかった。鮮血が床に広がり、夜中に病院に運ばれて何針も縫うことになった。今でもその傷跡を触ることができる。",
+        "「倒れるな！」はこの幼少期に椅子を傾けて転倒し、大怪我をした原体験から着想を得た作品。人が恐怖と安心の境界線と感じる傾斜17度に達すると、内蔵された装置が音を発して危険の限界を知らせる。目に見えない「倒れる」境界を可聴化することで、スリルを安全に体験できる新たな関係性をデザインした。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "400*450*800mm"
+        },
+        {
+          "label": "material",
+          "value": "hinoki cypress, glulam"
+        },
+        {
+          "label": "date",
+          "value": "2024.11"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/mg-5222-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/mg-5643-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-5657-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-5498-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-5339-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "localVideo",
+      "src": "videos/works/product/video.mp4",
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/mg-5374-post.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/mg-5711-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/mg-5717-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/mg-5719-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/mg-5351-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-5626-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-5804-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/mg-5352-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/mg-5632-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/mg-5324-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/mg-5307-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/mg-0340-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "displayWidth": 125
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/mg-5756-post-1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/mg-0093-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-0130-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-0146-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-0153-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-0209-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-0287-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-0303-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/s-4982x1599-v-frms-webp-6b2e52ce-b541-4e10-8fe1-95894736eab5-regular.webp",
+        "alt": "",
+        "caption": ""
+      }
+    }
+  ]
+}

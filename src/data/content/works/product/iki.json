@@ -1,0 +1,357 @@
+{
+  "slug": "iki",
+  "title": "息",
+  "type": "Installation",
+  "image": "images/works/product/iki.webp",
+  "category": "product",
+  "order": 9,
+  "template": "splitDetail",
+  "sections": [
+    {
+      "kind": "paragraph",
+      "text": [
+        "昔から人々の生活には、日の出と日没という自然のリズムが深く根付いていた。この体内時計は、呼吸のように無意識に心身のバランスを保つ。太陽の動きとともの明るさの変化、人々はそれに呼応して活動と休息を繰り返す。こうして視覚的に感知する光のリズムと身体の生体リズムが同期し、光の強弱や変化は自然界の周期的な営みの一部として人間の生活に溶け込んでいたのである。この作品は「深呼吸と光の変化をつなげて、現代都市生活の中でも自然な呼吸を思いだせる」という発想から生まれた照明器具です。",
+        "インタラクションロジック：マイクが気流の強度 A（しきい値）を検知すると、ライトが点灯し始める。その後、合計3秒間にわたって深い呼吸が続くと、ライトは段階的に1段階目まで明るくなる。合計三回繰り返し、ライトは３階段に明るくなる。段階的に明るくなる過程（3秒間）で深い呼吸が一旦止まると、ライトは暗くなり前の段階に戻る。"
+      ]
+    },
+    {
+      "kind": "specifications",
+      "items": [
+        {
+          "label": "dimensions",
+          "value": "350*350*70mm"
+        },
+        {
+          "label": "material",
+          "value": "aluminum, photopolymer resin, LED light guide plate"
+        },
+        {
+          "label": "date",
+          "value": "2024.11"
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "dimensions": "",
+  "material": "",
+  "imageScale": 1,
+  "imagePosition": "center",
+  "masonryThumbnail": {},
+  "photographyLightboxEnabled": false,
+  "seoTitle": "",
+  "seoDescription": "",
+  "gallery": [],
+  "leftSections": [
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/mg-9701-post-1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/mg-9622-post-1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-9623-post-1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/mg-9624-post-1.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "side",
+      "items": [
+        {
+          "kind": "localVideo",
+          "src": "videos/works/product/iki.mp4",
+          "caption": ""
+        }
+      ],
+      "sideItems": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-1129x370-v-fs-webp-fcb2b90e-094c-4db6-80bd-3204e1183998.webp",
+            "alt": "",
+            "caption": "△順調な呼吸波形"
+          },
+          "displayWidth": 90,
+          "mobile": {
+            "hidden": true
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-1129x370-v-fs-webp-3bedea45-d91b-4d94-bf3b-cc92b6d004f1.webp",
+            "alt": "",
+            "caption": "△太陽の軌跡とともの明るさの変化"
+          },
+          "displayWidth": 90,
+          "mobile": {
+            "hidden": true
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-1129x370-v-fs-webp-c0871519-373c-451c-a278-614890fa1900.webp",
+            "alt": "",
+            "caption": "△明るさの変化と呼吸波形の重なり"
+          },
+          "displayWidth": 90,
+          "mobile": {
+            "hidden": true
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-459x234-webp-5ca76b7d-02fe-4f5b-8c1a-8747e3cdf85b.webp",
+            "alt": "",
+            "caption": ""
+          },
+          "displayWidth": 60,
+          "mobile": {
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/mg-9820-post.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/img-6107-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/dsc-2141-post.webp",
+        "alt": "",
+        "caption": ""
+      },
+      "mobile": {
+        "hidden": true
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/dsc-2113-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-2116-post-2.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-2083-post-2.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-2197-post-2.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "imageCarousel",
+      "images": [
+        {
+          "src": "images/works/product/dsc-1992-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-2026-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        },
+        {
+          "src": "images/works/product/dsc-2037-post.webp",
+          "alt": "",
+          "caption": "",
+          "cropScale": 1,
+          "cropPosition": "center"
+        }
+      ],
+      "caption": ""
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/mg-9860-post-1.webp",
+        "alt": "",
+        "caption": ""
+      }
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/dsc-2140-post-1.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageCarousel",
+          "images": [
+            {
+              "src": "images/works/product/mg-9832-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/mg-9830-post.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            },
+            {
+              "src": "images/works/product/dsc-2111-post-1.webp",
+              "alt": "",
+              "caption": "",
+              "cropScale": 1,
+              "cropPosition": "center"
+            }
+          ],
+          "caption": ""
+        }
+      ],
+      "displayWidth": 125
+    },
+    {
+      "kind": "layoutGroup",
+      "layout": "row",
+      "items": [
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-1080x1364-v-fms-webp-caad1a16-f72d-4d4a-8ff5-9186da96aaf1-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-544x688-v-fs-webp-4b4eb510-8c9c-40f7-82d0-e611f18c688e-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-720x909-v-fs-webp-f989d921-6e99-46ee-9aeb-65775c9f966d-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-720x909-v-fs-webp-044131a2-d9f9-4d3f-9bb6-ce8d8dd5f693-small.webp",
+            "alt": "",
+            "caption": ""
+          }
+        },
+        {
+          "kind": "imageWithCaption",
+          "image": {
+            "src": "images/works/product/s-3638x3638-v-frms-webp-455cd017-f0f4-4a48-a0ab-05c4bd2873d3-small-2.webp",
+            "alt": "",
+            "caption": ""
+          }
+        }
+      ],
+      "rowMode": "fixedWidth",
+      "displayWidth": 125,
+      "mobile": {
+        "layout": "scroll"
+      }
+    },
+    {
+      "kind": "imageWithCaption",
+      "image": {
+        "src": "images/works/product/s-2548x1006-v-frms-webp-ff69060c-81c7-4e8f-8fd9-c4a709adf530-regular.webp",
+        "alt": "",
+        "caption": ""
+      },
+      "mobile": {
+        "hidden": true
+      }
+    }
+  ]
+}
