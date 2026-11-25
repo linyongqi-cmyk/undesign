@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^7.1.8",
+    "@astrojs/sitemap": "^3.7.6",
     "@puckeditor/core": "^0.24.0",
     "astro": "^7.4.8",
     "react": "^19.3.1",

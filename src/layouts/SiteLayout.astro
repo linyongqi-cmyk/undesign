@@ -50,6 +50,14 @@ const personSchema = canonical ? {
     {personSchema && <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />}
     <meta name="theme-color" content="#fbfbfa" />
     <meta name="description" content={description ?? siteSettings.description ?? 'Portfolio of Lin Yongqi — product, furniture, research and visual design.'} />
+    {!preview && (
+      <>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${title} — ${siteSettings.siteTitle || 'LIN YONGQI'}`} />
+        <meta property="og:description" content={description ?? siteSettings.description ?? 'Portfolio of Lin Yongqi — product, furniture, research and visual design.'} />
+        {canonical && <meta property="og:url" content={canonical.href} />}
+      </>
+    )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet" />

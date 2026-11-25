@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import { fileURLToPath } from 'node:url';
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 import { localAdminIntegration } from './scripts/local-admin-integration.mjs';
 
 const projectRoot = fileURLToPath(new URL('.', import.meta.url));
@@ -13,5 +14,11 @@ export default defineConfig({
   devToolbar: { enabled: false },
   server: { host: '127.0.0.1' },
   // The integration adds its Vite middleware only during `astro dev`.
-  integrations: [react(), localAdminIntegration(projectRoot)],
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => !page.includes('/admin') && !page.includes('/preview'),
+    }),
+    localAdminIntegration(projectRoot),
+  ],
 });
