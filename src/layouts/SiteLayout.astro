@@ -63,15 +63,15 @@ const personSchema = canonical ? {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet" />
     <ClientRouter />
     {preview && <meta name="robots" content="noindex, nofollow, noarchive" />}
-    <title>{title} — {siteSettings.siteTitle || 'LIN YONGQI'}</title>
+    <title translate="no">{title} — {siteSettings.siteTitle || 'LIN YONGQI'}</title>
   </head>
   <body class:list={{ 'home-layout': active === 'home' }}>
     <header class="mobile-topbar">
       <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
-      <a class="mobile-topbar-brand" href={routeBase} aria-label="Home">
-        <img src={`${base}images/brand/logo.svg`} alt={siteSettings.siteTitle || 'LIN YONGQI'} />
+      <a class="mobile-topbar-brand" href={routeBase} aria-label="Home" translate="no">
+        <img src={`${base}images/brand/logo.svg`} alt={siteSettings.siteTitle || 'LIN YONGQI'} width="196" height="87" />
       </a>
     </header>
     <SiteNavigation active={active} sections={sections} base={base} routeBase={routeBase} showAdminEntry={import.meta.env.DEV && !preview} />

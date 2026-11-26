@@ -113,10 +113,10 @@ export default function TextColorPicker({ color, onChange }) {
         <span aria-hidden="true" style={{ left: `${hsv[1]}%`, top: `${100 - hsv[2]}%`, backgroundColor: color }} />
       </div>
       <input className="text-color-hue" type="range" min="0" max="360" aria-label="色相" value={hsv[0]} onChange={(event) => updateHsv([Number(event.target.value), hsv[1], hsv[2]])} />
-      <select aria-label="拾色器模式" value={mode} onChange={(event) => { setMode(event.target.value); setHexDraft(color); }}>
+      <select name="color-mode" aria-label="拾色器模式" value={mode} onChange={(event) => { setMode(event.target.value); setHexDraft(color); }}>
         <option>HEX</option><option>HSV</option><option>RGB</option>
       </select>
-      {mode === 'HEX' ? <input aria-label="HEX 颜色值" value={hexDraft} maxLength={7} onChange={(event) => {
+      {mode === 'HEX' ? <input name="hex-color" autoComplete="off" spellCheck={false} aria-label="HEX 颜色值" value={hexDraft} maxLength={7} onChange={(event) => {
         const value = event.target.value;
         setHexDraft(value);
         const normalized = normalizeHex(value);

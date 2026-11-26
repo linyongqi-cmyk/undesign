@@ -46,10 +46,10 @@
         <p id="dialog-eyebrow" class="admin-label">新增内容</p>
         <label id="create-category-row" class="field" hidden>
           <span>分类</span>
-          <select id="create-category"></select>
+          <select id="create-category" name="category" autocomplete="off"></select>
         </label>
-        <label class="field"><span id="create-title-label">名称</span><input id="create-title" required /></label>
-        <label class="field"><span>网址标识（英文小写与连字符）</span><input id="create-slug" aria-describedby="create-slug-error" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
+        <label class="field"><span id="create-title-label">名称</span><input id="create-title" name="title" autocomplete="off" required /></label>
+        <label class="field"><span>网址标识（英文小写与连字符）</span><input id="create-slug" name="slug" autocomplete="off" spellcheck="false" aria-describedby="create-slug-error" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
         <p id="create-slug-error" class="create-error" role="alert"></p>
         <div class="dialog-actions"><button id="create-cancel" class="button button-quiet" type="button">取消</button><button id="create-confirm" class="button button-dark" value="default">创建</button></div>
       </form>

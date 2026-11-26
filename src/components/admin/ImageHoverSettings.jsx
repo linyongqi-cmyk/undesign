@@ -20,10 +20,10 @@ export default function ImageHoverSettings({ value, onChange, getFrame }) {
       <button className="button puck-image-hover-play" type="button" aria-label="预览效果" title="预览效果" disabled={!draft.enabled || !valid} onClick={() => { preview.current?.(); preview.current = showImageHover(getFrame(), settings); }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z" /></svg></button>
       <button className="button" type="button" disabled={draft.enabled && !valid} onClick={() => { preview.current?.(); onChange(imageHoverSettings(draft.enabled ? settings : draft)); }}>应用</button>
     </div>
-    <label className="canvas-field"><span>缩放基点</span><select aria-label="缩放基点" value={draft.origin} disabled={!draft.enabled} onChange={(event) => update({ origin: event.target.value })}>
+    <label className="canvas-field"><span>缩放基点</span><select name="hover-origin" aria-label="缩放基点" value={draft.origin} disabled={!draft.enabled} onChange={(event) => update({ origin: event.target.value })}>
       <option value="left">左中</option><option value="center">居中</option><option value="right">右中</option>
     </select></label>
-    <label className="canvas-field"><span>放大倍率</span><input type="text" inputMode="decimal" aria-label="放大倍率" aria-invalid={!valid} value={scaleText} disabled={!draft.enabled} onChange={(event) => { preview.current?.(); setScaleText(event.target.value); }} /></label>
+    <label className="canvas-field"><span>放大倍率</span><input type="text" name="hover-scale" autoComplete="off" inputMode="decimal" aria-label="放大倍率" aria-invalid={!valid} value={scaleText} disabled={!draft.enabled} onChange={(event) => { preview.current?.(); setScaleText(event.target.value); }} /></label>
     <div className="puck-image-hover-presets">{[1.25, 1.5, 1.75, 2, 2.5].map((value) => <button className="button" type="button" key={value} disabled={!draft.enabled} aria-pressed={valid && scale === value} onClick={() => { preview.current?.(); setScaleText(String(value)); }}>{value === 2 ? '2.0' : value}x</button>)}</div>
   </div>;
 }

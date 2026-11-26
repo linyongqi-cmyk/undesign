@@ -76,11 +76,11 @@ export function openImageCropEditor({ src, aspect = 1, scale = 1, position = 'ce
   const renderVariants = () => {
     if (!hasVariants) {
       variantsBar.hidden = true;
-      variantsBar.innerHTML = '';
+      variantsBar.replaceChildren();
       return;
     }
     variantsBar.hidden = false;
-    variantsBar.innerHTML = '';
+    const buttons = [];
     for (const item of variantStates.values()) {
       const button = document.createElement('button');
       button.type = 'button';
@@ -89,8 +89,9 @@ export function openImageCropEditor({ src, aspect = 1, scale = 1, position = 'ce
       button.dataset.cropVariant = item.id;
       button.setAttribute('aria-selected', String(item.id === activeVariant));
       button.textContent = item.label;
-      variantsBar.append(button);
+      buttons.push(button);
     }
+    variantsBar.replaceChildren(...buttons);
   };
   renderVariants();
 

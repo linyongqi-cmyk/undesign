@@ -1,6 +1,6 @@
 let componentClipboard = null;
 
-const clone = (value) => JSON.parse(JSON.stringify(value));
+const clone = (value) => structuredClone(value);
 
 function zoneContent(data, zone) {
   return zone === 'root' ? data?.content : data?.zones?.[zone];

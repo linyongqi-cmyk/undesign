@@ -315,7 +315,7 @@ function focusTextAreaAtEnd(element) {
 }
 
 function resizeTextArea(element) {
-  if (!element) return;
+  if (!element || CSS.supports?.('field-sizing', 'content')) return;
   element.style.height = 'auto';
   element.style.height = `${element.scrollHeight}px`;
 }
@@ -504,7 +504,7 @@ function InlineSpecifications({ historyField, items, dimensions = '', material =
     ref={editorRef}
     data-history-field={historyField}
     className="puck-inline-textarea puck-inline-specifications-textarea"
-    style={style}
+    style={{ ...style, fieldSizing: 'content', width: '100%', height: 'auto', minBlockSize: '3lh' }}
     rows={Math.max(3, rows.length)}
     value={draft}
     aria-label="编辑作品参数"

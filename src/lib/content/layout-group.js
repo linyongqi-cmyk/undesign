@@ -147,7 +147,7 @@ function updateSideGroups(root) {
     let top = alignBottom ? rect.bottom - (textRect.bottom - asideRect.top) : rect.top - (textRect.top - asideRect.top);
     const rightEdge = items.length ? (aside.querySelector('[data-side-fitted-media]') || aside).getBoundingClientRect().right : rect.right;
     group.style.setProperty('--group-tools-left', `${(rightEdge - rect.left) / zoom}px`);
-    for (const existing of [...occupied].sort((a, b) => a.top - b.top)) {
+    for (const existing of occupied.toSorted((a, b) => a.top - b.top)) {
       if (top + height + 12 * zoom > existing.top && top < existing.bottom + 12 * zoom) top = existing.bottom + 12 * zoom;
     }
     group.style.setProperty('--layout-side-offset', `${(top - rect.top) / zoom}px`);

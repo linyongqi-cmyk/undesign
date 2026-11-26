@@ -24,8 +24,8 @@ export function getContactSettings(): ContactSettings {
 }
 
 export function getCategories(): Category[] {
-  return [...categories]
-    .sort((a, b) => a.order - b.order)
+  return categories
+    .toSorted((a, b) => a.order - b.order)
     .map((category) => ({
       ...category,
       works: allWorks

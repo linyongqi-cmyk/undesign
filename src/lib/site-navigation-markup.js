@@ -23,7 +23,7 @@ export function renderSiteNavigation({
     `<a class="nav-sublink${active === section.slug ? ' active' : ''}" href="${escapeHtml(`${routeBase}works/${section.slug}/`)}">${escapeHtml(section.title)}</a>`
   )).join('');
 
-  return `<a class="brand" href="${escapeHtml(active === 'home' && routeBase !== base ? `${routeBase}home` : base)}" aria-label="Lin Yongqi home"><img class="brand-logo" src="${escapeHtml(`${base}images/brand/logo.svg`)}" alt="" /></a>
+  return `<a class="brand" href="${escapeHtml(active === 'home' && routeBase !== base ? `${routeBase}home` : base)}" aria-label="Lin Yongqi home" translate="no"><img class="brand-logo" src="${escapeHtml(`${base}images/brand/logo.svg`)}" alt="" width="196" height="87" /></a>
     <nav aria-label="Main navigation">
       <a class="nav-link${active === 'home' ? ' active' : ''}" href="${escapeHtml(active === 'home' && routeBase !== base ? `${routeBase}home` : base)}">HOME</a>
       <a class="nav-link${active === 'about' ? ' active' : ''}" href="${escapeHtml(`${routeBase}about/`)}">ABOUT</a>

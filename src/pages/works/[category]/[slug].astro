@@ -38,17 +38,17 @@ const bodySections = template === 'photographyGallery2'
   : allBodySections;
 const photoGallery = gallery;
 const photographyGallery2Source: ContentBlockData[] = photographyGallery2Sections(work);
-type PhotographyGallery2Item = { block: ContentBlockData; index: number; image?: ContentImage; aspect?: number };
+type PhotographyGallery2Item = { block: ContentBlockData; index: number; image?: ContentImage; aspect?: number; width?: number; height?: number };
 const photographyGallery2Items: PhotographyGallery2Item[] = await Promise.all(photographyGallery2Source.map(async (block, index) => {
   if (block?.kind !== 'imageWithCaption' || !block.image?.src) return { block, index };
   const { width, height } = await thumbnailMetadata(block.image.src);
   const aspect = Number(block.image.cropAspect) || (width / height) || 1;
-  return { block, index, image: block.image, aspect };
+  return { block, index, image: block.image, aspect, width, height };
 }));
 const photographyGalleryItems = await Promise.all(photoGallery.map(async (image, index) => {
   const { width, height } = await thumbnailMetadata(image.src);
   const aspect = Number(image.cropAspect) || (width / height) || 1;
-  return { image, index, aspect };
+  return { image, index, aspect, width, height };
 }));
 const photographyGalleryColumns = distributePhotographyGallery(photographyGalleryItems);
 const cropFrameStyle = (image: ContentImage) => image.cropAspect ? `aspect-ratio:${image.cropAspect} / 1;overflow:hidden` : undefined;
@@ -60,7 +60,7 @@ const cropImageStyle = (image: ContentImage) => `object-position:${image.cropPos
   {isSplitDetail ? (
       <div class="split-detail-layout">
         <div class="split-detail-gallery">
-          {gallery.map((image, index) => <MediaCaption source={image}><figure class="split-detail-image" {...imageHoverAttributes(image)} style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} /><ImageLinkLabel image={image} /></figure></MediaCaption>)}
+          {photographyGalleryItems.map(({ image, index, width, height }) => <MediaCaption source={image}><figure class="split-detail-image" {...imageHoverAttributes(image)} style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} width={width} height={height} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} /><ImageLinkLabel image={image} /></figure></MediaCaption>)}
           {work.leftSections?.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}
         </div>
         <aside class="split-detail-info">
@@ -74,20 +74,20 @@ const cropImageStyle = (image: ContentImage) => `object-position:${image.cropPos
     <header class="detail-heading">
       <h1>{work.title}</h1>
     </header>
-    {gallery.map((image, index) => <MediaCaption source={image}><figure class="article-detail-image" {...imageHoverAttributes(image)} style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} /><ImageLinkLabel image={image} /></figure></MediaCaption>)}
+    {photographyGalleryItems.map(({ image, index, width, height }) => <MediaCaption source={image}><figure class="article-detail-image" {...imageHoverAttributes(image)} style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} width={width} height={height} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} /><ImageLinkLabel image={image} /></figure></MediaCaption>)}
     {bodySections.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}
     </> : template === 'photographyGallery' ? <>
     <section class="photography-intro-layout" style={`--photography-intro-width:${Math.min(100, Math.max(10, Number(work.photographyIntroWidth) || 45))}vw`}>
       <header class="detail-heading photography-heading"><h1>{work.title}</h1></header>
       <div class="photography-intro">{bodySections.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}</div>
     </section>
-    {photoGallery.length > 0 && <div class="photography-gallery" data-photography-gallery data-photography-description-style={photographyDescriptionStyle}><div class="photography-gallery-columns">{photographyGalleryColumns.map((column) => <div data-photography-gallery-column>{column.map(({ image, index, aspect }) => <div data-photography-gallery-item data-photography-image-id={`gallery-${index}`} data-gallery-order={index} data-gallery-aspect={aspect} data-photo-crop-aspect={image.cropAspect || ''} data-photo-crop-scale={image.cropScale || 1} data-photo-crop-position={image.cropPosition || 'center'} style={`--gallery-order:${index}`}><MediaCaption source={image}><figure class="photography-detail-image" style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} />{photographyLightboxEnabled && <button type="button" class="photography-lightbox-trigger" data-photography-lightbox-trigger aria-label={`放大查看摄影图 ${index + 1}`} title="放大查看图片"></button>}<span hidden data-photography-description>{image.photographyDescription || ''}</span><ImageLinkLabel image={image} /></figure></MediaCaption></div>)}</div>)}</div></div>}
+    {photoGallery.length > 0 && <div class="photography-gallery" data-photography-gallery data-photography-description-style={photographyDescriptionStyle}><div class="photography-gallery-columns">{photographyGalleryColumns.map((column) => <div data-photography-gallery-column>{column.map(({ image, index, aspect, width, height }) => <div data-photography-gallery-item data-photography-image-id={`gallery-${index}`} data-gallery-order={index} data-gallery-aspect={aspect} data-photo-crop-aspect={image.cropAspect || ''} data-photo-crop-scale={image.cropScale || 1} data-photo-crop-position={image.cropPosition || 'center'} style={`--gallery-order:${index}`}><MediaCaption source={image}><figure class="photography-detail-image" style={cropFrameStyle(image)}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} width={width} height={height} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} />{photographyLightboxEnabled && <button type="button" class="photography-lightbox-trigger" data-photography-lightbox-trigger aria-label={`放大查看摄影图 ${index + 1}`} title="放大查看图片"></button>}<span hidden data-photography-description>{image.photographyDescription || ''}</span><ImageLinkLabel image={image} /></figure></MediaCaption></div>)}</div>)}</div></div>}
     </> : template === 'photographyGallery2' ? <div class="photography-gallery2-layout">
       <section class="photography-gallery2-text"><header class="detail-heading"><h1>{work.title}</h1></header>{bodySections.map((block) => <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}</section>
       {photographyGallery2Source.length > 0 && <div class="photography-gallery photography-gallery2-media" data-photography-gallery data-photography-description-style={photographyDescriptionStyle}>
-        <div class="photography-gallery2-items">{photographyGallery2Items.map(({ block, index, image, aspect }) => block.kind === 'imageWithCaption'
+        <div class="photography-gallery2-items">{photographyGallery2Items.map(({ block, index, image, aspect, width, height }) => block.kind === 'imageWithCaption'
           ? (image?.src ? <div class="photography-gallery2-item" data-photography-gallery-item data-photography-image-id={`gallery-${index}`} data-gallery-order={index} data-gallery-aspect={aspect} data-photo-crop-aspect={image.cropAspect || ''} data-photo-crop-scale={image.cropScale || 1} data-photo-crop-position={image.cropPosition || 'center'} style={`--photo2-aspect:${aspect};--gallery-order:${index}`}>
-            <MediaCaption source={image}><figure class="photography-detail-image photography-gallery2-image" style={`--photo2-aspect:${aspect};${cropFrameStyle(image) || ''}`}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} />{photographyLightboxEnabled && <button type="button" class="photography-lightbox-trigger" data-photography-lightbox-trigger aria-label={`放大查看摄影图 ${index + 1}`} title="放大查看图片"></button>}<span hidden data-photography-description>{image.photographyDescription || ''}</span><ImageLinkLabel image={image} /></figure></MediaCaption>
+            <MediaCaption source={image}><figure class="photography-detail-image photography-gallery2-image" style={`--photo2-aspect:${aspect};${cropFrameStyle(image) || ''}`}><img src={imageSrc(image.src, base)} alt={image.alt || `${work.title} — ${index + 1}`} width={width} height={height} loading={index ? 'lazy' : 'eager'} style={cropImageStyle(image)} />{photographyLightboxEnabled && <button type="button" class="photography-lightbox-trigger" data-photography-lightbox-trigger aria-label={`放大查看摄影图 ${index + 1}`} title="放大查看图片"></button>}<span hidden data-photography-description>{image.photographyDescription || ''}</span><ImageLinkLabel image={image} /></figure></MediaCaption>
           </div> : null)
           : <ContentBlock block={block} rotationSeconds={rotationSeconds} />)}</div>
       </div>}
