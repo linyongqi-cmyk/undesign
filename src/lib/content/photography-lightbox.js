@@ -25,7 +25,7 @@ function measureFrame(item, selector) {
 }
 
 function visualOrder(items, selector) {
-  const positions = items.map((item, index) => {
+  const positions = items.map((item) => {
     const position = measureFrame(item, selector);
     return position ? { id: item.id, ...position } : null;
   }).filter(Boolean);

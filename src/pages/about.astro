@@ -6,7 +6,7 @@ import { imageSrc } from '../lib/content/images';
 import { thumbnailMetadata } from '../lib/content/thumbnail-metadata.ts';
 export const prerender = true;
 const base = import.meta.env.BASE_URL;
-const profile = await getAboutProfile();
+const profile = getAboutProfile();
 const portraitSize = await thumbnailMetadata(profile.portrait);
 ---
 

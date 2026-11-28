@@ -17,12 +17,13 @@
           <div class="admin-heading">
           <h1>Portfolio Manager</h1>
         </div>
+          <div id="canvas-edit-status"></div>
         </div>
         <div class="admin-actions">
           <div id="canvas-toolbar"></div>
-          <button id="undo-button" class="button admin-icon-button" type="button" aria-label="撤回" aria-keyshortcuts="Control+Z Meta+Z" title="撤回（⌘Z / Ctrl+Z）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5-5 5 5 5M4 10h10a6 6 0 0 1 0 12"/></svg></button>
-          <button id="redo-button" class="button admin-icon-button" type="button" aria-label="重做" aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" title="重做（⌘⇧Z / Ctrl+Shift+Z）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 5 5-5 5m5-5H10a6 6 0 0 0 0 12"/></svg></button>
-          <button id="save-button" aria-label="保存到本机" aria-keyshortcuts="Control+S Meta+S" title="保存到本机（Ctrl+S / ⌘S）" class="button button-dark admin-icon-button" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h13l3 3v13H4zM8 4v6h8V4M8 20v-6h8v6"/></svg></button>
+          <button id="undo-button" class="button admin-icon-button" type="button" aria-label="撤回" aria-keyshortcuts="Control+Z Meta+Z" title="撤回（⌘Z / Ctrl+Z）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg></button>
+          <button id="redo-button" class="button admin-icon-button" type="button" aria-label="重做" aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y" title="重做（⌘⇧Z / Ctrl+Shift+Z）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13"/></svg></button>
+          <button id="save-button" aria-label="保存到本机" aria-keyshortcuts="Control+S Meta+S" title="保存到本机（Ctrl+S / ⌘S）" class="button button-dark admin-icon-button" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg></button>
         </div>
       </header>
 
@@ -51,7 +52,7 @@
         <label class="field"><span id="create-title-label">名称</span><input id="create-title" name="title" autocomplete="off" required /></label>
         <label class="field"><span>网址标识（英文小写与连字符）</span><input id="create-slug" name="slug" autocomplete="off" spellcheck="false" aria-describedby="create-slug-error" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" /></label>
         <p id="create-slug-error" class="create-error" role="alert"></p>
-        <div class="dialog-actions"><button id="create-cancel" class="button button-quiet" type="button">取消</button><button id="create-confirm" class="button button-dark" value="default">创建</button></div>
+        <div class="dialog-actions"><button id="create-cancel" class="button button-quiet admin-icon-button" type="button" aria-label="取消" title="取消"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button><button id="create-confirm" class="button button-dark" value="default">创建</button></div>
       </form>
     </dialog>
     <dialog id="work-delete-dialog" class="create-dialog" aria-labelledby="work-delete-title" aria-describedby="work-delete-message">
@@ -59,7 +60,7 @@
       <p id="work-delete-message"></p>
       <p id="work-delete-error" class="create-error" role="alert"></p>
       <div class="dialog-actions">
-        <button id="work-delete-cancel" class="button button-quiet" type="button" autofocus>取消</button>
+        <button id="work-delete-cancel" class="button button-quiet admin-icon-button" type="button" aria-label="取消" title="取消" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
         <button id="work-delete-confirm" class="button button-dark" type="button">移到回收站</button>
       </div>
     </dialog>

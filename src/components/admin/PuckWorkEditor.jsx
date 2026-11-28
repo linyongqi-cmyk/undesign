@@ -82,21 +82,21 @@ export function PuckTextStylePanel({ type, style, onClose, onConfirm, onStyleCha
     event.target.setAttribute('aria-invalid', String(!event.target.validity.valid));
   }} /><small>{suffix}</small></span>);
   const paddingDirections = [
-    ['paddingTop', '上内边距', 'M4 4h12M5 8h10v10H5z'],
-    ['paddingBottom', '下内边距', 'M5 2h10v10H5zM4 16h12'],
-    ['paddingLeft', '左内边距', 'M4 3v14M8 4h10v12H8z'],
-    ['paddingRight', '右内边距', 'M2 4h10v12H2zM16 3v14'],
+    ['paddingTop', '上内边距', 'M3 3h18'],
+    ['paddingBottom', '下内边距', 'M3 21h18'],
+    ['paddingLeft', '左内边距', 'M3 3v18'],
+    ['paddingRight', '右内边距', 'M21 3v18'],
   ];
   const paddingRows = [paddingDirections.slice(0, 2), paddingDirections.slice(2)];
   const paddingControls = <div className="puck-padding-controls"><span>内边距</span>{paddingRows.map((row, index) => <div className="puck-padding-controls-row" key={`padding-row-${index}`}>{row.map(([key, label, path]) => <label className="puck-padding-control" key={key} title={label}>
-    <svg viewBox="0 0 16 20" aria-hidden="true"><path d={path}/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="6" height="6" rx="1"/><path d={path}/></svg>
     <input type="number" min="0" max="200" step="1" value={draft[key] ?? 0} aria-label={label} onChange={(event) => { if (event.target.validity.valid) setValue(key, event.target.valueAsNumber); }} onBlur={(event) => { if (!event.target.validity.valid) event.target.value = draft[key] ?? 0; }} />
   </label>)}</div>)}</div>;
   const select = (key, label, options) => field(key, label, <select value={draft[key] ?? typographyDefaults[key]} disabled={key === 'fontFamily' && fontFamilyDisabled} onChange={(event) => setValue(key, event.target.value)}>{options.map(([value, name]) => <option key={value} value={value}>{name}</option>)}</select>);
   const textStyleChoices = <div className="puck-text-style-field"><span>文字装饰</span><span className="puck-text-style-choices" role="group" aria-label="文字装饰">
-    <button type="button" aria-label="下划线" title="下划线" aria-pressed={draft.textDecoration === 'underline'} onClick={() => setValue('textDecoration', draft.textDecoration === 'underline' ? 'none' : 'underline')}><u>U</u></button>
-    <button type="button" aria-label="删除线" title="删除线" aria-pressed={draft.textDecoration === 'line-through'} onClick={() => setValue('textDecoration', draft.textDecoration === 'line-through' ? 'none' : 'line-through')}><s>S</s></button>
-    <button type="button" aria-label="斜体" title="斜体" aria-pressed={draft.fontStyle === 'italic'} onClick={() => setValue('fontStyle', draft.fontStyle === 'italic' ? 'normal' : 'italic')}><i>i</i></button>
+    <button type="button" className="admin-icon-button" aria-label="下划线" title="下划线" aria-pressed={draft.textDecoration === 'underline'} onClick={() => setValue('textDecoration', draft.textDecoration === 'underline' ? 'none' : 'underline')}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v6a6 6 0 0 0 12 0V4"/><line x1="4" x2="20" y1="20" y2="20"/></svg></button>
+    <button type="button" className="admin-icon-button" aria-label="删除线" title="删除线" aria-pressed={draft.textDecoration === 'line-through'} onClick={() => setValue('textDecoration', draft.textDecoration === 'line-through' ? 'none' : 'line-through')}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><line x1="4" x2="20" y1="12" y2="12"/></svg></button>
+    <button type="button" className="admin-icon-button" aria-label="斜体" title="斜体" aria-pressed={draft.fontStyle === 'italic'} onClick={() => setValue('fontStyle', draft.fontStyle === 'italic' ? 'normal' : 'italic')}><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="19" x2="10" y1="4" y2="4"/><line x1="14" x2="5" y1="20" y2="20"/><line x1="15" x2="9" y1="4" y2="20"/></svg></button>
   </span></div>;
   const confirm = async () => {
     const invalid = [...stylePanel.current.querySelectorAll('input,select')].find(input => !input.checkValidity());
@@ -147,9 +147,8 @@ function PuckCarouselSettingsPanel({ seconds, anchor, onClose, onConfirm }) {
     catch (error) { showEditorFeedback('轮播间隔应用失败', { kind: 'error', detail: error.message || '请重试。' }); }
     finally { setSaving(false); }
   }}>
-    <div className="puck-carousel-settings-heading"><span>图片轮播间隔</span><button type="button" className="admin-icon-button" aria-label="取消轮播设置" onClick={onClose} disabled={saving}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button></div>
-    <label className="canvas-field"><span>切换间隔（秒）</span><input type="number" min="0.1" max="5" step="0.1" value={value} required disabled={saving} onChange={(event) => setValue(event.target.value)} /></label>
-    <button className="admin-icon-button button-dark" type="submit" aria-busy={saving} aria-label={saving ? '正在应用轮播间隔' : '应用轮播间隔'} title={saving ? '正在应用…' : '应用轮播间隔'} disabled={saving}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></button>
+    <div className="puck-carousel-settings-heading"><span>图片轮播间隔/s</span><div className="puck-carousel-settings-actions"><button type="button" className="admin-icon-button" aria-label="取消轮播设置" title="取消" onClick={onClose} disabled={saving}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg></button><button className="admin-icon-button button-dark" type="submit" aria-busy={saving} aria-label={saving ? '正在应用轮播间隔' : '确认并保存'} title={saving ? '正在应用…' : '确认并保存'} disabled={saving}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></button></div></div>
+    <label className="canvas-field puck-carousel-settings-input"><input type="number" min="0.1" max="5" step="0.1" value={value} aria-label="图片轮播间隔（秒）" required disabled={saving} onChange={(event) => setValue(event.target.value)} /></label>
   </form>;
 }
 
@@ -163,32 +162,33 @@ const templateOptions = [
 function AdminActionIcon({ name }) {
   return <svg className="admin-action-icon" viewBox="0 0 24 24" aria-hidden="true">
     <path d={adminActionPaths[name]} />
-    {name === 'settings' && <circle cx="12" cy="12" r="3.1" />}
+    {name === 'settings' && <circle cx="12" cy="12" r="3" />}
+    {name === 'size' && <circle cx="12" cy="12" r="1" />}
   </svg>;
 }
 
 const contentIconPaths = {
-  ParagraphBlock: <><path d="M6 6h12M6 10h12M6 14h9M6 18h7" /></>,
-  SubheadingBlock: <><path d="M5 6h14M5 12h9M5 18h14" /><path d="M17 10v4" /></>,
-  SpecificationsBlock: <><rect x="4" y="4" width="16" height="16" rx="1.5" /><path d="M4 9h16M4 14h16M10 9v11" /></>,
-  NoteBlock: <><path d="M10 11H5.5a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1H9a1 1 0 0 1 1 1V13a4 4 0 0 1-4 4M20 11h-4.5a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1H19a1 1 0 0 1 1 1V13a4 4 0 0 1-4 4" /></>,
-  ImageBlock: <><rect x="3" y="4" width="18" height="16" rx="1.5" /><circle cx="9" cy="9" r="1.5" /><path d="m5 17 5-5 3 3 2-2 4 4" /></>,
-  MediaCompositionBlock: <><rect x="4" y="3" width="16" height="7" rx="1.2" /><rect x="4" y="14" width="16" height="7" rx="1.2" /></>,
-  ImageCarouselBlock: <><rect x="3" y="5" width="18" height="14" rx="1.5" /><path d="m7 12-2 2 2 2M17 12l2 2-2 2M9 14h6" /></>,
+  ParagraphBlock: <><path d="M15 12H3" /><path d="M17 18H3" /><path d="M21 6H3" /></>,
+  SubheadingBlock: <><path d="M17 20H5" /><path d="M6 8 3 5l3-3" /><path d="M21 20V7a2 2 0 0 0-2-2H3" /><path d="M17 10h-7" /><path d="M17 15H5" /></>,
+  SpecificationsBlock: <><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" /></>,
+  NoteBlock: <><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /></>,
+  ImageBlock: <><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></>,
+  MediaCompositionBlock: <><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 12h18" /></>,
+  ImageCarouselBlock: <><path d="M2 3v18" /><rect width="12" height="18" x="6" y="3" rx="2" /><path d="M22 3v18" /></>,
   SourceCardBlock: <><rect x="3" y="4" width="18" height="16" rx="1.5" /><path d="M7 10h10m-10 4h7" /></>,
-  FreeSizeGroupBlock: <><path d="M3 5h6v14H3zm9 0h9v14h-9z" /></>,
-  LocalVideoBlock: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m10 9 5 3-5 3z" /></>,
-  VideoEmbedBlock: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 9h18m-12 5 2 2m0-2 2-2a2 2 0 0 1 3 3l-2 2" /></>,
-  QuoteBlock: <><path d="M10 11H5.5a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1H9a1 1 0 0 1 1 1V13a4 4 0 0 1-4 4M20 11h-4.5a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1H19a1 1 0 0 1 1 1V13a4 4 0 0 1-4 4" /></>,
-  InternalLinkBlock: <><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1M14 11a5 5 0 0 0-7.1 0l-2 2a5 5 0 0 0 7.1 7.1l1.1-1.1" /></>,
-  ExternalLinkBlock: <><path d="M13 5h6v6M19 5l-8 8" /><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" /></>,
+  FreeSizeGroupBlock: <><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M12 3v18" /></>,
+  LocalVideoBlock: <><rect width="18" height="18" x="3" y="3" rx="2" /><path d="m9 8 6 4-6 4Z" /></>,
+  VideoEmbedBlock: <><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></>,
+  QuoteBlock: <><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /></>,
+  InternalLinkBlock: <><path d="M9 17H7A5 5 0 0 1 7 7h2" /><path d="M15 7h2a5 5 0 1 1 0 10h-2" /><line x1="8" x2="16" y1="12" y2="12" /></>,
+  ExternalLinkBlock: <><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></>,
 };
 
 function ContentTypeIcon({ name, className = '' }) {
   const isStack = name === 'MediaCompositionBlock';
   const isInternalLink = name === 'InternalLinkBlock';
   return <span className={`puck-content-type-icon${isStack ? ' puck-content-type-icon--stack' : ''}${isInternalLink ? ' puck-content-type-icon--internal-link' : ''}${className ? ` ${className}` : ''}`} aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">{contentIconPaths[name] || contentIconPaths.ParagraphBlock}</svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">{contentIconPaths[name] || contentIconPaths.ParagraphBlock}</svg>
     {isStack && <span className="puck-content-type-icon-count">↓</span>}
   </span>;
 }
@@ -265,8 +265,8 @@ function ThumbnailEditor({ category, onUpload }) {
         {displaySrc ? <img src={imageElementSrc(displaySrc)} alt={workTitle(props)} draggable="false" onLoad={(event) => { const image = event.currentTarget; setNaturalAspect(image.naturalWidth / image.naturalHeight || 1); }} style={thumbnailImageStyle(settings)} /> : <span className="cover-image-empty">选择封面图片</span>}
       </div>
       <div className="cover-image-actions">
-        <button className="puck-image-action" type="button" aria-label="编辑裁切" title="编辑裁切" disabled={!src} onClick={(event) => { event.stopPropagation(); openCrop(); }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v14a2 2 0 0 0 2 2h12M3 7h14a2 2 0 0 1 2 2v12" /></svg></button>
-        <button className="puck-image-action" type="button" aria-label="更换图片" title="更换图片" onClick={(event) => { event.stopPropagation(); fileInputRef.current?.click(); }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h15l-3-3M20 17H5l3 3M19 7l-3 3M5 17l3-3" /></svg></button>
+        <button className="puck-image-action" type="button" aria-label="编辑裁切" title="编辑裁切" disabled={!src} onClick={(event) => { event.stopPropagation(); openCrop(); }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2v14a2 2 0 0 0 2 2h14M18 22V8a2 2 0 0 0-2-2H2" /></svg></button>
+        <button className="puck-image-action" type="button" aria-label="更换图片" title="更换图片" onClick={(event) => { event.stopPropagation(); fileInputRef.current?.click(); }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 7l4 4M4 7h16m-4 14 4-4-4-4m4 4H4" /></svg></button>
         <input ref={fileInputRef} className="puck-visually-hidden-file" type="file" accept="image/jpeg,image/png,image/webp" aria-label="选择封面图片" onChange={replaceImage} />
       </div>
     </figure>
@@ -423,7 +423,11 @@ function InlineParagraph({ historyField, text, className, style, paragraphStyle,
     onCommit={finishEditing}
     onCancel={() => setEditing(false)}
   /> : <div data-history-field={historyField} className={`${className} puck-inline-editable puck-inline-document`} style={style} title={viewport === 'mobile' ? undefined : '双击直接编辑'} onDoubleClick={beginEditing}>
-    {items.map((item, index) => <p key={item.key || index} style={paragraphStyle?.(index)}>{item.text || <br />}</p>)}
+    {items.map((item, index) => {
+      const pStyle = paragraphStyle?.(index);
+      const finalStyle = index === items.length - 1 && pStyle ? { ...pStyle, marginBottom: 0 } : pStyle;
+      return <p key={item.key || index} style={finalStyle}>{item.text || <br />}</p>;
+    })}
   </div>;
 }
 
@@ -590,7 +594,7 @@ async function fixedRowImageFits({ id, rowElement, candidateAspect, appState, ge
   return available <= 0 || projectedWidth <= available + 1;
 }
 
-function PuckImageEditor({ id, src = '', alt = '', label = '图片', iconName = 'ImageBlock', showComponentActions = true, onDeleteImage, onImageChange, onNaturalAspect, showActions = true, showImageAdjustments = true, showHoverZoom = true, extraActions, showEmptyAddButton = true, uniformCropAspect = false, uniformComposition = false, imageFieldKey = '', uploadImage, imageListPath = '', imageIndex = -1, hoverZoom, cropAspect, cropScale = 1, cropPosition = 'center', mobileCropAspect, mobileCropScale, mobileCropPosition, mobileBar, caption = '', captionSettings, linkLabel, photographyDescription = '', showPhotographyDescription = false, onPhotographyPreview, showCaption = true, showLink = true }) {
+function PuckImageEditor({ id, src = '', alt = '', showComponentActions = true, onDeleteImage, onImageChange, onNaturalAspect, showActions = true, showImageAdjustments = true, showHoverZoom = true, extraActions, showEmptyAddButton = true, uniformCropAspect = false, uniformComposition = false, imageFieldKey = '', uploadImage, imageListPath = '', imageIndex = -1, hoverZoom, cropAspect, cropScale = 1, cropPosition = 'center', mobileCropAspect, mobileCropScale, mobileCropPosition, mobileBar, caption = '', captionSettings, linkLabel, photographyDescription = '', showPhotographyDescription = false, onPhotographyPreview, showCaption = true, showLink = true }) {
   const viewport = useContext(CanvasViewportContext);
   const imageSizingState = usePuck();
   const blockData = findBlockById(imageSizingState.appState.data, id);
@@ -741,8 +745,8 @@ function PuckImageEditor({ id, src = '', alt = '', label = '图片', iconName = 
         {showCaption && <MediaCaptionAction caption={caption} captionSettings={captionSettings} onChange={(patch) => updateImage(captionPatch(patch, { caption, captionSettings }))} />}
         {showLink && <ImageLinkAction linkLabel={linkLabel} onChange={(patch) => updateImage(patch)} />}
         {showImageAdjustments && showHoverZoom && <CanvasPopoverAction label="图片悬停效果" icon="zoomIn" fields={close => <ImageHoverSettings value={hoverZoom} onChange={(value) => { updateImage({ hoverZoom: value }); close(); }} getFrame={() => editorRef.current?.querySelector('.puck-image-viewport')} />} />}
-        {showImageAdjustments && <button className="puck-image-action cover-image-action" type="button" data-image-action="crop" aria-label="裁切图片" title="裁切图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v14a2 2 0 0 0 2 2h12M3 7h14a2 2 0 0 1 2 2v12" /></svg></button>}
-        {showImageAdjustments && <button className="puck-image-action cover-image-action" type="button" data-image-action="replace" aria-label="更换图片" title="更换图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h15l-3-3M20 17H5l3 3M19 7l-3 3M5 17l3-3" /></svg></button>}
+        {showImageAdjustments && <button className="puck-image-action cover-image-action" type="button" data-image-action="crop" aria-label="裁切图片" title="裁切图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2v14a2 2 0 0 0 2 2h14M18 22V8a2 2 0 0 0-2-2H2" /></svg></button>}
+        {showImageAdjustments && <button className="puck-image-action cover-image-action" type="button" data-image-action="replace" aria-label="更换图片" title="更换图片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 7l4 4M4 7h16m-4 14 4-4-4-4m4 4H4" /></svg></button>}
         {showComponentActions && <button className="puck-image-action cover-image-action" type="button" data-image-action="delete" aria-label="删除组件" title="删除组件"><AdminActionIcon name="delete" /></button>}
       </>}
       {!displaySrc && showEmptyAddButton && <button className="puck-image-add" type="button" data-image-action="add">＋ 从电脑选择图片</button>}
@@ -754,7 +758,7 @@ function PuckImageEditor({ id, src = '', alt = '', label = '图片', iconName = 
 }
 
 function PhotographyGalleryCanvas({ gallery = [], uploadImage, lightboxEnabled = false, layoutVariant = 'columns' }) {
-  const { dispatch, appState } = usePuck();
+  const { dispatch } = usePuck();
   const typography = useContext(IndentTypographyContext);
   const fileInput = useRef(null);
   const [uploading, setUploading] = useState(false);
@@ -1100,10 +1104,10 @@ function PuckImageCarouselEditor({ id, images = [], caption = '', captionSetting
           <img src={imageElementSrc(image.src)} alt="" />
         </button>
         <button type="button" data-carousel-action="crop-slide" data-index={index} aria-label={`裁切第 ${index + 1} 张图片`} title="裁切图片">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v14a2 2 0 0 0 2 2h12M3 7h14a2 2 0 0 1 2 2v12" /></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2v14a2 2 0 0 0 2 2h14M18 22V8a2 2 0 0 0-2-2H2" /></svg>
         </button>
         <button type="button" data-carousel-action="replace-slide" data-index={index} aria-label={`更换第 ${index + 1} 张图片`} title="更换图片">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h15l-3-3M20 17H5l3 3M19 7l-3 3M5 17l3-3" /></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 7l4 4M4 7h16m-4 14 4-4-4-4m4 4H4" /></svg>
         </button>
         <button type="button" data-carousel-action="move-up" data-index={index} aria-label={`上移第 ${index + 1} 张图片`} title="上移" disabled={index === 0}><AdminActionIcon name="up" /></button>
         <button type="button" data-carousel-action="move-down" data-index={index} aria-label={`下移第 ${index + 1} 张图片`} title="下移" disabled={index === visibleImages.length - 1}><AdminActionIcon name="down" /></button>
@@ -1418,7 +1422,7 @@ function GroupedOtherContent({ item = {}, settingsAction, mobileBar, onUpdate, o
         {item.src ? <video controls={!isMobile} preload="metadata" src={`/${item.src}`} /> : <span>尚未添加视频</span>}
         {isMobile ? (mobileBar && <div className="puck-canvas-action-rail">{mobileBar}</div>) : <CanvasActionRail>{settingsAction}
           <button className="puck-image-action cover-image-action" type="button" disabled={uploading} aria-label={item.src ? '更换视频' : '上传视频'} title={item.src ? '更换视频' : '上传视频'} onClick={(event) => { event.stopPropagation(); fileRef.current?.click(); }}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h15l-3-3M20 17H5l3 3M19 7l-3 3M5 17l3-3" /></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 7l4 4M4 7h16m-4 14 4-4-4-4m4 4H4" /></svg>
           </button>
           <MediaCaptionAction caption={item.caption} captionSettings={item.captionSettings} onChange={(patch) => update(captionPatch(patch, item))} />
           <button className="puck-image-action cover-image-action" type="button" aria-label="删除视频" title="删除视频" onClick={(event) => { event.stopPropagation(); onDelete(); }}>
@@ -1590,7 +1594,7 @@ function PlacementIcon({ placement }) {
   </svg>;
 }
 
-function useCanvasGroupSelection(id, { enterOnPointerDown = true } = {}) {
+function useCanvasGroupSelection(id) {
   const { appState, getSelectorForId, dispatch } = usePuck();
   const [editingChildren, setEditingChildren] = useState(false);
   const groupRef = useRef(null);
@@ -1601,13 +1605,14 @@ function useCanvasGroupSelection(id, { enterOnPointerDown = true } = {}) {
   const mode = editingChildren ? 'children' : groupSelected ? 'group' : 'idle';
 
   useEffect(() => {
-    if (!enterOnPointerDown && !editingChildren) return registerOverlayPortal(surfaceRef.current, { disableDrag: true });
-  }, [editingChildren, enterOnPointerDown]);
+    if (editingChildren && groupRef.current) return registerOverlayPortal(groupRef.current, { disableDrag: true });
+    if (!editingChildren && surfaceRef.current) return registerOverlayPortal(surfaceRef.current, { disableDrag: true });
+  }, [editingChildren]);
 
   useEffect(() => {
     if (mode === 'idle') return;
     const closeOutside = (event) => {
-      if (groupRef.current?.contains(event.target) || groupRef.current?.querySelector(':popover-open') || event.target.closest?.('.puck-image-hover-settings, .puck-component-settings-menu, .puck-link-popover')) return;
+      if (groupRef.current?.contains(event.target) || groupRef.current?.querySelector(':popover-open') || event.target.closest?.('.puck-image-hover-settings, .puck-component-settings-menu, .puck-link-popover, .puck-group-breadcrumb')) return;
       if (editingChildren) setEditingChildren(false);
       if (groupSelected) dispatch({ type: 'setUi', ui: { itemSelector: null } });
     };
@@ -1633,16 +1638,33 @@ function useCanvasGroupSelection(id, { enterOnPointerDown = true } = {}) {
 
   const selectGroup = (event) => {
     event.stopPropagation();
-    editChildren(event);
+    const selector = getSelectorForId(id);
+    if (selector) dispatch({ type: 'setUi', ui: { itemSelector: selector } });
+    surfaceRef.current?.focus({ preventScroll: true });
   };
   const editChildren = (event) => {
-    event.stopPropagation();
+    event?.stopPropagation?.();
     dispatch({ type: 'setUi', ui: { itemSelector: null } });
     setEditingChildren(true);
   };
-  const surface = !editingChildren && <button ref={surfaceRef} className="puck-research-group-surface" type="button"
-    aria-label="进入群组并编辑组内组件"
-    onPointerDown={(event) => { event.stopPropagation(); if (enterOnPointerDown) { event.preventDefault(); editChildren(event); } }} onClick={selectGroup} />;
+  const exitChildren = (event) => {
+    event?.stopPropagation?.();
+    const selector = getSelectorForId(id);
+    dispatch({ type: 'setUi', ui: { itemSelector: selector || null } });
+    setEditingChildren(false);
+    requestAnimationFrame(() => surfaceRef.current?.focus({ preventScroll: true }));
+  };
+  const toolbarHost = typeof document !== 'undefined' ? (document.getElementById('canvas-edit-status') || document.getElementById('canvas-toolbar')) : null;
+  const surface = !editingChildren ? <button ref={surfaceRef} className="puck-research-group-surface" type="button"
+    aria-label="单击选中群组，双击或按回车进入组内编辑"
+    title="单击选中群组 · 双击进入组内"
+    onClick={selectGroup}
+    onDoubleClick={editChildren}
+    onKeyDown={(event) => { if (event.key === 'Enter') { event.preventDefault(); editChildren(event); } }} /> : (toolbarHost ? createPortal(<div className="puck-group-breadcrumb" role="status" aria-live="polite">
+      <button type="button" onClick={exitChildren}>画布</button>
+      <span aria-hidden="true">/</span>
+      <span className="is-current">群组内编辑</span>
+    </div>, toolbarHost) : null);
   return { groupRef, editingChildren, setEditingChildren, editChildren, mode, surface };
 }
 
@@ -1723,11 +1745,11 @@ function LayoutNumberFields({ id, field, label, initial, min, max, unit, close }
         input.value = percent;
         setSelectedValue(percent);
       }}>{name}</button>
-    )}</div><button className="button button-dark" type="submit">应用</button></div>
+    )}</div><button className="button button-dark admin-icon-button" type="submit" aria-label="保存" title="保存"><AdminActionIcon name="save" /></button></div>
   </form>;
 }
 
-function ImageRowSettingsFields({ id, single = false, rowMode = 'fixedWidth', rowHeight = 200, displayWidth, onClose }) {
+function ImageRowSettingsFields({ id, single = false, onClose }) {
   const { appState, dispatch } = usePuck();
   // Read the selected block when the form opens, including after saving or undoing.
   const current = findBlockById(appState.data, id)?.props || {};
@@ -1760,7 +1782,7 @@ function ImageRowSettingsFields({ id, single = false, rowMode = 'fixedWidth', ro
       </label>}
     <div className="puck-layout-actions">
       <div className="puck-setting-presets">{(mode === 'fixedHeight' ? [200, 256, 320] : [75, 100, 125]).map((value) => <button type="button" key={value} className={`puck-setting-preset${Number(mode === 'fixedHeight' ? height : width) === value ? ' is-active' : ''}`} onClick={() => mode === 'fixedHeight' ? setHeight(value) : setWidth(value)}>{mode === 'fixedHeight' ? `${value}px` : `${value}%`}</button>)}</div>
-      <button type="submit" className="button button-dark">应用</button>
+      <button type="submit" className="button button-dark admin-icon-button" aria-label="保存" title="保存"><AdminActionIcon name="save" /></button>
     </div>
   </form>;
 }
@@ -1878,7 +1900,7 @@ function DeleteCanvasAction({ onDelete, label = '删除组件' }) {
   }}><AdminActionIcon name="delete" /></button>;
 }
 
-function SourceCardPreview({ text, linkText, href, paragraphStyle, externalLinkStyle, className = '' }) {
+function SourceCardPreview({ linkText, href, paragraphStyle, externalLinkStyle, className = '' }) {
   const link = useRef(null);
   const safeHref = validExternalUrl(href);
   const displayText = sourceCardDisplayText(linkText, safeHref);
@@ -1893,7 +1915,7 @@ function SourceCardPreview({ text, linkText, href, paragraphStyle, externalLinkS
   </div>;
 }
 
-function SourceCardFields({ text, linkText, href = '', onApply, onClose }) {
+function SourceCardFields({ linkText, href = '', onApply, onClose }) {
   const [error, setError] = useState('');
   return <form className="puck-free-media-form" onSubmit={(event) => {
     event.preventDefault();
@@ -1907,7 +1929,7 @@ function SourceCardFields({ text, linkText, href = '', onApply, onClose }) {
     <label className="canvas-field"><span>出典链接显示文字</span><input name="cardLinkText" type="text" defaultValue={sourceCardDisplayText(linkText, href)} placeholder="MUJI壁挂式CD机-深泽直人" required /></label>
     <label className="canvas-field"><span>站外链接（HTTPS）</span><input name="cardHref" type="url" defaultValue={href} placeholder="https://" /></label>
     {error && <small role="alert">{error}</small>}
-    <button type="submit" className="button button-dark">应用</button>
+    <button type="submit" className="button button-dark admin-icon-button" aria-label="保存" title="保存"><AdminActionIcon name="save" /></button>
   </form>;
 }
 
@@ -1939,7 +1961,7 @@ function PuckFreeSizeGroup({ id, items = [], mode: initialMode = 'work', height 
   const effectiveOverflowRight = !isMobile && overflowRight;
   const mobileLayout = normalizeMobileOverride(mobile)?.layout;
   const { dispatch, getSelectorForId } = usePuck();
-  const { groupRef, editingChildren, setEditingChildren, editChildren, mode: selectionMode, surface } = useCanvasGroupSelection(id, { enterOnPointerDown: false });
+  const { groupRef, editingChildren, setEditingChildren, editChildren, mode: selectionMode, surface } = useCanvasGroupSelection(id);
   const [selectedItemId, setSelectedItemId] = useState('');
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
@@ -2198,7 +2220,7 @@ function BlockIndentFields({ value = 0, size, defaultSize = 14, onApply, onClose
   }}>
     <label className="canvas-field"><span>每字符宽度（px）</span><input name="characterSize" type="number" min="1" max="200" step="any" value={pixels} onChange={event => setPixels(event.target.value)} required /></label>
     <label className="canvas-field"><span>整体缩进（字符）</span><input name="indent" type="number" min="0" max="20" step="1" value={count} onChange={event => setCount(event.target.value)} required /></label>
-    <div className="puck-layout-actions"><small>实际缩进：{Number((Number(count) * Number(pixels)).toFixed(2))}px</small><button className="button button-dark" type="submit">应用</button></div>
+    <div className="puck-layout-actions"><small>实际缩进：{Number((Number(count) * Number(pixels)).toFixed(2))}px</small><button className="button button-dark admin-icon-button" type="submit" aria-label="保存" title="保存"><AdminActionIcon name="save" /></button></div>
   </form>;
 }
 
@@ -2302,7 +2324,7 @@ function MediaCaptionFields({ caption = '', captionSettings, onApply, onClose })
       <div className="puck-media-text-presets" role="group" aria-label="常用间距">
         {[4, 8, 12].map((value) => <button className="button" type="button" key={value} aria-pressed={gapValid && gap === value} onClick={() => setValue({ gap: value })}>{value}px</button>)}
       </div>
-      <button type="submit" className="button button-dark" disabled={!gapValid}>应用</button>
+      <button type="submit" className="button button-dark admin-icon-button" aria-label="保存" title="保存" disabled={!gapValid}><AdminActionIcon name="save" /></button>
     </div>
   </form>;
 }
@@ -2319,7 +2341,7 @@ function PhotographyDescriptionFields({ description = '', onApply, onClose }) {
     onClose?.();
   }}>
     <label className="canvas-field"><span>摄影说明</span><textarea aria-label="摄影说明" value={draft} placeholder="仅在放大查看时显示" onChange={(event) => setDraft(event.target.value)} /></label>
-    <div className="puck-media-text-footer"><small>留空则不显示说明</small><button type="submit" className="button button-dark">应用</button></div>
+    <div className="puck-media-text-footer"><small>留空则不显示说明</small><button type="submit" className="button button-dark admin-icon-button" aria-label="保存" title="保存"><AdminActionIcon name="save" /></button></div>
   </form>;
 }
 
@@ -2352,7 +2374,7 @@ function ImageLinkFields({ linkLabel, onApply, onClose }) {
     <label className="canvas-field"><span>链接地址（HTTPS）</span><input name="linkHref" type="url" defaultValue={value.href} placeholder="https://" /></label>
     <label className="canvas-field"><span>打开方式</span><select name="linkNewTab" defaultValue={String(value.newTab)}><option value="true">新标签打开</option><option value="false">当前标签打开</option></select></label>
     {error && <small className="puck-media-text-error" role="alert">{error}</small>}
-    <div className="puck-media-text-footer"><button type="submit" className="button button-dark">应用</button></div>
+    <div className="puck-media-text-footer"><button type="submit" className="button button-dark admin-icon-button" aria-label="保存" title="保存"><AdminActionIcon name="save" /></button></div>
   </form>;
 }
 
@@ -2434,7 +2456,7 @@ function createConfig(imagePaths, category = {}, isSplitDetail = false, isPhotog
         } } : {}),
       },
       defaultProps: { title: '', type: '', image: '', imageScale: 1, imagePosition: 'center', template: defaultTemplate, seoTitle: '', seoDescription: '', photographyIntroWidth: 45, photographyLightboxEnabled: false, gallery: [] },
-      render: ({ title, type, template = 'articleReading', gallery = [], photographyIntroWidth = 45, photographyLightboxEnabled = false, articleLanguage = 'ja', children }) => {
+      render: ({ title, template = 'articleReading', gallery = [], photographyIntroWidth = 45, photographyLightboxEnabled = false, articleLanguage = 'ja', children }) => {
         const images = gallery.map((image, galleryIndex) => ({ ...image, galleryIndex })).filter((image) => image?.src);
         const imageStack = images.map((image, index) => {
           const caption = mediaCaption(image);
@@ -2712,12 +2734,11 @@ function WorkCanvas({ tools, canvasViewport = 'desktop', onViewportChange }) {
     {createPortal(<div className="puck-work-tools">{tools}</div>, document.getElementById('admin-tools'))}
     {createPortal(<div className="puck-canvas-toolbar" role="group" aria-label="画布缩放与视口">
       <div className="canvas-viewport-switch" role="group" aria-label="画板视口切换">
-        <button type="button" aria-pressed={canvasViewport === 'desktop'} onClick={() => onViewportChange?.('desktop')}>桌面</button>
-        <button type="button" aria-pressed={canvasViewport === 'mobile'} onClick={() => onViewportChange?.('mobile')}>手机</button>
+        <button type="button" className="admin-icon-button" aria-label="桌面画板" title="桌面画板" aria-pressed={canvasViewport === 'desktop'} onClick={() => onViewportChange?.('desktop')}><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
+        <button type="button" className="admin-icon-button" aria-label="手机画板" title="手机画板" aria-pressed={canvasViewport === 'mobile'} onClick={() => onViewportChange?.('mobile')}><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></button>
       </div>
-      <output className="canvas-zoom-value" aria-label="画布缩放比例">{Math.round(zoom)}%</output>
       <button type="button" className="admin-icon-button" aria-label="适应宽度" title="适应宽度" onClick={fitWidth}>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5v14m16-14v14M7 12h10m-7-3-3 3 3 3m4-6 3 3-3 3"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 15v-3"/><path d="M14 15v-3"/><path d="M18 15v-3"/><path d="M2 8V4"/><path d="M22 6H2"/><path d="M22 8V4"/><path d="M6 15v-3"/><rect x="2" y="12" width="20" height="8" rx="2"/></svg>
       </button>
     </div>, document.getElementById('canvas-toolbar'))}
   </>;
@@ -2878,7 +2899,7 @@ export function PuckWorkEditor({ historyDocument, historyRevision, category, cat
       return;
     }
     if (!textGroupTypes.has(blocks[index].type)) {
-      setResearchGroupMessage('只能选择文字组件，不能选择媒体或已有群组。');
+      setResearchGroupMessage('只能选择单独且连续文字组件');
       return;
     }
     if (researchGroupIds.length && selectedGroupList(livePuckDocumentRef.current, researchGroupIds[0])?.zone !== list.zone) {
@@ -3043,20 +3064,20 @@ export function PuckWorkEditor({ historyDocument, historyRevision, category, cat
               <p>增删组件或修改文字请切回桌面画板。</p>
               <button type="button" className="button button-dark" onClick={() => setCanvasViewport('desktop')}>切回桌面画板</button>
             </section> : <>
-            {!photographyActive && <section className={`puck-research-group-toolbar${researchGroupMode ? ' is-active' : ''}`} aria-label="群组编辑">
-              <button type="button" aria-pressed={researchGroupMode} onClick={() => {
-                if (researchGroupMode) cancelResearchGroupSelection();
-                else setResearchGroupMode(true);
-              }}>{researchGroupMode ? '退出选择' : '选择文字组件'}</button>
-              {researchGroupMode && <>
-                <span className="puck-research-group-count">已选 {researchGroupIds.length}</span>
-                <button type="button" disabled={researchGroupIds.length < 2} onClick={groupResearchSelection}>群组</button>
-                <button type="button" onClick={cancelResearchGroupSelection}>取消</button>
-                {researchGroupMessage && <p role="status">{researchGroupMessage}</p>}
-              </>}
-            </section>}
             <section className="puck-drawer-groups">{Object.entries(config.categories).filter(([, group]) => group.visible !== false).map(([id, group]) => <section key={id}>
-              <h3>{group.title}</h3>
+              <div className="puck-drawer-group-header">
+                <h3>{group.title}</h3>
+                {id === 'text' && !photographyActive && <button type="button" className={`puck-text-group-toggle${researchGroupMode ? ' is-active' : ''}`} aria-pressed={researchGroupMode} onClick={() => {
+                  if (researchGroupMode) cancelResearchGroupSelection();
+                  else setResearchGroupMode(true);
+                }}>{researchGroupMode ? '退出多选' : '文字群组'}</button>}
+              </div>
+              {id === 'text' && !photographyActive && researchGroupMode && <div className="puck-research-group-toolbar is-active" aria-label="群组编辑">
+                <span className="puck-research-group-count">已选 {researchGroupIds.length}</span>
+                <button type="button" className="admin-icon-button" aria-label="群组" title="群组" disabled={researchGroupIds.length < 2} onClick={groupResearchSelection}><AdminActionIcon name="group" /></button>
+                <button type="button" className="admin-icon-button" aria-label="取消" title="取消" onClick={cancelResearchGroupSelection}><AdminActionIcon name="close" /></button>
+                {researchGroupMessage && <p role="status">{researchGroupMessage}</p>}
+              </div>}
               <Drawer droppableId={`work-drawer-${id}`}>{group.components.map((name) => <Drawer.Item key={name} name={name} label={config.components[name].label}>{renderDrawerItem}</Drawer.Item>)}</Drawer>
             </section>)}</section>
             {category?.kind !== 'research' && <ThumbnailEditor category={category} onUpload={onThumbnailUpload} />}
@@ -3078,7 +3099,7 @@ export function PuckWorkEditor({ historyDocument, historyRevision, category, cat
             <span><strong>{title}</strong></span>
           </button>)}
         </div>
-        <button className="puck-placement-cancel" type="button" onClick={closePlacementDialog}>Cancel</button>
+        <button className="puck-placement-cancel admin-icon-button" type="button" aria-label="取消" title="取消" onClick={closePlacementDialog}><AdminActionIcon name="close" /></button>
       </section>
     </div>}
   </>;

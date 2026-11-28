@@ -3,7 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import { getContactSettings } from '../lib/content';
 import { CONTACT_ICONS } from '../lib/content/contact-icons';
 export const prerender = true;
-const contact = await getContactSettings();
+const contact = getContactSettings();
 ---
 
 <SiteLayout active="contact" title="Contact">

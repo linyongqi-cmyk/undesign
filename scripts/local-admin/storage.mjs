@@ -66,7 +66,7 @@ const ALLOWED_IMAGE_TYPES = new Map([
   ['.gif', 'image/gif'],
 ]);
 export const MAX_IMAGE_BYTES = 25 * 1024 * 1024;
-export const MAX_VIDEO_BYTES = 200 * 1024 * 1024;
+export const MAX_VIDEO_BYTES = 50 * 1024 * 1024;
 const ALLOWED_VIDEO_TYPES = new Map([['.mp4', ['video/mp4']], ['.mov', ['video/quicktime']], ['.m4v', ['video/x-m4v', 'video/mp4']], ['.webm', ['video/webm']], ['.ogv', ['video/ogg']]]);
 const VALID_TEMPLATES = new Set(['splitDetail', 'articleReading', 'photographyGallery', 'photographyGallery2']);
 const VALID_BLOCKS = new Set(['richText', 'paragraph', 'subheading', 'note', 'internalLink', 'externalLink', 'imageWithCaption', 'imagePair', 'mediaComposition', 'imageCarousel', 'quote', 'link', 'specifications', 'localVideo', 'videoEmbed', 'wideMedia', 'componentGroup', 'layoutGroup', 'sourceCard', 'freeSizeGroup']);
@@ -142,7 +142,7 @@ function readJson(filePath) {
 function atomicJsonWrite(filePath, value) {
   const folder = path.dirname(filePath);
   mkdirSync(folder, { recursive: true });
-  const tempPath = `${filePath}.${process.pid}.${Date.now()}.tmp`;
+  const tempPath = `${filePath}.${process.pid}.${randomUUID()}.tmp`;
   writeFileSync(tempPath, `${JSON.stringify(value, null, 2)}\n`, { encoding: 'utf8', flag: 'wx' });
   renameSync(tempPath, filePath);
 }

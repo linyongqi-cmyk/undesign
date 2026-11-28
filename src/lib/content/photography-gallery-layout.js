@@ -1,4 +1,4 @@
-/** @typedef {{image: import('./types').ContentImage, index: number, aspect: number}} PhotographyGalleryItem */
+/** @typedef {{image: import('./types').ContentImage, index: number, aspect: number, width?: number, height?: number}} PhotographyGalleryItem */
 
 /** @param {PhotographyGalleryItem[]} items @returns {PhotographyGalleryItem[][]} */
 export function distributePhotographyGallery(items = []) {

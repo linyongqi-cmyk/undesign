@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useId, useRef, useState, useCallback } from 'react';
+import React, { createContext, useId, useRef, useState, useCallback } from 'react';
 
 export const CanvasMenuContext = createContext(null);
 
@@ -52,7 +52,7 @@ export default function CanvasActionMenu({ children, disabled = false }) {
     panel.current.showPopover();
   };
   return <>
-    <button type="button" className={`puck-image-action puck-component-settings${groupMenu ? ' is-group-settings' : ''}`} aria-label={title} title={title} aria-expanded={open} aria-controls={id} onClickCapture={toggle}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="9" cy="18" r="2"/></svg><span>设置</span></button>
+    <button type="button" className={`puck-image-action puck-component-settings${groupMenu ? ' is-group-settings' : ''}`} aria-label={title} title={title} aria-expanded={open} aria-controls={id} onClickCapture={toggle}><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg><span>设置</span></button>
     <div className="puck-toolbar-quick puck-toolbar-replace">{groups['快捷']}</div>
     <div className="puck-toolbar-quick puck-toolbar-order">{groups['排序']}</div>
     <div className="puck-toolbar-quick puck-toolbar-delete">{groups['删除']}</div>
@@ -63,7 +63,7 @@ export default function CanvasActionMenu({ children, disabled = false }) {
       if (!event.target.closest('[data-image-action], [data-carousel-action]')) event.stopPropagation();
     }}>
       {portalTarget && createPortal(<>
-      <header>{title}<button type="button" className="button" aria-label={`关闭${title}`} onClick={() => panel.current.hidePopover()}>×</button></header>
+      <header>{title}<button type="button" className="button admin-icon-button" aria-label={`关闭${title}`} title={`关闭${title}`} onClick={() => panel.current.hidePopover()}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></header>
       <CanvasMenuContext.Provider value={{ inline: true, activeKey, setActiveKey }}>
       {['布局', '内容与链接', '图片效果'].map(group => groups[group]?.length ? <section key={group} className={group === '删除' ? 'is-danger' : ''}><h4>{group === '删除' ? '管理' : group}</h4><div className="puck-component-settings-list">{groups[group]}</div></section> : null)}
       </CanvasMenuContext.Provider>

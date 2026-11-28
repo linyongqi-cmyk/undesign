@@ -259,7 +259,7 @@ function renderNavigation() {
   const category = activeCategory();
   const works = category?.works || [];
   workNav.className = 'work-nav';
-  workNav.innerHTML = `<div class="work-nav-header"><div class="work-nav-title"><span class="admin-label">作品列表</span><span class="work-nav-count">${works.length}</span></div><button class="mini-button work-nav-add" type="button" data-action="create-work" aria-label="新增作品" title="新增作品"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div><label class="work-nav-category-field"><select class="work-nav-category" data-select-category aria-label="当前分类">${state.drafts.categories.map((item) => `<option value="${esc(item.slug)}" ${item.slug === state.categorySlug ? 'selected' : ''}>${esc(item.title)}</option>`).join('')}</select></label><div class="work-nav-list">${works.length ? works.map((work, index) => `<div class="work-nav-row" data-sort-item data-sort-path="works" data-sort-index="${index}" data-category-slug="${esc(category.slug)}" draggable="true"><button class="work-nav-button ${state.section === 'work' && work.slug === state.workSlug ? 'is-active' : ''}" type="button" data-action="select-work" data-slug="${esc(work.slug)}"><span>${esc(work.title)}</span></button><span class="work-nav-drag-handle" aria-hidden="true" title="拖动排序">⠿</span></div>`).join('') : '<p class="work-nav-empty">这个分类还没有作品</p>'}</div>`;
+  workNav.innerHTML = `<div class="work-nav-header"><div class="work-nav-title"><span class="admin-label">作品列表</span><span class="work-nav-count">${works.length}</span></div><button class="mini-button work-nav-add" type="button" data-action="create-work" aria-label="新增作品" title="新增作品"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div><label class="work-nav-category-field"><select class="work-nav-category" data-select-category aria-label="当前分类">${state.drafts.categories.map((item) => `<option value="${esc(item.slug)}" ${item.slug === state.categorySlug ? 'selected' : ''}>${esc(item.title)}</option>`).join('')}</select></label><div class="work-nav-list">${works.length ? works.map((work, index) => `<div class="work-nav-row" data-sort-item data-sort-path="works" data-sort-index="${index}" data-category-slug="${esc(category.slug)}" draggable="true"><button class="work-nav-button ${state.section === 'work' && work.slug === state.workSlug ? 'is-active' : ''}" type="button" data-action="select-work" data-slug="${esc(work.slug)}"><span>${esc(work.title)}</span></button><span class="work-nav-drag-handle" aria-hidden="true" title="拖动排序"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="12" r="1"/><circle cx="9" cy="5" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="15" cy="19" r="1"/></svg></span></div>`).join('') : '<p class="work-nav-empty">这个分类还没有作品</p>'}</div>`;
 }
 
 function renderEditor() {
@@ -326,8 +326,8 @@ function renderEditor() {
       <h3>分类排序</h3>
       <ol>${categories.map((category, index) => `<li>
         <span>${esc(category.title)}</span>
-        <button class="icon-button" type="button" data-action="move" data-path="" data-index="${index}" data-delta="-1" aria-label="${esc(category.title)} 上移" ${index === 0 ? 'disabled' : ''}>↑</button>
-        <button class="icon-button" type="button" data-action="move" data-path="" data-index="${index}" data-delta="1" aria-label="${esc(category.title)} 下移" ${index === categories.length - 1 ? 'disabled' : ''}>↓</button>
+        <button class="icon-button" type="button" data-action="move" data-path="" data-index="${index}" data-delta="-1" aria-label="${esc(category.title)} 上移" title="上移" ${index === 0 ? 'disabled' : ''}>${adminActionIcon('up')}</button>
+        <button class="icon-button" type="button" data-action="move" data-path="" data-index="${index}" data-delta="1" aria-label="${esc(category.title)} 下移" title="下移" ${index === categories.length - 1 ? 'disabled' : ''}>${adminActionIcon('down')}</button>
       </li>`).join('')}</ol>
       <div class="category-trash-entry"><button class="button" type="button" data-action="open-work-trash">${adminActionIcon('delete')} 回收站</button></div>
     </section>`);
@@ -433,7 +433,7 @@ function bindPageCanvas(canvas) {
   const host = $('#canvas-toolbar');
   host.insertAdjacentHTML('beforeend', `<div class="puck-canvas-toolbar page-canvas-toolbar" role="group" aria-label="画布缩放">
     <output class="canvas-zoom-value" aria-label="画布缩放比例"></output>
-    <button type="button" data-zoom="fit" class="admin-icon-button" aria-label="适应宽度" title="适应宽度"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5v14m16-14v14M7 12h10m-7-3-3 3 3 3m4-6 3 3-3 3"/></svg></button>
+    <button type="button" data-zoom="fit" class="admin-icon-button" aria-label="适应宽度" title="适应宽度"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 15v-3"/><path d="M14 15v-3"/><path d="M18 15v-3"/><path d="M2 8V4"/><path d="M22 6H2"/><path d="M22 8V4"/><path d="M6 15v-3"/><rect x="2" y="12" width="20" height="8" rx="2"/></svg></button>
   </div>`);
   const toolbar = host.lastElementChild;
   let zoom = Number(viewport.dataset.pageZoom) || 0;

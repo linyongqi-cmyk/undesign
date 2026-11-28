@@ -113,14 +113,14 @@ export function MobileOverrideBar({
 
   return <div ref={barRef} className={`mobile-override-bar${className ? ` ${className}` : ''}`} onPointerDown={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()}>
     <button type="button" className="puck-image-action" aria-label={`在手机端隐藏${label}`} title="在手机端隐藏" onClick={() => patchMobile({ hidden: true })}>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10.4 10.4 0 0 1 12 5c5 0 9 3.5 10 7a11.3 11.3 0 0 1-3.1 4.4M6.5 6.6A11.4 11.4 0 0 0 2 12c1 3.5 5 7 10 7a10.4 10.4 0 0 0 5.4-1.5" /></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
     </button>
     <button type="button" className={`puck-image-action mobile-override-settings-btn${active ? ' has-override' : ''}`} aria-label={`${label}手机端设置`} title="手机端排版设置" aria-expanded={open} aria-controls={id} onClick={toggle}>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2" /><path d="M11 18h2" /></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg>
     </button>
     <div ref={attachPanel} id={id} popover="auto" role="dialog" aria-label={`${label}手机端设置`} className="puck-component-settings-menu mobile-override-panel" style={{ left: `${position.left}px`, top: `${position.top}px` }} onToggle={(e) => setOpen(e.newState === 'open')} onClick={(e) => e.stopPropagation()}>
       {portalTarget && createPortal(<>
-        <header>{label} · 手机端<button type="button" className="button" aria-label="关闭手机端设置" onClick={() => panelRef.current?.hidePopover()}>×</button></header>
+        <header>{label} · 手机端<button type="button" className="button admin-icon-button" aria-label="关闭手机端设置" title="关闭手机端设置" onClick={() => panelRef.current?.hidePopover()}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></header>
         <div className="mobile-override-panel-body">
           {supportsLayout && <section className="mobile-override-section">
             <h4>手机端排列</h4>
